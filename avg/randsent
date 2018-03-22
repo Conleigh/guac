@@ -1,0 +1,178 @@
+#!/usr/bin/env python2
+
+import argparse
+import random
+
+# Parse arguments.  You should not need to modify this.
+parser = argparse.ArgumentParser()
+parser.add_argument("grammar", help="path to grammar file")
+parser.add_argument("count", type=int, help="number of sentences to generate", nargs='?', default=1)
+parser.add_argument("-t", "--tree", action='store_true', help="pretty-print tree form instead of printing sentence")
+parser.add_argument("--seed", type=int, default=0, help="RNG seed")
+args = parser.parse_args()
+
+# Create a random generator.
+rng = random.Random(args.seed)
+
+
+rule_id = 0
+rules = {}
+# Get grammar into a dictionary called 'rules'
+with open(args.grammar, 'r') as grammar_file:
+  for line in grammar_file:
+    if line.startswith('#'):
+      continue
+    else:
+      line = line.split("#")[0]
+      L = line.split()
+      if len(L) == 0:
+        continue
+      weight = L[0]
+      LHS = L[1]
+      RHS = L[2:]
+      D = {
+           'weight': weight, 'LHS': LHS, 'RHS': RHS, 'term_type': ''
+          }
+      rules[rule_id] = D
+      rule_id += 1
+
+# go through each rule and determine if its terminal or nonterminal
+for rule_id in rules:
+  rule = rules[rule_id]
+  term_type = 'terminal'
+  RHS = rule['RHS']
+  for rule_id2 in rules:
+    rule2 = rules[rule_id2]
+    for symbol in RHS:
+      if symbol in rule2['LHS']:
+        term_type = 'non_terminal'
+  rule['term_type'] = term_type  
+
+
+#function to randomly choose rule based on weight
+def select_random_rule(rules, list_of_rule_ids):
+  cutoffs = []
+  total = 0
+  #get the weights of rules
+  total = 0
+  list_of_rule_ids.reverse()
+  for rule_id in list_of_rule_ids:
+    d = rules[rule_id]
+    weight = float(d['weight'])
+    total = total + weight
+    cutoffs.append(total)
+  rand = rng.random() * total
+  for counter, cutoff in enumerate(cutoffs):
+    if rand <= cutoff:
+      rule_id = list_of_rule_ids[counter]
+      selected_rule = rules[rule_id]
+      return selected_rule
+ 
+  print 'ERROR!!!'
+
+all_sentences = []
+all_trees = []
+
+# Print example sentences:
+for i in range(args.count): 
+  #print ('doing sentence ', i)
+  tracker = 0
+  sentence = ['START']
+  tree = [' (','START',')']
+  full_sent = False
+  while not full_sent: 
+    tok_replacement_rule = 0
+    #no_words_left_counter = 0
+    all_terminal = True
+    for counter,tok in enumerate(sentence):
+      #print'restarting to look at sentence: token is:' +str(tok)
+
+      #Get list of viable rules for given token
+      list_of_valid_rule_ids = []
+      for rule_id in rules:
+        rule = rules[rule_id]
+        if rule['LHS'] == tok:
+          #print('found new rule: ', tok, ' to ', rule['RHS'])
+          list_of_valid_rule_ids.append(rule_id)
+        else:
+          continue
+
+      #Select valid rule
+      if len(list_of_valid_rule_ids) == 0:
+        no_words_left_counter += 1
+        #print('no valid rules for token:', tok)
+        #print('current no words left counter:', no_words_left_counter)
+        continue 
+      elif len(list_of_valid_rule_ids) == 1:
+        all_terminal = False
+        no_words_left_counter = 0
+        tok_replacement_rule = rules[list_of_valid_rule_ids[0]] #returns a dictionary of LHS, RHS and weight
+      else:
+        all_terminal = False
+        no_words_left_counter = 0
+        tok_replacement_rule = select_random_rule(rules, list_of_valid_rule_ids)
+
+      #Replace tokens by using the chosen grammar rule
+      before_tok = sentence[:counter]
+      after_tok = sentence[counter+1:]
+      tok_replacement = tok_replacement_rule['RHS']
+      for w in tok_replacement:
+        before_tok.append(w)
+      for w in after_tok:
+        before_tok.append(w)
+      new_sentence = before_tok
+      #print 'Replacing ', tok, ' with ', tok_replacement
+      #print 'new sentence: ', new_sentence
+      sentence = new_sentence
+
+      ###CREATE TREE
+      #find correct location to insert
+      tree_index = None
+      for i,branch in enumerate(tree):
+        if branch == tok and tree[i-1] ==' (' and tree[i+1] == ')':
+          tree_index = i
+          break
+    
+      if tree_index == None:
+        print 'Error ,tree_index = none'
+        exit()
+      # Find correct formating (different if terminal or non-terminal rule)
+      if tok_replacement_rule['term_type'] == 'non_terminal':
+        add_branch = []
+        for r in tok_replacement:
+          add_branch.append(' (')
+          add_branch.append(r)
+          add_branch.append(')')
+      elif tok_replacement_rule['term_type'] == 'terminal':
+        add_branch = []
+        for r in tok_replacement:
+          add_branch.append(' ')
+          add_branch.append(r)
+
+      #insert new branch
+      tree_before_tok = tree[:tree_index+1]
+      tree_after_tok = tree[tree_index+1:]
+      for w in add_branch:
+        tree_before_tok.append(w)
+      for w in tree_after_tok:
+        tree_before_tok.append(w)
+      tree = tree_before_tok
+      pretty_tree = ''.join(tree)
+      
+      break
+    
+    
+    #save sentence and tree
+    if all_terminal == True:
+      full_sent = True
+      full_sentence = ' '.join(sentence)
+      all_sentences.append(full_sentence)
+      all_trees.append(pretty_tree)
+
+
+
+for sent,tree in zip(all_sentences, all_trees):
+  print(sent)
+  if args.tree == True:
+    print(tree)
+

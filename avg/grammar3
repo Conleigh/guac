@@ -1,0 +1,123 @@
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - You should follow this convention unless you have a good reason
+#      not to.
+#
+#    - But your *program* should still work with grammars that don't 
+#      follow this convention.  It should not pay any attention to
+#      upper/lower case.  From your program's point of view, 
+#      if there is at least one rule for rewriting a symbol, then
+#      that symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+1 	START	ROOT
+1	ROOT	S .
+1	ROOT	S !
+1	ROOT	is it true that S ?     # mixing terminals and nonterminals is ok.
+
+# The basic grammar rules.  Here's what the abbreviations stand for:
+#    S  = sentence
+#    NP = noun phrase
+#    VP = verb phrase
+#    PP = prepositional phrase
+#    Det = determiner (sometimes called "article")
+#    Prep = preposition
+#    Adj = adjective
+#    Adv = adverb
+#    CPn = compositional phrase Noun
+#    CPv = compositional phrase verb
+#    CL = clause
+#    TV = transitive verb
+#    ITV = intransitive verb
+#    TVP = transitive verb phrase
+#    DAP = Definite Article Phrase
+#    DA = Definite Article
+#    VPP = verb phrase with prepositional phrase
+#    Vpp = verb with preposition
+#    Vcl = verbs that can lead into another clause. e.g. thought that, understood that
+
+1	S	NP VP
+0.05	S	S CL
+2	VP	Verb NP
+0.5	NP	Det Noun
+0.02	NP	NP PP
+1	PP	Prep NP
+2	Noun	Adj Noun
+0.02	NP	Name
+1	VP	Verb
+1	VP	ITV
+0.02	NP	NP CPn
+1	CPn	C NP
+0.02	VP	VP CPv
+1	CPv	C VP
+1	CPv	Cv VP
+1	CL	Cb S
+1	CL	C S
+0.2	VP	Vcl CLt
+1	CLt	DA S
+0.06	S	DAP TVP
+1	DAP	DA S
+1	TVP	TV NP
+1	VP	Vpp PP 
+2	Adj     Adv Adj
+
+# Vocabulary.  Your program can see that "ate" is a terminal
+# symbol because there exists no rule for rewriting it.
+# Any symbol that can rewrite as a terminal (or a string of 
+# terminals, like "chief of staff") is called a "preterminal."  Notice 
+# that a preterminal is a special kind of nonterminal.
+
+1	Verb	ate
+1	Verb	wanted
+1	Verb	kissed
+1	Verb	understood
+1	Verb	pickled
+1	Verb	thought
+
+1	Vpp	worked
+
+1	ITV	sighed
+
+1	Vcl	thought
+1	Vcl	understood
+1	Vcl	wanted
+
+1	TV	perplexed
+
+1	DA	that
+
+1       Adv     very
+
+1	Det	the
+1	Det	a
+1	Det	every
+
+1	Noun	president
+1	Noun	sandwich
+1	Noun	pickle
+1	Noun	chief of staff
+1	Noun	floor
+1	Noun	proposal
+1	Noun	desk
+
+1	Name	Sally
+
+1	Adj	fine
+1	Adj	delicious
+1	Adj	perplexed
+1	Adj	pickled
+
+1	C	and
+
+1	Cb	but
+
+1	Prep	with
+1	Prep	on
+1	Prep	under
+1	Prep	in
