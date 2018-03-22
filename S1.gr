@@ -6,13 +6,17 @@
 # VBG - gerund
 # JJ    Adjective
 
-1	S1	NP VP .
+1	S1 NP VP .
 
+<<<<<<< HEAD
 1	VP	VerbT NP
 1   VP  Be-conj JJ
 
 1   GP  VBG PP
 1   GP  Det PP
+=======
+1	VP VerbT NP
+>>>>>>> b8e41d99f6c4f7acc2f05d80db393a9d3ed24a70
 
 20	NP	Det Nbar
 1	NP	Proper
