@@ -93,6 +93,7 @@
 1	VerbT	grows
 1 VerbT suggests
 1	VerbT	knows
+1 VerbT is
 
 #Verbs followed by complementizer
 1	VerbC	suggests
@@ -117,6 +118,7 @@
 1	VerbT_pl carry
 1	VerbT_pl	suggest
 1	VerbT_pl	know
+1 VerbT_pl are
 
 # Verbs (present, plural, third person). _ Intransitive
 #TODO: why are they missing "go"? "Goes" exists...
