@@ -17,6 +17,7 @@ will - can be a noun (make sure to sign the will!)
 snows - verb
 inches - verb
 snakes - verb
+covering - noun (like a tent!)
 south - would 'the south' need to be capitalized?
 drunk/grown/ridden/carried etc - are they adjectives too?
 
