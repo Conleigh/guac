@@ -7,6 +7,7 @@ cat Top.gr S1.gr S1_Vocab.gr S2.gr S2_Vocab.gr > GRAMMAR.gr
 ./randsent GRAMMAR.gr (#) (-t)
 
 #(on athena) test grammaticality of test sentences; -s S1 uses S1 as start symbol
+# Setup 6.863 first 
 
 cat S1.gr S1_Vocab.gr > S1GR.gr
 

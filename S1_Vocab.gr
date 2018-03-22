@@ -246,10 +246,10 @@
 
 # More proper nouns, not people.
 
-1	Misc	Camelot
-1	Misc	England
-1	Misc	Holy Grail
-1	Misc	Round Table
+1	Proper	Camelot
+1	Proper	England
+1	Proper	Holy Grail
+1	Proper	Round Table
 
 # Plural proper nouns.
 1	Misc	Britons
@@ -318,16 +318,16 @@
 1	Misc	if
 
 # Modals.
-1	Misc	can
-1	Misc	could
-1	Misc	may
-1	Misc	might
-1	Misc	must
-1	Misc	ought
-1	Misc	shall
-1	Misc	should
-1	Misc	will
-1	Misc	would
+1	Modal	can
+1	Modal	could
+1	Modal	may
+1	Modal	might
+1	Modal	must
+1	Modal	ought to
+1	Modal	shall
+1	Modal	should
+1	Modal	will
+1	Modal	would
 
 # Possessive personal pronouns
 1	Misc	her
