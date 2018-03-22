@@ -6,12 +6,12 @@
 # JJ    Adjective
 
 1	S1 NP VP .
-1 S1 GP VP .
+1   S1 GP VP .
 
 1	VP	VerbT NP
 1   VP  Be-conj JJ
 
-1   GP  VBG PP
+1   GP  G PP
 1   GP  Det PP
 
 20	NP	Det Nbar
