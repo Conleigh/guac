@@ -1,18 +1,17 @@
 # This is a very, very, very simple grammar to get you started.
-# TODO:
-#-can have been
+# TODO: "can have been"
 
 
 # VBG - gerund
 # JJ    Adjective
 
 1	S1 NP VP .
-1   GP VP .
+1 S1 GP VP .
 
 1	VP	VerbT NP
 1   VP  Be-conj JJ
 
-1   GP  G PP
+1   GP  VBG PP
 1   GP  Det PP
 
 20	NP	Det Nbar
@@ -27,4 +26,3 @@
 1   Be-conj was
 1   Be-conj Modals be
 1   Be-conj Modals have been #can have been?
-
