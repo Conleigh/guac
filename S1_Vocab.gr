@@ -172,17 +172,17 @@
 1	Misc	tiniest
 1	Misc	hardest
 
-# Plural nouns.
-1	Misc	coconuts
-1	Misc	halves
-1	Misc	snows
-1	Misc	mountains
-1	Misc	areas
-1	Misc	strangers
-1	Misc	inches
-1	Misc	snakes
-1	Misc	ants
-1	Misc	nights
+# Plural nouns. (NNS)
+1	NNS	coconuts
+1	NNS	halves
+1	NNS	snows
+1	NNS	mountains
+1	NNS	areas
+1	NNS	strangers
+1	NNS	inches
+1	NNS	snakes
+1	NNS	ants
+1	NNS	nights
 
 # More proper nouns, not people.
 
@@ -223,8 +223,8 @@
 1	Misc	unfortunately
 
 # 'do'/'does'
-1	Misc	do
-1	Misc	does
+1	'do'	do
+1	'does'	does
 
 # 'to'
 1	'to'	to
@@ -309,18 +309,18 @@
 1	Misc	suggests
 1	Misc	knows
 
-# Verbs (present, plural, third person).
-1	Misc	have
-1	Misc	speak
-1	Misc	cover
-1	Misc	are
-1	Misc	ride
-1	Misc	drink
-1	Misc	grow
-1	Misc	carry
-1	Misc	suggest
-1	Misc	migrate
-1	Misc	know
+# Verbs (present, plural, third person). [VBP]
+1	VBP	have
+1	VBP	speak
+1	VBP	cover
+1	VBP	are
+1	VBP	ride
+1	VBP	drink
+1	VBP	grow
+1	VBP	carry
+1	VBP	suggest
+1	VBP	migrate
+1	VBP	know
 
 # Wh-determiners.
 1	Misc	that

@@ -7,6 +7,12 @@
 
 1	S1 NP VP .
 1   S1 GP VP .
+1   S1 Q ?
+
+1   Q   'do' Clause_pl
+1   Q   'does' Clause_si #need to add the singular case
+
+1   Clause_pl NNS VBP
 
 1	VP	VerbT NP
 1   VP  Be-conj JJ
