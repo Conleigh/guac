@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 
 import argparse
-import random
+import numpy.random 
 
 # Parse arguments.  You should not need to modify this.
 parser = argparse.ArgumentParser()
@@ -12,7 +12,7 @@ parser.add_argument("--seed", type=int, default=0, help="RNG seed")
 args = parser.parse_args()
 
 # Create a random generator.
-rng = random.Random(args.seed)
+numpy.random.seed(args.seed)
 
 # Here's how to access the args.  (You won't print them in your actual program.)
 # print 'path to grammar file:', args.grammar
@@ -21,8 +21,6 @@ rng = random.Random(args.seed)
 # print 'RNG seed:', args.seed
 
 # Print out the grammar.  You'll replace the loop body.
-# Option: change dict to store [weight] instances of each entry.
-# Will need more memory, but could mean faster performance. 
 grammar_dict = {} # start symbol: [(weight, [following tokens])]
 
 with open(args.grammar, 'r') as grammar_file:
@@ -31,7 +29,7 @@ with open(args.grammar, 'r') as grammar_file:
     if not line: continue
     if line.startswith('#'): continue
     items = line.split()
-    weight = int(items[0])
+    weight = float(items[0])
     start = items[1]
     tokens = []
     for token in items[2:]:
@@ -45,13 +43,12 @@ with open(args.grammar, 'r') as grammar_file:
 def expand(start):
 	if start not in grammar_dict: return start + " "
 	sentence = ""
-	# Expand choices, with one entry for each weight in the grammar file
 	choices = []
+    weights = []
 	for entry in grammar_dict[start]:
-		for i in range(entry[0]):
-			choices.append(entry[1])
-	tokens = rng.choice(choices)
-	# Choose which entry to use
+		choices.append(entry[1])
+        weights.append(entry[0])
+    tokens = numpy.random.choice(choices, p=weights)
 	for token in tokens:
 		sentence = sentence + expand(token)
 	return sentence

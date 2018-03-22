@@ -24,17 +24,15 @@ d = {} #empty dictionary to store named rules
 with open(args.grammar, 'r') as grammar_file:
     count = 0
     for line in grammar_file:
-        #print 'count: ', count
-        #Skip if blank line or line begins with # #TODO: parentheses?
-        if (line == '\n') or line.startswith('#'): #TODO: more robust to other kinds of blank lines?
-            count+=1
-            continue
+	    line = line.strip()
+	    if not line: continue
+	    if line.startswith('#'): continue
         #Enter in rule parameters TODO: make this with regX instead of splits?
         line = line.split("#")[0] #Do not include comments
         weight = line.split()[0]
         LHS = line.split()[1]
         RHS = line[len(weight)+len(LHS)+2:] #don't include space before RHS
-        RHS = re.sub(r"[\n\t]*", "", RHS) #remove tabs and new lines
+        RHS = re.sub(r"[\n\t]", "", RHS) #remove tabs and new lines
         weight = float(weight)
         name = "r" + str(count) #e.g., r2 for a rule originating from line 2 in file
         d[name] = Rule(weight, LHS, RHS) #add to dictionary
