@@ -328,17 +328,17 @@
 1	Misc	which
 
 # Wh-pronouns.
-1	Misc	what
-1	Misc	who
+1	Wh-pronouns	what
+1	Wh-pronouns	who
 
 # Wh possessive pronoun.
 1	Misc	whose
 
 # Wh-adverbs
-1	Misc	how
-1	Misc	when
-1	Misc	where
-1	Misc	why
+1	Wh-adverbs	how
+1	Wh-adverbs	when
+1	Wh-adverbs	where
+1	Wh-adverbs	why
 
 
 # Possessive marker.
