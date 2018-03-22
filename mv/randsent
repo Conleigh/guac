@@ -44,11 +44,18 @@ def expand(start):
     if start not in grammar_dict: return start + " "
     sentence = ""
     choices = []
-    weights = []
+    weights = [] 
+    counter = 0
+    hacky = []
     for entry in grammar_dict[start]:
         choices.append(entry[1])
         weights.append(entry[0])
-    tokens = numpy.random.choice(choices, p=weights)
+        hacky.append(counter)
+        counter = counter + 1
+    total_prob = sum(weights)
+    for i in hacky:
+        weights[i] = float(weights[i]) / total_prob
+    tokens = choices[numpy.random.choice(hacky, p=weights)]
     for token in tokens:
         sentence = sentence + expand(token)
     return sentence
