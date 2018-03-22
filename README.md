@@ -1,8 +1,16 @@
 # guac
 
-run by:
+#generate random sentences
+
 cat Top.gr S1.gr S1_Vocab.gr S2.gr S2_Vocab.gr > GRAMMAR.gr
+
 ./randsent GRAMMAR.gr (#) (-t)
+
+#(on athena) test grammaticality of test sentences; -s S1 uses S1 as start symbol
+
+cat S1.gr S1_Vocab.gr > S1GR.gr
+
+/mit/6.863/spring2018/Software/parse -g S1GR.gr -i base-set.sen -s S1
 
     2 ripe avocados
     1/2 teaspoon Kosher salt
