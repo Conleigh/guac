@@ -16,6 +16,7 @@
 
 20	NP	Det Nbar
 1	NP	Proper
+1   NP  Proper_ppl
 
 20	Nbar	Noun
 1	Nbar	Nbar PP

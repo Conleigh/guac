@@ -62,14 +62,14 @@
 1	Prep	with
 
 # Proper nouns.  Note that our Proper tag is just for people.
-1	Proper	Arthur
-1	Proper	Guinevere
-1	Proper	Sir Lancelot
-1	Proper	Sir Bedevere
-1	Proper	Zoot
-1	Proper	Dingo
-1	Proper	Patsy
-1	Proper	Uther Pendragon
+1	Proper_ppl	Arthur
+1	Proper_ppl	Guinevere
+1	Proper_ppl	Sir Lancelot
+1	Proper_ppl	Sir Bedevere
+1	Proper_ppl	Zoot
+1	Proper_ppl	Dingo
+1	Proper_ppl	Patsy
+1	Proper_ppl	Uther Pendragon
 
 # Verbs (third person singular present).
 # Note that only transitive verbs get our VerbT tag,
@@ -186,10 +186,10 @@
 
 # More proper nouns, not people.
 
-1	Misc	Camelot
-1	Misc	England
-1	Misc	Holy Grail
-1	Misc	Round Table
+1	Proper	Camelot
+1	Proper	England
+1	Proper	Holy Grail
+1	Proper	Round Table
 
 # Plural proper nouns.
 1	Misc	Britons
