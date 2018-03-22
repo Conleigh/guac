@@ -197,14 +197,14 @@
 ###NOUNS############################################################
 
 # Proper nouns.  Note that our Proper tag is just for people.
-1	Proper_ppl	Arthur
-1	Proper_ppl	Guinevere
-1	Proper_ppl	Sir Lancelot
-1	Proper_ppl	Sir Bedevere
-1	Proper_ppl	Zoot
-1	Proper_ppl	Dingo
-1	Proper_ppl	Patsy
-1	Proper_ppl	Uther Pendragon
+1	Proper	Arthur
+1	Proper	Guinevere
+1	Proper	Sir Lancelot
+1	Proper	Sir Bedevere
+1	Proper	Zoot
+1	Proper	Dingo
+1	Proper	Patsy
+1	Proper	Uther Pendragon
 
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.

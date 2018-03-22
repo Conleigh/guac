@@ -15,6 +15,7 @@
 .3 VP_pl VerbC_pl CC
 2	NP Det Noun
 .2 NP NP PP
+.3 NP Proper
 .3 NP Noun
 .2 NP_pl NP_pl PP
 .3 NP_pl Noun_pl
@@ -22,7 +23,7 @@
 1	PP Prep NP_pl
 2	Noun JJ Noun
 2	Noun_pl JJ Noun_pl
-1 CC Comp S 
+1 CC Comp S
 1 GP VerbG PP
 1 GP VerbG
 
