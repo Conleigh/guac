@@ -1,5 +1,9 @@
 # guac
 
+run by:
+cat Top.gr S1.gr S1_Vocab.gr S2.gr S2_Vocab.gr > GRAMMAR.gr
+./randsent GRAMMAR.gr (#) (-t)
+
     2 ripe avocados
     1/2 teaspoon Kosher salt
     1 Tbsp of fresh lime juice or lemon juice

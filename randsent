@@ -1,0 +1,104 @@
+#!/usr/bin/env python2
+
+import argparse
+import random
+import collections #named tuples
+import re
+
+# Parse arguments.  You should not need to modify this.
+parser = argparse.ArgumentParser()
+parser.add_argument("grammar", help="path to grammar file")
+parser.add_argument("count", type=int, help="number of sentences to generate", nargs='?', default=1)
+parser.add_argument("-t", "--tree", action='store_true', help="pretty-print tree form instead of printing sentence")
+parser.add_argument("--seed", type=int, default=0, help="RNG seed")
+args = parser.parse_args()
+
+# Create a random generator.
+rng = random.Random(args.seed)
+
+# Define structure of rules
+Rule = collections.namedtuple('Rule', 'w lhs rhs')
+d = {} #empty dictionary to store named rules
+
+# Read in grammar rules as named tuples stored in a dictionary
+with open(args.grammar, 'r') as grammar_file:
+    count = 0
+    for line in grammar_file:
+        #print 'count: ', count
+        #Skip if blank line or line begins with # #TODO: parentheses?
+        if (line == '\n') or line.startswith('#'): #TODO: more robust to other kinds of blank lines?
+            count+=1
+            continue
+        #Enter in rule parameters TODO: make this with regX instead of splits?
+        line = line.split("#")[0] #Do not include comments
+        weight = line.split()[0]
+        LHS = line.split()[1]
+        RHS = line[len(weight)+len(LHS)+2:] #don't include space before RHS
+        RHS = re.sub(r"[\n\t]*", "", RHS) #remove tabs and new lines
+        weight = float(weight)
+        name = "r" + str(count) #e.g., r2 for a rule originating from line 2 in file
+        d[name] = Rule(weight, LHS, RHS) #add to dictionary
+        count+=1
+
+#print d
+# print d['r2'].rhs
+
+# Generate random sentences
+for i in range(0,args.count): #for each sentence
+    # Search string S for a nonterminal (LHS) matching in dictionary keys
+    S = 'START' #initial string
+    S_tree = '(START)' #initial tree string
+    while any(re.search(d[key].lhs+r"\b", S) is not None for key in d):
+        for key in d:
+            candR = [] #candidate rules
+            #print 'key/lhs: ', d[key].lhs
+            #print 'sentence to look for match: ', S
+            if re.search(d[key].lhs+r"\b", S) is not None:
+                lhs0 = d[key].lhs
+                key0 = key
+                candR.append(key0) #add as candidate rule
+                for k in d:
+                    if k == key0:
+                        continue
+                    if d[k].lhs == lhs0:
+                        candR.append(k) #add as candidate rule
+                #print 'candidate rules: ', candR
+                # Randomly choose one of candidate rules according to weights
+                rnum = random.random() #TODO: seed?
+                sumW = 0
+                for r in candR:
+                    sumW += d[r].w
+                k = [0]
+                i = 1
+                for r in candR:
+                    k_new = d[r].w/sumW + k[i-1]
+                    k.append(k_new)
+                    i+=1
+                #print 'k: ', k
+                #print 'rnum = ', rnum
+                for i in range(1,len(k)):
+                    if rnum < k[i]:
+                        winR = candR[i-1] #winning rule
+                        break
+                # Replace lhs0 in S with rhs0
+                rhs0 = d[winR].rhs
+                #print 'lhs: ', lhs0, ' rhs: ', rhs0
+                S = re.sub(lhs0+r"\b", rhs0, S, count=1) #replace at most 1 occurence (the first)
+                # Tree
+                if any(re.search(d[key].lhs+r"\b", rhs0) is not None for key in d): #if any rhs0 word is also a lhs in a rule, use parentheses
+                    rhs0_list = rhs0.split() #split at word boundaries into list of words
+                    rhs0_words = "("+rhs0_list[0]+")" #string that will be added to tree, e.g., NP (Det) (Noun) for NP -> Det Noun
+                    for i in range(1,len(rhs0_list)):
+                        if any(re.search(d[key].lhs+r"\b", rhs0_list[i]) is not None for key in d):
+                            rhs0_words += " " + "("+rhs0_list[i]+")"
+                        else:
+                            rhs0_words += " " + rhs0_list[i] #so we don't add parentheses around, e.g., punctuation
+                    S_tree = re.sub(lhs0+r"\b\)", lhs0+r" "+rhs0_words+r")", S_tree, count=1)
+                else:
+                    S_tree = re.sub(lhs0+r"\b\)", lhs0+r" "+rhs0+r")", S_tree, count=1)
+                #print 'tempS: ', S
+    if args.tree is True:
+        print S
+        print S_tree
+    else:
+        print S
