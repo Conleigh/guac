@@ -5,19 +5,37 @@
 # S2 is the start symbol of the markov grammar that is the default fallback.
 99	START	S1
 1	START	S2
-# This is a very, very, very simple grammar to get you started.
 
-1	S1 NP VP .
 
+1 S1 NP VP
+1 S1 NP-pl VP-pl
+1 S1 GP VP .
+1 VP VP PP
 1	VP VerbT NP
+1	VP VerbI
+.3 VP VerbC CC
+1 VP-pl VP-pl PP
+1	VP-pl VerbT-pl NP-pl
+1	VP-pl VerbI-pl
+.3 VP-pl VerbC-pl CC
+2	NP Det Noun
+.2 NP NP PP
+.3 NP Noun
+2	NP-pl Det Noun-pl
+.2 NP-pl NP-pl PP
+.3 NP-pl Noun-pl
+1	PP Prep NP
+1	PP Prep NP-pl
+2	Noun JJ Noun
+2	Noun-pl JJ Noun-pl
+1 CC Comp S1
+1 GP VerbG PP
+1 GP VerbG
 
-20	NP	Det Nbar
-1	NP	Proper
-
-20	Nbar	Noun
-1	Nbar	Nbar PP
-
-1	PP	Prep NP
+#1   Be-conj is
+#1   Be-conj was
+#1   Be-conj Modals be
+#1   Be-conj Modals have been #can have been?
 # This is a hand-generated set of preterminal rules.
 # It specifies a simple tag set which will be handled by the S2
 # grammar and which can (though doesn't necessarily need to be)
@@ -28,31 +46,6 @@
 
 # Miscellaneous items that don't fit into any of our simple tags are
 # given to Misc.  You will want to develop your own tags for these!
-
-
-# Singular and mass nouns.  Notice that only the
-# ones that start with consonants get our Noun tag.
-1	Noun	castle
-1	Noun	king
-1	Noun	defeater
-1	Noun	sovereign
-1	Noun	servant
-1	Noun	corner
-1	Noun	land
-1	Noun	quest
-1	Noun	chalice
-1	Noun	master
-1	Noun	horse
-1	Noun	fruit
-1	Noun	swallow
-1	Noun	sun
-1	Noun	winter
-1	Noun	coconut
-1	Noun	pound
-1	Noun	husk
-1	Noun	home
-1	Noun	weight
-1	Noun	story
 
 # Determiners.
 1	Det	a
@@ -81,6 +74,166 @@
 1	Prep	through
 1	Prep	with
 
+###ADJECTIVES#################################################################
+
+# Adjectives.
+1	JJ	weary
+1	JJ	bloody
+1	JJ	unable
+1	JJ	trusty
+1	JJ	further
+1	JJ	sacred
+1	JJ	tropical
+1	JJ	indigenous
+1	JJ	temperate
+1	JJ	hot
+1	JJ	lucky
+1	JJ	simple
+1	JJ	tiny
+1	JJ	hard
+1	JJ	sensational
+1	JJ	comparable
+1	JJ	angolian
+1	JJ	yellow
+1	JJ	plodding
+
+# Comparative adjectives.
+1	JJcomp	bloodier
+1	JJcomp	wearier
+1	JJcomp	trustier
+1	JJcomp	hotter
+1	JJcomp	simpler
+1	JJcomp	tinier
+1	JJcomp	harder
+
+# Superlative adjectives.
+1	JJsup	bloodiest
+1	JJsup	weariest
+1	JJsup	trustiest
+1	JJsup	hottest
+1	JJsup	simplest
+1	JJsup	tiniest
+1	JJsup	hardest
+
+###VERBS#####################################################
+
+#TODO: Special verbs that require certain prepositions afterwards
+#e.g., "migrates to"?
+
+# Verbs (third person singular present).
+# Note that only transitive verbs get our VerbT tag,
+# and some of those could also function as intransitives!
+1	VerbT has
+1	VerbT covers
+1	VerbT drinks
+1	VerbT	carries
+1	VerbT	rides
+1	VerbT	grows
+1 VerbT suggests
+1	VerbT	knows
+
+#Verbs followed by complementizer
+1	VerbC	suggests
+1	VerbC	knows
+
+#Verbs (third person singular present) - Intransitive
+1	VerbI drinks
+1	VerbI rides
+1	VerbI	speaks
+1	VerbI	grows
+1	VerbI	goes
+1	VerbI	migrates
+1	VerbI	knows
+
+# Verbs (present, plural, third person).
+1	VerbT-pl	have
+1	VerbT-pl	speak
+1	VerbT-pl	cover
+1	VerbT-pl	ride
+1	VerbT-pl	drink
+1	VerbT-pl	grow
+1	VerbT-pl carry
+1	VerbT-pl	suggest
+1	VerbT-pl	know
+
+# Verbs (present, plural, third person). - Intransitive
+#TODO: why are they missing "go"? "Goes" exists...
+1	VerbI-pl have
+1	VerbI-pl drink
+1	VerbI-pl ride
+1	VerbI-pl	speak
+1	VerbI-pl	grow
+1	VerbI-pl	migrate
+1	VerbI-pl	know
+
+#Verbs followed by complementizer
+1	VerbC-pl	suggest
+1	VerbC-pl	know
+
+# Copula
+1	VCop is
+1 VCop was
+1	VCop-pl	are
+
+#SPECIAL #TODO
+1	Misc	had #had been etc.
+1	Misc	been
+1	Misc	being #is being drunk; is being JJ
+
+# Verbs (base form) (infinitive)
+1	Vinf	have
+1	Vinf	speak
+1	Vinf	cover
+1	Vinf	be
+1	Vinf	ride
+1	Vinf	drink
+1	Vinf	grow
+1	Vinf	carry
+1	Vinf	suggest
+1	Vinf	migrate
+1	Vinf	know
+
+# Verbs (past tense).
+1	VerbT-p	had
+1	VerbT-p	spoke
+1	VerbT-p	covered
+1	VerbT-p	were
+1	VerbT-p	rode
+1	VerbT-p	drank
+1	VerbT-p	grew
+1	VerbT-p	carried
+1	VerbT-p suggested
+1	VerbT-p	migrated
+1	VerbT-p	knew
+
+# Verbs (present participles). G for gerud, although not always strictly a gerund
+1	VerbG	having
+1	VerbG	speaking
+1	VerbG	covering
+1	VerbG	riding
+1	VerbG	drinking
+1	VerbG	growing
+1	VerbG	carrying
+1	VerbG	migrating
+1	VerbG	knowing
+
+#Gerund with complentizer that
+#"is/was knowing that" ungrammatical
+1 VerbGC suggesting
+
+# Verbs (past participle).
+1	Verb-pp	spoken #TODO: special "to"
+1	Verb-pp	covered
+1	Verb-pp	ridden
+1	Verb-pp	drunk
+1	Verb-pp	grown
+1	Verb-pp	carried
+1	Verb-pp	suggested
+1	Verb-pp	migrated
+1	Verb-pp	known
+
+###NOUNS############################################################
+
 # Proper nouns.  Note that our Proper tag is just for people.
 1	Proper	Arthur
 1	Proper	Guinevere
@@ -91,118 +244,41 @@
 1	Proper	Patsy
 1	Proper	Uther Pendragon
 
-# Verbs (third person singular present).
-# Note that only transitive verbs get our VerbT tag,
-# and some of those could also function as intransitives!
-1	VerbT	has
-1	VerbT	covers
-1	VerbT	is
-1	VerbT	drinks
-1	VerbT	carries
-1	VerbT	rides
-
-# End-of-sentence.
-1	Misc	!
-1	Misc	.
-1	Misc	?
-
-# Pauses.
-1	Misc	,
-1	Misc	...
-1	Misc	--
-1	Misc	;
-1	Misc	:
-
-# Coordinating conjunctions.
-1	Misc	and
-1	Misc	but
-1	Misc	or
-1	Misc	either
-1	Misc	nor
-1	Misc	neither
-1	Misc	so
-
-# Numbers.
-1	Misc	eight
-1	Misc	five
-1	Misc	one
-1	Misc	5.5
-1	Misc	sixty
-1	Misc	5,000
-
-# Expletive.
-1	Misc	there
-
-# Subordinating conjunctions.
-1	Misc	that
-1	Misc	so
-1	Misc	while
-1	Misc	because
-1	Misc	if
-
-# Modals.
-1	Misc	can
-1	Misc	could
-1	Misc	may
-1	Misc	might
-1	Misc	must
-1	Misc	ought
-1	Misc	shall
-1	Misc	should
-1	Misc	will
-1	Misc	would
-
-
-# Adjectives.
-1	Misc	bloody
-1	Misc	weary
-1	Misc	unable
-1	Misc	trusty
-1	Misc	further
-1	Misc	sacred
-1	Misc	tropical
-1	Misc	indigenous
-1	Misc	temperate
-1	Misc	hot
-1	Misc	lucky
-1	Misc	simple
-1	Misc	tiny
-1	Misc	hard	
-1	Misc	sensational
-1	Misc	comparable
-1	Misc	angolian
-1	Misc	yellow
-1	Misc	plodding
-
-# Comparative adjectives.
-1	Misc	bloodier
-1	Misc	wearier
-1	Misc	trustier
-1	Misc	hotter
-1	Misc	simpler
-1	Misc	tinier
-1	Misc	harder
-
-# Superlative adjectives.
-1	Misc	bloodiest
-1	Misc	weariest
-1	Misc	trustiest
-1	Misc	hottest
-1	Misc	simplest
-1	Misc	tiniest
-1	Misc	hardest
+# Singular and mass nouns.  Notice that only the
+# ones that start with consonants get our Noun tag.
+1	Noun	castle
+1	Noun	king
+1	Noun	defeater
+1	Noun	sovereign
+1	Noun	servant
+1	Noun	corner
+1	Noun	land
+1	Noun	quest
+1	Noun	chalice
+1	Noun	master
+1	Noun	horse
+1	Noun	fruit
+1	Noun	swallow
+1	Noun	sun
+1	Noun	winter
+1	Noun	coconut
+1	Noun	pound
+1	Noun	husk
+1	Noun	home
+1	Noun	weight
+1	Noun	story
 
 # Plural nouns.
-1	Misc	coconuts
-1	Misc	halves
-1	Misc	snows
-1	Misc	mountains
-1	Misc	areas
-1	Misc	strangers
-1	Misc	inches
-1	Misc	snakes
-1	Misc	ants
-1	Misc	nights
+1	Noun-pl	coconuts
+1	Noun-pl	halves
+1	Noun-pl	snows
+1	Noun-pl	mountains
+1	Noun-pl	areas
+1	Noun-pl	strangers
+1	Noun-pl	inches
+1	Noun-pl	snakes
+1	Noun-pl	ants
+1	Noun-pl	nights
 
 # More proper nouns, not people.
 
@@ -225,6 +301,69 @@
 1	Misc	them
 1	Misc	they
 
+####################################################################
+
+###OTHER################################################################
+
+# End-of-sentence.
+1	Misc	!
+1	Misc	.
+1	Misc	?
+
+# Pauses.
+1	Misc	,
+1	Misc	...
+1	Misc	--
+1	Misc	;
+1	Misc	:
+
+
+# Coordinating conjunctions, sentence-level
+1 Conj and
+1 Conj but
+
+# Coordinating conjunctions, NP/VP-level
+1 conj and
+
+# Coordinating conjunctions.
+1	Misc	or
+1	Misc	either
+1	Misc	nor
+1	Misc	neither
+1	Misc	so
+
+# Numbers.
+1	Misc	eight
+1	Misc	five
+1	Misc	one
+1	Misc	5.5
+1	Misc	sixty
+1	Misc	5,000
+
+# Expletive.
+1	Misc	there
+
+# Complementizers
+1 Comp that
+
+# Subordinating conjunctions.
+1	Misc	that
+1	Misc	so
+1	Misc	while
+1	Misc	because
+1	Misc	if
+
+# Modals.
+1	Misc	can
+1	Misc	could
+1	Misc	may
+1	Misc	might
+1	Misc	must
+1	Misc	ought
+1	Misc	shall
+1	Misc	should
+1	Misc	will
+1	Misc	would
 
 # Possessive personal pronouns
 1	Misc	her
@@ -252,80 +391,6 @@
 # 'not'
 1	Misc	not
 
-# Verbs (base form).
-1	Misc	have
-1	Misc	speak
-1	Misc	cover
-1	Misc	be
-1	Misc	ride
-1	Misc	drink
-1	Misc	grow
-1	Misc	carry
-1	Misc	suggest
-1	Misc	migrate
-1	Misc	know
-
-# Verbs (past tense).
-1	Misc	had
-1	Misc	spoke
-1	Misc	covered
-1	Misc	was
-1	Misc	were
-1	Misc	rode
-1	Misc	drank
-1	Misc	grew
-1	Misc	carried
-1	Misc	suggested
-1	Misc	migrated
-1	Misc	knew
-
-# Verbs (present participles).
-1	Misc	having
-1	Misc	speaking
-1	Misc	covering
-1	Misc	being
-1	Misc	riding
-1	Misc	drinking
-1	Misc	growing
-1	Misc	carrying
-1	Misc	suggesting
-1	Misc	migrating
-1	Misc	knowing
-
-# Verbs (past participle).
-1	Misc	had
-1	Misc	spoken
-1	Misc	covered
-1	Misc	been
-1	Misc	ridden
-1	Misc	drunk
-1	Misc	grown
-1	Misc	carried
-1	Misc	suggested
-1	Misc	migrated
-1	Misc	known
-
-# More third person singular verbs.
-1	Misc	speaks
-1	Misc	grows
-1	Misc	goes
-1	Misc	migrates
-1	Misc	suggests
-1	Misc	knows
-
-# Verbs (present, plural, third person).
-1	Misc	have
-1	Misc	speak
-1	Misc	cover
-1	Misc	are
-1	Misc	ride
-1	Misc	drink
-1	Misc	grow
-1	Misc	carry
-1	Misc	suggest
-1	Misc	migrate
-1	Misc	know
-
 # Wh-determiners.
 1	Misc	that
 1	Misc	what
@@ -343,7 +408,6 @@
 1	Misc	when
 1	Misc	where
 1	Misc	why
-
 
 # Possessive marker.
 1	Misc	's
