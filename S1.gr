@@ -1,7 +1,6 @@
 
-<<<<<<< HEAD
-1 S1 NP VP
-1 S1 NP_pl VP_pl
+1 S1 NP VP .
+1 S1 NP_pl VP_pl .
 1 S1 GP VP .
 1 VP VP PP
 1	VP VerbT NP
