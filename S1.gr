@@ -19,7 +19,7 @@
 1	PP Prep NP_pl
 2	Noun JJ Noun
 2	Noun_pl JJ Noun_pl
-1 CC Comp S1
+1 CC Comp S1 #TODO: fix so that no double ..
 1 GP VerbG PP
 1 GP VerbG
 
