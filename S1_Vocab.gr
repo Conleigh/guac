@@ -272,6 +272,22 @@
 1	Misc	migrating
 1	Misc	knowing
 
+#Gerunds_transport (not of)
+1   G_tr    riding
+1   G_tr    migrating
+
+#Gerunds no direct object (not )
+1   G_nodo  growing 
+1   G_nodo  covering
+1   G_nodo  carrying
+1   G_nodo  drinking
+
+
+
+#Gerund with that
+1   G_that  knowing
+1   G_that  suggesting
+
 # Verbs (past participle).
 1	Misc	had
 1	Misc	spoken
