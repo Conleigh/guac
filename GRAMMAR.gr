@@ -6,37 +6,38 @@
 99	START	S1
 1	START	S2
 
-
-1 S1 NP VP
-1 S1 NP-pl VP-pl
+1 S1 NP VP .
+1 S1 NP_pl VP_pl .
 1 S1 GP VP .
+1 S NP VP
+1 S NP_pl VP_pl
+1 S GP VP
 1 VP VP PP
 1	VP VerbT NP
 1	VP VerbI
 .3 VP VerbC CC
-1 VP-pl VP-pl PP
-1	VP-pl VerbT-pl NP-pl
-1	VP-pl VerbI-pl
-.3 VP-pl VerbC-pl CC
+1 VP_pl VP_pl PP
+1	VP_pl VerbT_pl NP_pl
+1	VP_pl VerbI_pl
+.3 VP_pl VerbC_pl CC
 2	NP Det Noun
 .2 NP NP PP
 .3 NP Noun
-2	NP-pl Det Noun-pl
-.2 NP-pl NP-pl PP
-.3 NP-pl Noun-pl
+.2 NP_pl NP_pl PP
+.3 NP_pl Noun_pl
 1	PP Prep NP
-1	PP Prep NP-pl
+1	PP Prep NP_pl
 2	Noun JJ Noun
-2	Noun-pl JJ Noun-pl
-1 CC Comp S1
+2	Noun_pl JJ Noun_pl
+1 CC Comp S 
 1 GP VerbG PP
 1 GP VerbG
 
-#1   Be-conj is
-#1   Be-conj was
-#1   Be-conj Modals be
-#1   Be-conj Modals have been #can have been?
-# This is a hand-generated set of preterminal rules.
+#1   Be_conj is
+#1   Be_conj was
+#1   Be_conj Modals be
+#1   Be_conj Modals have been #can have been?
+# This is a hand_generated set of preterminal rules.
 # It specifies a simple tag set which will be handled by the S2
 # grammar and which can (though doesn't necessarily need to be)
 # handled by the S1 grammar.
@@ -47,7 +48,7 @@
 # Miscellaneous items that don't fit into any of our simple tags are
 # given to Misc.  You will want to develop your own tags for these!
 
-# Determiners.
+# Determiners. Note these are all for singular Nouns.
 1	Det	a
 1	Det	another
 1	Det	any
@@ -136,7 +137,7 @@
 1	VerbC	suggests
 1	VerbC	knows
 
-#Verbs (third person singular present) - Intransitive
+#Verbs (third person singular present) _ Intransitive
 1	VerbI drinks
 1	VerbI rides
 1	VerbI	speaks
@@ -146,34 +147,34 @@
 1	VerbI	knows
 
 # Verbs (present, plural, third person).
-1	VerbT-pl	have
-1	VerbT-pl	speak
-1	VerbT-pl	cover
-1	VerbT-pl	ride
-1	VerbT-pl	drink
-1	VerbT-pl	grow
-1	VerbT-pl carry
-1	VerbT-pl	suggest
-1	VerbT-pl	know
+1	VerbT_pl	have
+1	VerbT_pl	speak
+1	VerbT_pl	cover
+1	VerbT_pl	ride
+1	VerbT_pl	drink
+1	VerbT_pl	grow
+1	VerbT_pl carry
+1	VerbT_pl	suggest
+1	VerbT_pl	know
 
-# Verbs (present, plural, third person). - Intransitive
+# Verbs (present, plural, third person). _ Intransitive
 #TODO: why are they missing "go"? "Goes" exists...
-1	VerbI-pl have
-1	VerbI-pl drink
-1	VerbI-pl ride
-1	VerbI-pl	speak
-1	VerbI-pl	grow
-1	VerbI-pl	migrate
-1	VerbI-pl	know
+1	VerbI_pl have
+1	VerbI_pl drink
+1	VerbI_pl ride
+1	VerbI_pl	speak
+1	VerbI_pl	grow
+1	VerbI_pl	migrate
+1	VerbI_pl	know
 
 #Verbs followed by complementizer
-1	VerbC-pl	suggest
-1	VerbC-pl	know
+1	VerbC_pl	suggest
+1	VerbC_pl	know
 
 # Copula
 1	VCop is
 1 VCop was
-1	VCop-pl	are
+1	VCop_pl	are
 
 #SPECIAL #TODO
 1	Misc	had #had been etc.
@@ -194,17 +195,17 @@
 1	Vinf	know
 
 # Verbs (past tense).
-1	VerbT-p	had
-1	VerbT-p	spoke
-1	VerbT-p	covered
-1	VerbT-p	were
-1	VerbT-p	rode
-1	VerbT-p	drank
-1	VerbT-p	grew
-1	VerbT-p	carried
-1	VerbT-p suggested
-1	VerbT-p	migrated
-1	VerbT-p	knew
+1	VerbT_p	had
+1	VerbT_p	spoke
+1	VerbT_p	covered
+1	VerbT_p	were
+1	VerbT_p	rode
+1	VerbT_p	drank
+1	VerbT_p	grew
+1	VerbT_p	carried
+1	VerbT_p suggested
+1	VerbT_p	migrated
+1	VerbT_p	knew
 
 # Verbs (present participles). G for gerud, although not always strictly a gerund
 1	VerbG	having
@@ -222,27 +223,27 @@
 1 VerbGC suggesting
 
 # Verbs (past participle).
-1	Verb-pp	spoken #TODO: special "to"
-1	Verb-pp	covered
-1	Verb-pp	ridden
-1	Verb-pp	drunk
-1	Verb-pp	grown
-1	Verb-pp	carried
-1	Verb-pp	suggested
-1	Verb-pp	migrated
-1	Verb-pp	known
+1	Verb_pp	spoken #TODO: special "to"
+1	Verb_pp	covered
+1	Verb_pp	ridden
+1	Verb_pp	drunk
+1	Verb_pp	grown
+1	Verb_pp	carried
+1	Verb_pp	suggested
+1	Verb_pp	migrated
+1	Verb_pp	known
 
 ###NOUNS############################################################
 
 # Proper nouns.  Note that our Proper tag is just for people.
-1	Proper	Arthur
-1	Proper	Guinevere
-1	Proper	Sir Lancelot
-1	Proper	Sir Bedevere
-1	Proper	Zoot
-1	Proper	Dingo
-1	Proper	Patsy
-1	Proper	Uther Pendragon
+1	Proper_ppl	Arthur
+1	Proper_ppl	Guinevere
+1	Proper_ppl	Sir Lancelot
+1	Proper_ppl	Sir Bedevere
+1	Proper_ppl	Zoot
+1	Proper_ppl	Dingo
+1	Proper_ppl	Patsy
+1	Proper_ppl	Uther Pendragon
 
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.
@@ -269,16 +270,16 @@
 1	Noun	story
 
 # Plural nouns.
-1	Noun-pl	coconuts
-1	Noun-pl	halves
-1	Noun-pl	snows
-1	Noun-pl	mountains
-1	Noun-pl	areas
-1	Noun-pl	strangers
-1	Noun-pl	inches
-1	Noun-pl	snakes
-1	Noun-pl	ants
-1	Noun-pl	nights
+1	Noun_pl	coconuts
+1	Noun_pl	halves
+1	Noun_pl	snows
+1	Noun_pl	mountains
+1	Noun_pl	areas
+1	Noun_pl	strangers
+1	Noun_pl	inches
+1	Noun_pl	snakes
+1	Noun_pl	ants
+1	Noun_pl	nights
 
 # More proper nouns, not people.
 
@@ -305,7 +306,7 @@
 
 ###OTHER################################################################
 
-# End-of-sentence.
+# End_of_sentence.
 1	Misc	!
 1	Misc	.
 1	Misc	?
@@ -313,16 +314,16 @@
 # Pauses.
 1	Misc	,
 1	Misc	...
-1	Misc	--
+1	Misc	__
 1	Misc	;
 1	Misc	:
 
 
-# Coordinating conjunctions, sentence-level
+# Coordinating conjunctions, sentence_level
 1 Conj and
 1 Conj but
 
-# Coordinating conjunctions, NP/VP-level
+# Coordinating conjunctions, NP/VP_level
 1 conj and
 
 # Coordinating conjunctions.
@@ -382,32 +383,32 @@
 1	Misc	unfortunately
 
 # 'do'/'does'
-1	Misc	do
-1	Misc	does
+1	'do'	do
+1	'does'	does
 
 # 'to'
-1	Misc	to
+1	'to'	to
 
 # 'not'
 1	Misc	not
 
-# Wh-determiners.
+# Wh_determiners.
 1	Misc	that
 1	Misc	what
 1	Misc	which
 
-# Wh-pronouns.
-1	Misc	what
-1	Misc	who
+# Wh_pronouns.
+1	Wh_pronouns	what
+1	Wh_pronouns	who
 
 # Wh possessive pronoun.
 1	Misc	whose
 
-# Wh-adverbs
-1	Misc	how
-1	Misc	when
-1	Misc	where
-1	Misc	why
+# Wh_adverbs
+1	Wh_adverbs	how
+1	Wh_adverbs	when
+1	Wh_adverbs	where
+1	Wh_adverbs	why
 
 # Possessive marker.
 1	Misc	's
