@@ -17,7 +17,6 @@
 1 SubjP PRP_subj Vinf 
 1 SubjP PRP_subj_pl Vinf
 
-
 #Need to add a Vinf phrase 
 
 1 Q Q_do
@@ -42,12 +41,16 @@
 
 1 VP_inf_ext V_inf_1 NP
 
-1 Q_subjunct Is_p subj
-1 Is_p 
+1 Q_subjunct Is_p 
+1 Is_p VCop_pl NP_pl
 
+1 NP_pl PRP_subj_pl PPP 
+
+1 PPP Verb_pp
+1 PPP VerbGC SubjP
 
 1 VP_inf Vinf
-1 VP_inf VP_inf PP
+0.2 VP_inf VP_inf PP
 
 1 VP_pl VP_pl PP
 1	VP_pl VerbT_pl NP_pl

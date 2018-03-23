@@ -119,7 +119,7 @@
 1	VerbT_pl    carry
 1	VerbT_pl	suggest
 1	VerbT_pl	know
-1 VerbT_pl are
+1   VerbT_pl are
 
 # Verbs (present, plural, third person). _ Intransitive
 #TODO: why are they missing "go"? "Goes" exists...
