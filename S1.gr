@@ -5,7 +5,7 @@
 1 S GP VP
 
 #Interrogative sentences
-#1 S1 Q ?
+1 S1 Q ?
 
 #Verb basics
 1 VP VP PP
@@ -94,37 +94,37 @@
 
 
 ####MOSTLY ALEX STUFF
-# 1 Q Q_do
-# 1 Q Q_wh
-# 1 Q Q_is
-#
-# 1 Q_wh Wh_pronouns Q_do
-# 1 Q_wh Wh_adverbs Q_do
-#
-# 1 Q_do do_sing Vinf_Cl #e.g. does the coconut drink ?
-# 1 Q_do do_pl Vinf_Cl_pl #e.g. do coconuts drink ?
-# 1 Q_do do_sing InfP #e.g. does arthur suggest she drink ?
-#
-# 1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
-# #1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
-#
-# 1 Vinf_Cl NP VinfP
-# 1 Vinf_Cl_pl NP_pl VinfP
-# 1 Vinf_Cl_subjunct Vinf_subjunct Vinf_Cl
-#
-# 1 VinfP Vinf
-# 1 VinfP VinfP PP
-#
-# 1 VP_inf_ext V_inf_1 NP
-#
-# 1 Q_is Is_phrase_pl PresPP
-# 1 Q_is Is_phrase PresPP
-#
-# 1 Is_phrase VCop PRP_subj
-# 1 Is_phrase_pl VCop_pl PRP_subj_pl
-#
-# 1 PresPP VerbG
-# 1 PresPP VerbGC Vinf_Cl
-# 1 InfP Vinf_subjunct Vinf_CL
+ 1 Q Q_do
+ 1 Q Q_wh
+ 1 Q Q_is
+
+ 1 Q_wh Wh_pronouns Q_do
+ 1 Q_wh Wh_adverbs Q_do
+
+ 1 Q_do do_sing Vinf_Cl #e.g. does the coconut drink ?
+ 1 Q_do do_pl Vinf_Cl_pl #e.g. do coconuts drink ?
+ 1 Q_do do_sing InfP #e.g. does arthur suggest she drink ?
+
+ 1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
+ 1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
+
+ 1 Vinf_Cl NP VinfP
+ 1 Vinf_Cl_pl NP_pl VinfP
+ 1 Vinf_Cl_subjunct Vinf_subjunct Vinf_Cl
+
+ 1 VinfP Vinf
+ 1 VinfP VinfP PP
+
+ 1 VP_inf_ext V_inf_1 NP
+
+ 1 Q_is Is_phrase_pl PresPP
+ 1 Q_is Is_phrase PresPP
+
+ 1 Is_phrase VCop PRP_subj
+ 1 Is_phrase_pl VCop_pl PRP_subj_pl
+
+ 1 PresPP VerbG
+ 1 PresPP VerbGC Vinf_Cl
+ 1 InfP Vinf_subjunct Vinf_CL
 
 ## END OF ALEX STUFF
