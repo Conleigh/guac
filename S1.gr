@@ -29,6 +29,11 @@
 1 Q_do do_pl Vinf_Cl_pl
 1 Q_do do_sing Vinf_Cl
 
+###
+1 Q_do do_sing Vinf_subj_Cl
+1 Vinf_subj_Cl Vinf_subj Vinf_Cl
+#1 Vinf_subj_Cl Vinf_subj Vinf_Cl_pl 
+###
 
 1 VP_inf_ext V_inf_1 NP
 
