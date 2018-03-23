@@ -12,7 +12,7 @@
 1	VP Be_conj	GP
 
 1 Q do_pl Cl_pl
-100 Q do_sing CL_sing
+100 Q do_sing Cl_sing
 
 1 Cl_pl NP_pl VP_inf
 1 Cl_sing NP_sing VP_inf
