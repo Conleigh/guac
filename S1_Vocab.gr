@@ -116,7 +116,7 @@
 1	VerbT_pl	ride
 1	VerbT_pl	drink
 1	VerbT_pl	grow
-1	VerbT_pl carry
+1	VerbT_pl    carry
 1	VerbT_pl	suggest
 1	VerbT_pl	know
 1 VerbT_pl are
@@ -157,6 +157,10 @@
 1	Vinf	suggest
 1	Vinf	migrate
 1	Vinf	know
+
+# Subjunctive - see https://www.englishpage.com/minitutorials/subjunctive.html
+# also might be used to trip up other teams
+1   Vinf_subj suggest
 
 
 # Verbs (past tense).
@@ -258,14 +262,14 @@
 1	Misc	Saxons
 
 # Personal pronouns.
-1	Misc	he
-1	Misc	her
-1	Misc	him
-1	Misc	it
-1	Misc	one
-1	Misc	she
-1	Misc	them
-1	Misc	they
+1	PRP	he
+1	PRP	her
+1	PRP	him
+1	PRP	it
+1	PRP	one
+1	PRP	she
+1	PRP	them
+1	PRP	they
 
 ####################################################################
 
