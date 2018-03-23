@@ -15,6 +15,7 @@
 1	Det	any
 1	Det	each
 1	Det	every
+1	Det one # Is one a determiner? Might make more sense than number.
 1	Det	no
 1	Det	that
 1	Det	the
@@ -353,8 +354,8 @@
 
 1	Proper	Camelot
 1	Proper	England
-1	Proper	Holy Grail
-1	Proper	Round Table
+1	Proper	the Holy Grail
+1	Proper	the Round Table
 
 # Plural proper nouns.
 1	Misc	Britons
@@ -418,12 +419,12 @@
 1	Misc	so
 
 # Numbers.
-1	Misc	eight
-1	Misc	five
-1	Misc	one
-1	Misc	5.5
-1	Misc	sixty
-1	Misc	5,000
+1	Number	eight
+1	Number	five
+#1	Number	one # Might be a det instead of number - would need special case for not plural 
+1	Number	5.5
+1	Number	sixty
+1	Number	5,000
 
 # Expletive.
 1	Misc	there

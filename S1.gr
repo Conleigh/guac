@@ -68,6 +68,7 @@
 #Basic NP plural (note all Dets in Vocab are sing)
 .1 NP_pl NP_pl PP
 1 NP_pl Noun_pl
+1 NP_pl Number Noun_pl
 
 #Basic PP
 1	PP Prep NP
