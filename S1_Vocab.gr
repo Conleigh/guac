@@ -83,6 +83,55 @@
 #TODO: Special verbs that require certain prepositions afterwards
 #e.g., "migrates to"?
 
+######################TODO############
+
+
+#TODO: break up Vinf to I and T forms and others as needed
+# Verbs (base form) (infinitive)
+1	Vinf	have
+1	Vinf	speak #TODO weird with what questions: (what does arthur speak) but might be fine (e.g. what language does arthur speak)
+1	Vinf	cover
+1	Vinf	be #TODO this is weird in questions (does arthur be? do coconuts be?)
+1	Vinf	ride
+1	Vinf	drink
+1	Vinf	grow
+1	Vinf	carry
+1	Vinf	suggest
+1	Vinf	migrate
+1	Vinf	know
+
+# Subjunctive - see https://www.englishpage.com/minitutorials/subjunctive.html
+# also might be used to trip up other teams
+1 Vinf_subjunct suggest
+
+# Subjunctive ()
+
+# Verbs (infinite) (one argument)
+1 V_inf_1 have
+1 V_inf_1 cover
+1 V_inf_1 ride
+1 _inf_1 drink
+1 V_inf_1 grow
+1 V_inf_1 caryy
+1 V_inf_1 suggest
+1 V_inf_1 migrate
+1 V_inf_1 know
+###################### End TODO############
+
+# Copula
+1	VCop is
+1 VCop_p was
+1	VCop_pl	are
+1	VCop_pl_p	were
+
+#SPECIAL #TODO
+1	Misc	had #had been etc.
+1 Misc has
+1 Misc have
+1	Misc	been
+1	Misc	being #is being drunk; is being JJ
+1 Misc be
+
 # Verbs (third person singular present).
 # Note that only transitive verbs get our VerbT tag,
 # and some of those could also function as intransitives!
@@ -123,7 +172,6 @@
 
 # Verbs (present, plural, third person). _ Intransitive
 #TODO: why are they missing "go"? "Goes" exists...
-1	VerbI_pl have
 1	VerbI_pl drink
 1	VerbI_pl ride
 1	VerbI_pl	speak
@@ -131,56 +179,15 @@
 1	VerbI_pl	migrate
 1	VerbI_pl	know
 
-#Verbs followed by complementizer
+#Verbs followed by complementizer - pres pl
 1	VerbC_pl	suggest
 1	VerbC_pl	know
 
-# Copula
-1	VCop is
-1 VCop was
-1	VCop_pl	are
-
-#SPECIAL #TODO
-1	Misc	had #had been etc.
-1	Misc	been
-1	Misc	being #is being drunk; is being JJ
-
-# Verbs (base form) (infinitive)
-1	Vinf	have
-1	Vinf	speak #TODO weird with what questions: (what does arthur speak) but might be fine (e.g. what language does arthur speak)
-1	Vinf	cover
-1	Vinf	be #TODO this is weird in questions (does arthur be? do coconuts be?)
-1	Vinf	ride
-1	Vinf	drink
-1	Vinf	grow
-1	Vinf	carry
-1	Vinf	suggest
-1	Vinf	migrate
-1	Vinf	know
-
-# Subjunctive - see https://www.englishpage.com/minitutorials/subjunctive.html
-# also might be used to trip up other teams
-1   Vinf_subjunct suggest
-
-# Subjunctive ()
-
-# Verbs (infinite) (one argument)
-1   V_inf_1 have
-1   V_inf_1 cover
-1   V_inf_1 ride
-1   V_inf_1 drink
-1   V_inf_1 grow
-1   V_inf_1 caryy
-1   V_inf_1 suggest
-1   V_inf_1 migrate
-1   V_inf_1 know
-
-
-# Verbs (past tense).
+# Verbs (past tense). Transitive - sing
+1	VerbT_p	was
 1	VerbT_p	had
 1	VerbT_p	spoke
 1	VerbT_p	covered
-1	VerbT_p	were
 1	VerbT_p	rode
 1	VerbT_p	drank
 1	VerbT_p	grew
@@ -189,7 +196,44 @@
 1	VerbT_p	migrated
 1	VerbT_p	knew
 
-# Verbs (present participles). G for gerud, although not always strictly a gerund
+# Verbs (past tense). Transitive - pl
+1	VerbT_pl_p	were
+1	VerbT_pl_p	had
+1	VerbT_pl_p	spoke
+1	VerbT_pl_p	covered
+1	VerbT_pl_p	rode
+1	VerbT_pl_p	drank
+1	VerbT_pl_p	grew
+1	VerbT_pl_p	carried
+1	VerbT_pl_p suggested
+1	VerbT_pl_p	knew
+
+# Verbs (past tense). Intransitive - sing
+1	VerbI_p	migrated
+1	VerbI_p drank
+1	VerbI_p rode
+1	VerbI_p	spoke
+1	VerbI_p	grew
+1	VerbI_p	knew
+
+# Verbs (past tense). Intransitive - pl
+1	VerbI_pl_p	migrated
+1	VerbI_pl_p drank
+1	VerbI_pl_p rode
+1	VerbI_pl_p	spoke
+1	VerbI_pl_p	grew
+1	VerbI_pl_p	knew
+
+#Verbs followed by complementizer - past sing
+1	VerbC_p	suggested
+1	VerbC_p	knew
+
+#Verbs followed by complementizer - past pl
+1	VerbC_pl_p	suggested
+1	VerbC_pl_p	knew
+
+
+# Verbs (present participles). G for gerund, although not always strictly a gerund
 1	VerbG	having
 1	VerbG	speaking
 1	VerbG	covering
