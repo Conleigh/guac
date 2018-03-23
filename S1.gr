@@ -16,9 +16,7 @@
 
 1 SubjP PRP_subj Vinf 
 1 SubjP PRP_subj_pl Vinf
-1 SubjP Vinf PP
 
-#Need to add a Vinf phrase 
 
 1 Q Q_do
 1 Q Q_wh
@@ -50,8 +48,6 @@
 
 1 PresPP VerbG
 1 PresPP VerbGC SubjP
-
-#1 NP_pl PRP_subj_pl
 
 1 VP_inf Vinf
 0.2 VP_inf VP_inf PP
