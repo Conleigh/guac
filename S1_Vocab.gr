@@ -119,18 +119,38 @@
 ###################### End TODO############
 
 # Copula
-1	VCop is
-1 VCop_p was
-1	VCop_pl	are
-1	VCop_pl_p	were
+1	BE is
+1 BE_p was
+1	BE_pl	are
+1	BE_pl_p	were
+1	BE_pp been
+1	BE_cont being #is being drunk; is being JJ
+1 BE_inf be
 
-#SPECIAL #TODO
-1	Misc	had #had been etc.
-1 Misc has
-1 Misc have
-1	Misc	been
-1	Misc	being #is being drunk; is being JJ
-1 Misc be
+# Have as auxillary
+1 HAVE has
+1 HAVE_pl have
+1	HAVE_p had
+1	HAVE_pl_p had
+
+
+# Modals.
+1	Modal	can
+1	Modal	could
+1	Modal	may
+1	Modal	might
+1	Modal	must
+1	Modal	ought to
+1	Modal	shall
+1	Modal	should
+1	Modal	will
+1	Modal	would
+
+1	'to'	to
+
+
+
+
 
 # Verbs (third person singular present).
 # Note that only transitive verbs get our VerbT tag,
@@ -244,20 +264,51 @@
 1	VerbG	migrating
 1	VerbG	knowing
 
+# Transitive
+1	VerbT_G	having
+1	VerbT_G	speaking
+1	VerbT_G	covering
+1	VerbT_G	riding
+1	VerbT_G	drinking
+1	VerbT_G	growing
+1	VerbT_G	carrying
+1	VerbT_G	knowing
+
+# Intransitive
+1	VerbI_G	migrating
+1	VerbI_G	speaking
+1	VerbI_G	riding
+1	VerbI_G	drinking
+1	VerbI_G	growing
+1 VerbI_G	knowing
+
 #Gerund with complentizer that
 #"is/was knowing that" ungrammatical
-1 VerbGC suggesting
+1 VerbG_C suggesting
 
 # Verbs (past participle).
-1	Verb_pp	spoken #TODO: special "to"
-1	Verb_pp	covered
-1	Verb_pp	ridden
-1	Verb_pp	drunk
-1	Verb_pp	grown
-1	Verb_pp	carried
-1	Verb_pp	suggested
-1	Verb_pp	migrated
-1	Verb_pp	known
+# - Transitive
+1	VerbT_pp	spoken #TODO: special "to"
+1	VerbT_pp	covered
+1	VerbT_pp	ridden
+1	VerbT_pp	drunk
+1	VerbT_pp	grown
+1	VerbT_pp	carried
+1	VerbT_pp	suggested
+1	VerbT_pp	known
+
+# - Intransitive
+1 VerbI_pp	migrated
+1	VerbI_pp	suggested
+1	VerbI_pp	known
+1	VerbI_pp	ridden
+1	VerbI_pp	drunk
+1	VerbI_pp	grown
+1	VerbI_pp	spoken
+
+# - followed by complementizer
+1	VerbC_pp	suggested
+1	VerbC_pp	known
 
 ###NOUNS############################################################
 
@@ -348,6 +399,18 @@
 
 ###OTHER################################################################
 
+# Adverbs.
+1	Adv	again
+1	Adv	already
+1	Adv	currently
+1	Adv	frequently
+1	Adv	precisely
+1	Adv	south
+1	Adv	successfully
+1	Adv	unfortunately
+
+
+
 # End_of_sentence.
 1	Misc	!
 1	Misc	.
@@ -396,35 +459,15 @@
 1	Misc	because
 1	Misc	if
 
-# Modals.
-1	Modal	can
-1	Modal	could
-1	Modal	may
-1	Modal	might
-1	Modal	must
-1	Modal	ought to
-1	Modal	shall
-1	Modal	should
-1	Modal	will
-1	Modal	would
 
 
 
-# Adverbs.
-1	Misc	again
-1	Misc	already
-1	Misc	currently
-1	Misc	frequently
-1	Misc	precisely
-1	Misc	south
-1	Misc	successfully
-1	Misc	unfortunately
 
 # 'do'/'does'
 1	do_pl	do
 1	do_sing	does
 
-# 'to'
+# 'to' #Note this is being used up in VERBS
 1	'to'	to
 
 # 'not'

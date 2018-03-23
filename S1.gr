@@ -7,58 +7,76 @@
 #Interrogative sentences
 #1 S1 Q ?
 
+###VERBS#############################################
 #Verb basics
 1 VP VP PP
 1 VP_pl VP_pl PP
 
-#Verbs - pres sing.
+#Copula - pres sing #is yellow
+1	VP BE AP
+#Copula - pres pl
+1	VP_pl BE_pl AP
+#Copula - past sing #was yellow
+1	VP BE_p AP
+#Copula - past pl
+1	VP_pl BE_pl_p AP
+
+#Copula: is being yellow - pres
+1 VP BE BE_cont AP #sing
+1 VP_pl BE_pl BE_cont AP #pl
+#was being being yellow - past
+1 VP BE_p BE_cont AP #sing
+1 VP_pl BE_pl_p BE_cont AP #pl
+
+#Copula: has been yellow
+1 VP HAVE BE_pp AP #sing
+1 VP HAVE_pl BE_pp AP #pl
+
+#Copula: has been being
+1 VP HAVE BE_pp BE_cont AP #sing
+1 VP HAVE_pl BE_pp BE_cont AP #pl
+
+#Verbs - pres sing. #he drinks
 1	VP VerbT NP
 1	VP VerbI
 .3 VP VerbC CC
-
 #Verbs - pres pl
 1	VP_pl VerbT_pl NP_pl
 1	VP_pl VerbI_pl
 .3 VP_pl VerbC_pl CC
 
-#Verbs - past sing.
+#Verbs - past sing. #he drank
 1	VP VerbT_p NP
 1	VP VerbI_p
 .3 VP VerbC_p CC
-
 #Verbs - past pl.
 1	VP VerbT_pl_p NP
 1	VP VerbI_pl_p
 .3 VP VerbC_pl_p CC
 
-#Copula - pres sing
-1	VP BE JJ
-#Copula - pres pl
-1	VP-pl BE_pl JJ
-#Copula - past sing
-1	VP BE_p JJ
-#Copula - past pl
-1	VP-pl BE_pl_p JJ
-
 #Present continuous - sing. #is drinking
-1	VP BE	GP
-#Present continuous - pl.
-1	VP-pl BE_pl	GP
-#Past continuous - sing.
-1	VP BE_p	GP
-#Past continuous - pl.
-1	VP-pl BE_pl_p	GP
+1	VP BE	GP #sing
+1	VP_pl BE_pl	GP #pl
+#Past continuous
+1	VP BE_p	GP #sing
+1	VP_pl BE_pl_p	GP #pl
 
-#Present Simple Passive #is drunk
-1 VP BE Verb_pp #sing
-1 VP BE_pl Verb_pp #pl
+#Present Simple Passive #is drunk (Note: only transitive)
+1 VP BE VerbT_pp #sing
+1 VP_pl BE_pl VerbT_pp #pl
 #Past Simple Passive
-1 VP BE_p Verb_pp #sing
-1 VP BE_pl_p Verb_pp #pl
+1 VP BE_p VerbT_pp #sing
+1 VP_pl BE_pl_p VerbT_pp #pl
 
-#Present Continuous Passive #is being drunk
+#Present Continuous Passive #is being drunk (Note: only transitive.
+1 VP BE BE_cont VerbT_pp #sing
+1 VP_pl BE_pl BE_cont VerbT_pp #pl
+#Past Continuous Passive
+1 VP BE_p BE_cont VerbT_pp #sing
+1 VP_pl BE_pl_p BE_cont VerbT_pp #pl
 
 
+###NOUNS#############################################
 
 #Basic NP
 .2 NP NP PP
@@ -73,24 +91,26 @@
 1	PP Prep NP_pl
 
 #Basic Noun
-2	Noun JJ Noun
-2	Noun_pl JJ Noun_pl
+2	Noun AP Noun
+2	Noun_pl AP Noun_pl
+
+###OTHER##############################################
+
+#Adjective phrase
+1 AP JJ
+.1 AP Adv JJ
 
 #Complementizer
 1 CC Comp S
 
 #Gerund phrases
-1 GP VerbG PP
-1 GP VerbG
-.2 GP VerbGC CC
+1 GP GP PP
+1 GP VerbT_G NP
+1 GP VerbI_G
+.2 GP VerbG_C CC
 
-#Funky copula verb things
-1 BE VCop
-1 BE_pl VCop-pl
-1 BE_p VCop_p
-1 BE_pl_p VCop_pl_p
-#1 BE Modal be #TODO add modals
-#1 BE Modal have been #TODO add modals; can have been?
+#Past participle phrases
+1 PPP
 
 
 ####MOSTLY ALEX STUFF
@@ -120,11 +140,11 @@
 # 1 Q_is Is_phrase_pl PresPP
 # 1 Q_is Is_phrase PresPP
 #
-# 1 Is_phrase VCop PRP_subj
-# 1 Is_phrase_pl VCop_pl PRP_subj_pl
+# 1 Is_phrase BE PRP_subj
+# 1 Is_phrase_pl BE_pl PRP_subj_pl
 #
 # 1 PresPP VerbG
-# 1 PresPP VerbGC Vinf_Cl
+# 1 PresPP VerbG_C Vinf_Cl
 # 1 InfP Vinf_subjunct Vinf_CL
 
 ## END OF ALEX STUFF
