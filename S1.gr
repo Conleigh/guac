@@ -34,20 +34,20 @@
 #Copula - pres sing
 1	VP BE JJ
 #Copula - pres pl
-1	VP-pl BE_pl JJ
+1	VP_pl BE_pl JJ
 #Copula - past sing
 1	VP BE_p JJ
 #Copula - past pl
-1	VP-pl BE_pl_p JJ
+1	VP_pl BE_pl_p JJ
 
 #Present continuous - sing. #is drinking
 1	VP BE	GP
 #Present continuous - pl.
-1	VP-pl BE_pl	GP
+1	VP_pl BE_pl	GP
 #Past continuous - sing.
 1	VP BE_p	GP
 #Past continuous - pl.
-1	VP-pl BE_pl_p	GP
+1	VP_pl BE_pl_p	GP
 
 #Present Simple Passive #is drunk
 1 VP BE Verb_pp #sing
