@@ -34,7 +34,7 @@
 1 Q_do do_pl InfP_pl
 1 Q_do do_sing InfP
 
-1 InfP_pl NP_pl VP_inf
+1 InfP_pl NP_pl VinfP
 1 InfP_pl NP_pl VP_inf_ext
 1 InfP NP VP_inf
 1 InfP NP VP_inf_ext
