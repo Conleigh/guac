@@ -365,6 +365,7 @@
 # Wh_pronouns.
 1	Wh_pronouns	what
 1	Wh_pronouns	who
+1   Wh_pronouns why
 
 # Wh possessive pronoun.
 1	Misc	whose
