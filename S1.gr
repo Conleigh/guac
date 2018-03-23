@@ -11,8 +11,13 @@
 1	VP Be_conj 	JJ
 1	VP Be_conj	GP
 
-1 Q do_pl Cl_pl
-100 Q do_sing Cl_sing
+1 Q Q_do
+1 Q Q_wh
+
+1 Q_wh Wh_pronouns Q_do
+
+1 Q_do do_pl Cl_pl
+1 Q_do do_sing Cl_sing
 
 1 Cl_pl NP_pl VP_inf
 1 Cl_sing NP VP_inf
