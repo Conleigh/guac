@@ -108,12 +108,19 @@
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
 
- 1 Vinf_Cl NP VinfP
- 1 Vinf_Cl_pl NP_pl VinfP
- 1 Vinf_Cl_subjunct Vinf_subjunct Vinf_Cl
+ 1 Vinf_Cl NP VinfP 
+ 1 Vinf_Cl_pl NP_pl VinfP 
+ 1 Vinf_Cl_subjunct Vinf_subjunct Vinf_Cl 
 
- 1 VinfP Vinf
- 1 VinfP VinfP PP
+
+# Verb, infinitive, intransitive - needs no second object.
+ 1 VinfP VinfI
+ # Verb, infinitive, intransitive, works with PP
+ 1 VinfP VinfIPP PP
+# Verb, transitive, requires one direct object
+ 1 VinfP VinfT NP
+ # Verb, transitiv, requires one direct object, works with PP
+ 1 VinfP VinfTPP NP PP
 
  1 VP_inf_ext V_inf_1 NP
 
