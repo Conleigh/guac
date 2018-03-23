@@ -64,6 +64,7 @@
 .2 NP NP PP
 1 NP Proper
 1 NP Det Noun
+1 NP PRP_subj
 #Basic NP plural (note all Dets in Vocab are sing)
 .1 NP_pl NP_pl PP
 1 NP_pl Noun_pl
