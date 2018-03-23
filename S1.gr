@@ -15,7 +15,7 @@
 100 Q do_sing Cl_sing
 
 1 Cl_pl NP_pl VP_inf
-1 Cl_sing NP_sing VP_inf
+1 Cl_sing NP VP_inf
 
 1 VP_inf Vinf
 1 VP_inf VP_inf PP
