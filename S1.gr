@@ -17,18 +17,19 @@
 1 VinfP VinfP PP
 
 1 Vinf_Cl NP VinfP
+1 Vinf_Cl_pl NP_pl VinfP
 
 1 Q Q_do
-1 Q Q_wh
+1 Q Q_wh 
 1 Q Q_is
 
-1 Q_wh Wh_pronouns Q_do
+1 Q_wh Wh_pronouns Q_do #
 1 Q_wh Wh_pronouns Q_do_prep
 1 Q_wh Wh_adverbs Q_do
 
 1 Q_do_prep Q_do Prep
 
-1 Q_do do_pl Vinf_Cl
+1 Q_do do_pl Vinf_Cl_pl
 1 Q_do do_sing Vinf_Cl
 
 
