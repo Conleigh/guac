@@ -11,15 +11,6 @@
 1	VP Be_conj 	JJ
 1	VP Be_conj	GP
 
-#1 VP_subjunct_inf Vinf_subjunct SubjP
-
-1 VinfP Vinf 
-1 VinfP VinfP PP
-
-1 Vinf_Cl NP VinfP
-1 Vinf_Cl_pl NP_pl VinfP
-1 Vinf_Cl_conj Vinf_subjunct Vinf_Cl
-
 1 Q Q_do
 1 Q Q_wh 
 1 Q Q_is
@@ -29,13 +20,18 @@
 
 1 Q_do do_pl Vinf_Cl_pl
 1 Q_do do_sing Vinf_Cl
-1 Q_do do_sing Vinf_Cl_conj
-
+1 Q_do do_sing Vinf_Cl_subjunct
 
 1 Q_do do_sing Vinf_subjunct_Cl
 1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
 #1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl 
-###
+
+1 Vinf_Cl NP VinfP
+1 Vinf_Cl_pl NP_pl VinfP
+1 Vinf_Cl_subjunct Vinf_subjunct Vinf_Cl
+
+1 VinfP Vinf 
+1 VinfP VinfP PP
 
 1 VP_inf_ext V_inf_1 NP
 
