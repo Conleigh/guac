@@ -12,14 +12,28 @@
 1 VP VP PP
 1 VP_pl VP_pl PP
 
-#Copula - pres sing #is yellow
+#Copula - pres sing #is yellow, is PP
+1 VP BE PP
 1	VP BE AP
 #Copula - pres pl
+1	VP_pl BE_pl PP
 1	VP_pl BE_pl AP
-#Copula - past sing #was yellow
+#Copula - past sing #was yellow, was PP
+1	VP BE_p PP
 1	VP BE_p AP
 #Copula - past pl
+1	VP_pl BE_pl_p PP
 1	VP_pl BE_pl_p AP
+#Copula - #might be yellow, might be PP
+1 VP Modal BE_inf PP
+1 VP Modal BE_inf AP
+1 VP_pl Modal BE_inf PP
+1 VP_pl Modal BE_inf AP
+#Copula - #might have been
+1 VP Modal HAVE_inf BE_pp PP
+1 VP Modal HAVE_inf BE_pp AP
+1 VP_pl Modal HAVE_inf BE_pp PP
+1 VP_pl Modal HAVE_inf BE_pp AP
 
 #Copula: is being yellow - pres
 1 VP BE BE_cont AP #sing
@@ -96,11 +110,36 @@
 1	VP HAVE_p BE_pp	GP #sing
 1	VP_pl HAVE_pl_p BE_pp	GP #pl
 
+#Future (will) #will drink
+#Future Possibility #might drink
+#Present Modal #should drink
+1 VP Modal VinfP #sing
+1 VP_pl Modal VinfP #pl
 
-#future add: #should(modal) have been
+#Future (will) Passive #will be drunk (Note: only transitive)
+1 VP Modal BE_inf VerbT_pp
+1 VP_pl Modal BE_inf VerbT_pp
+
+#Future Continuous #will be drinking #Future Possible continuous
+1 VP Modal BE_inf GP
+1 VP_pl Modal BE_inf GP
+
+#Future Perfect #will have drunk
+#Past Modal #should have drunk
+#Past Unreal Conditional #would have drunk
+1 VP Modal HAVE_inf PPP
+1 VP_pl Modal HAVE_inf PPP
+
+#Unknown #should have been drinking
+1 VP Modal HAVE_inf BE_pp GP
+1 VP_pl Modal HAVE_inf BE_pp GP
 
 
-#TODO: subjunctive verbs in "if" etc. clauses
+#TODO: incorporate these conditional statements.
+#TODO #Real Conditional #if he drinks wine, I will drive home
+#TODO #Unreal Conditional #if he drank wine, I would drive home.
+#TODO #Past Unreal Conditional #If he had drunk wine, I would have driven home.
+
 
 
 ###NOUNS#############################################
@@ -140,6 +179,11 @@
 1 PPP VerbT_pp NP
 1 PPP VerbI_pp
 1 PPP VerbC_pp CC
+
+#Infinitive verb phrase
+1 VinfP VinfT NP
+1 VinfP VinfI
+1 VinfP Vinf_C CC
 
 
 ####MOSTLY ALEX STUFF

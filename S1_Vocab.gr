@@ -104,8 +104,6 @@
 # also might be used to trip up other teams
 1 Vinf_subjunct suggest
 
-# Subjunctive ()
-
 # Verbs (infinite) (one argument)
 1 V_inf_1 have
 1 V_inf_1 cover
@@ -132,7 +130,7 @@
 1 HAVE_pl have
 1	HAVE_p had
 1	HAVE_pl_p had
-
+1 HAVE_inf have
 
 # Modals.
 1	Modal	can
@@ -146,10 +144,33 @@
 1	Modal	will
 1	Modal	would
 
-1	'to'	to
 
+# Verbs (base form) (infinitive)
+# Transitive
+1	VinfT	have
+1	VinfT	speak
+1	VinfT	cover
+1	VinfT	be
+1	VinfT	ride
+1	VinfT	drink
+1	VinfT	grow
+1	VinfT	carry
+1	VinfT	suggest
+1	VinfT	know
 
+#Intransitive
+1	VinfI	speak
+1	VinfI	be
+1	VinfI	ride
+1	VinfI	drink
+1	VinfI	grow
+1	VinfI	suggest
+1	VinfI	migrate
+1	VinfI	know
 
+# Followed by complementizer
+1 Vinf_C suggest
+1 Vinf_C know
 
 
 # Verbs (third person singular present).
@@ -467,7 +488,7 @@
 1	do_pl	do
 1	do_sing	does
 
-# 'to' #Note this is being used up in VERBS
+# 'to'
 1	'to'	to
 
 # 'not'
