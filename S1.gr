@@ -18,6 +18,8 @@
 .2 NP NP PP
 .3 NP Proper
 .3 NP Noun
+1 Proper Proper_person
+1 Proper Proper_other
 .2 NP_pl NP_pl PP
 .3 NP_pl Noun_pl
 1	PP Prep NP
