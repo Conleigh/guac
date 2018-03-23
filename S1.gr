@@ -16,12 +16,13 @@
 
 1 SubjP PRP_subj Vinf 
 1 SubjP PRP_subj_pl Vinf
+1 SubjP Vinf PP
 
 #Need to add a Vinf phrase 
 
 1 Q Q_do
 1 Q Q_wh
-1 Q Q_subjunct
+1 Q Q_is
 
 1 Q_wh Wh_pronouns Q_do
 1 Q_wh Wh_pronouns Q_do_prep
@@ -41,10 +42,11 @@
 
 1 VP_inf_ext V_inf_1 NP
 
-1 Q_subjunct Is_p 
-1 Is_p VCop_pl NP_pl
+1 Q_is Is_phrase_pl PPP
+1 Q_is Is_phrase PPP
 
-1 NP_pl PRP_subj_pl PPP 
+1 Is_phrase VCop PRP_subj
+1 Is_phrase_pl VCop_pl PRP_subj_pl
 
 1 PPP Verb_pp
 1 PPP VerbGC SubjP
