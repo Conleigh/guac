@@ -42,16 +42,16 @@
 
 1 VP_inf_ext V_inf_1 NP
 
-1 Q_is Is_phrase_pl PPP
-1 Q_is Is_phrase PPP
+1 Q_is Is_phrase_pl PresPP
+1 Q_is Is_phrase PresPP
 
 1 Is_phrase VCop PRP_subj
 1 Is_phrase_pl VCop_pl PRP_subj_pl
 
-1 PPP Verb_pp
-1 PPP VerbGC SubjP
+1 PresPP VerbG
+1 PresPP VerbGC SubjP
 
-1 NP_pl PRP_subj_pl
+#1 NP_pl PRP_subj_pl
 
 1 VP_inf Vinf
 0.2 VP_inf VP_inf PP
