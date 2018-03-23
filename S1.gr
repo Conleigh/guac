@@ -19,7 +19,7 @@
 
 1 Q_do do_sing Vinf_Cl #e.g. does the coconut drink ?
 1 Q_do do_pl Vinf_Cl_pl #e.g. do coconuts drink ?
-1 Q_do do_sing Vinf_Cl_subjunct #e.g. does arthur suggest she drink ?
+1 Q_do do_sing InfP #e.g. does arthur suggest she drink ?
 
 1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
 #1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl 
@@ -41,6 +41,9 @@
 
 1 PresPP VerbG
 1 PresPP VerbGC Vinf_Cl
+1 InfP Vinf_subjunct Vinf_CL
+
+1 
 
 1 VP_pl VP_pl PP
 1	VP_pl VerbT_pl NP_pl
