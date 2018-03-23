@@ -18,6 +18,8 @@
 1 SubjP PRP_subj_pl Vinf
 1 SubjP NP VP
 
+1 S1 NP VP # TAKE OUT
+
 
 1 Q Q_do
 1 Q Q_wh
