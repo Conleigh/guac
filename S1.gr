@@ -1,4 +1,3 @@
-
 1 S1 S .
 100 S1 Q ?
 1 S NP VP
@@ -18,11 +17,10 @@
 1 Q_wh Wh_pronouns Q_do 
 1 Q_wh Wh_adverbs Q_do
 
-1 Q_do do_pl Vinf_Cl_pl
-1 Q_do do_sing Vinf_Cl
-1 Q_do do_sing Vinf_Cl_subjunct
+1 Q_do do_sing Vinf_Cl #e.g. does the coconut drink ?
+1 Q_do do_pl Vinf_Cl_pl #e.g. do coconuts drink ?
+1 Q_do do_sing Vinf_Cl_subjunct #e.g. does arthur suggest she drink ?
 
-1 Q_do do_sing Vinf_subjunct_Cl
 1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
 #1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl 
 
