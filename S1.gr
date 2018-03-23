@@ -11,12 +11,18 @@
 1	VP Be_conj 	JJ
 1	VP Be_conj	GP
 
-1 VP_subj Vinf_subj SubjP
+1 VP_subj_inf Vinf_subj SubjP
 
-1 SubjP PRP Vinf 
+
+1 SubjP PRP_subj Vinf 
+1 SubjP PRP_subj_pl Vinf
+
+
+#Need to add a Vinf phrase 
 
 1 Q Q_do
 1 Q Q_wh
+1 Q Q_subjunct
 
 1 Q_wh Wh_pronouns Q_do
 1 Q_wh Wh_pronouns Q_do_prep
@@ -31,11 +37,13 @@
 1 InfP_pl NP_pl VP_inf_ext
 1 InfP_sing NP VP_inf
 1 InfP_sing NP VP_inf_ext
-1 InfP_sing NP VP_subj
-1 InfP_pl NP_pl VP_subj
+1 InfP_sing NP VP_subj_inf
+1 InfP_pl NP_pl VP_subj_inf
 
 1 VP_inf_ext V_inf_1 NP
 
+1 Q_subjunct Is_p subj
+1 Is_p 
 
 
 1 VP_inf Vinf

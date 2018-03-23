@@ -162,6 +162,8 @@
 # also might be used to trip up other teams
 1   Vinf_subj suggest
 
+# Subjunctive ()
+
 # Verbs (infinite) (one argument)
 1   V_inf_1 have
 1   V_inf_1 cover
@@ -273,14 +275,30 @@
 1	Misc	Saxons
 
 # Personal pronouns.
-1	PRP	he
-1	PRP	her
-1	PRP	him
-1	PRP	it
-1	PRP	one
-1	PRP	she
-1	PRP	them
-1	PRP	they
+1	PRP_subj	he
+1   PRP_subj    she
+1   PRP_subj    it
+
+# Personal pronouns (plural) (subjective)
+1	PRP_subj_pl	they
+
+# Personal pronouns (plural) (objective)
+1	PRP_obj_pl	them
+
+# Possessive personal pronouns
+1	PRP_poss	her
+1	PRP_poss	his
+1	PRP_poss	its
+
+
+# Possessive personal pronouns (plural)
+1   PRP_poss_pl   their
+
+
+# un-classified pronouns
+1	PRP_misc one
+
+
 
 ####################################################################
 
@@ -346,11 +364,7 @@
 1	Modal	will
 1	Modal	would
 
-# Possessive personal pronouns
-1	Misc	her
-1	Misc	his
-1	Misc	its
-1	Misc	their
+
 
 # Adverbs.
 1	Misc	again
