@@ -17,8 +17,8 @@
 1 Cl_pl NP_pl VP_inf
 1 Cl_sing NP VP_inf
 
-1 VP_inf Vinf_wh
-1 VP_inf VP_inf_wh PP
+1 VP_inf Vinf
+1 VP_inf VP_inf PP
 
 1 VP_pl VP_pl PP
 1	VP_pl VerbT_pl NP_pl
