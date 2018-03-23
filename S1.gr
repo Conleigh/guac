@@ -1,5 +1,5 @@
 1 S1 S .
-100 S1 Q ?
+1 S1 Q ?
 1 S NP VP
 1 S NP_pl VP_pl
 1 S GP VP
@@ -10,6 +10,33 @@
 1	VP Be_conj 	JJ
 1	VP Be_conj	GP
 
+
+1 VP_pl VP_pl PP
+1	VP_pl VerbT_pl NP_pl
+1	VP_pl VerbI_pl
+.3 VP_pl VerbC_pl CC
+2	NP Det Noun
+.2 NP NP PP
+.3 NP Proper
+.3 NP Det Noun
+.2 NP_pl NP_pl PP
+.3 NP_pl Noun_pl
+1	PP Prep NP
+1	PP Prep NP_pl
+2	Noun JJ Noun
+2	Noun_pl JJ Noun_pl
+1 CC Comp S
+1 GP VerbG PP
+1 GP VerbG
+
+
+1   Be_conj is
+1   Be_conj was
+1   Be_conj Modal be
+1   Be_conj Modal have been #can have been?
+
+
+####MOSTLY ALEX STUFF
 1 Q Q_do
 1 Q Q_wh 
 1 Q Q_is
@@ -43,28 +70,4 @@
 1 PresPP VerbGC Vinf_Cl
 1 InfP Vinf_subjunct Vinf_CL
 
-1 
-
-1 VP_pl VP_pl PP
-1	VP_pl VerbT_pl NP_pl
-1	VP_pl VerbI_pl
-.3 VP_pl VerbC_pl CC
-2	NP Det Noun
-.2 NP NP PP
-.3 NP Proper
-.3 NP Det Noun
-.2 NP_pl NP_pl PP
-.3 NP_pl Noun_pl
-1	PP Prep NP
-1	PP Prep NP_pl
-2	Noun JJ Noun
-2	Noun_pl JJ Noun_pl
-1 CC Comp S
-1 GP VerbG PP
-1 GP VerbG
-
-
-1   Be_conj is
-1   Be_conj was
-1   Be_conj Modal be
-1   Be_conj Modal have been #can have been?
+## END OF ALEX STUFF
