@@ -51,6 +51,8 @@
 1 PPP Verb_pp
 1 PPP VerbGC SubjP
 
+1 NP_pl PRP_subj_pl
+
 1 VP_inf Vinf
 0.2 VP_inf VP_inf PP
 
