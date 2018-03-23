@@ -158,6 +158,22 @@
 1	Vinf	migrate
 1	Vinf	know
 
+# What/Who verbs (infinitive) (e.g. what does arthur know? Who does patsy drink?)
+#This is similar to base form (infinitive) verbs, but with some minor adjustments
+1   Vinf_wh have
+1   Vinf_wh speak to
+1   Vinf_wh cover
+1   Vinf_wh ride
+1   Vinf_wh drink
+1   Vinf_wh grow
+1   Vinf_wh carry
+1	Vinf_wh suggest
+1	Vinf_wh migrate
+1	Vinf_wh	know
+
+
+# Who verbs 
+
 # Verbs (past tense).
 1	VerbT_p	had
 1	VerbT_p	spoke
