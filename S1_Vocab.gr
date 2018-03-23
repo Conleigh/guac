@@ -34,8 +34,8 @@
 1	Prep	on
 1	Prep	over
 1	Prep	through
-1	Prep 	to #Beware special cases here 
-1	Prep	with #Lots of special cases - also serves as conjunction?_other
+1	Prep 	to
+1	Prep	with
 
 ###ADJECTIVES#################################################################
 
@@ -171,10 +171,10 @@
 1	VerbT_p	migrated
 1	VerbT_p	knew
 
-# Verbs (present participles). G for gerund, although not always strictly a gerund
+# Verbs (present participles). G for gerud, although not always strictly a gerund
 1	VerbG	having
 1	VerbG	speaking
-1	VerbG	covering # Covering with?
+1	VerbG	covering
 1	VerbG	riding
 1	VerbG	drinking
 1	VerbG	growing
@@ -200,14 +200,14 @@
 ###NOUNS############################################################
 
 # Proper nouns.  Note that our Proper tag is just for people.
-1	Proper_person	Arthur
-1	Proper_person	Guinevere
-1	Proper_person	Sir Lancelot
-1	Proper_person	Sir Bedevere
-1	Proper_person	Zoot
-1	Proper_person	Dingo
-1	Proper_person	Patsy
-1	Proper_person	Uther Pendragon
+1	Proper	Arthur
+1	Proper	Guinevere
+1	Proper	Sir Lancelot
+1	Proper	Sir Bedevere
+1	Proper	Zoot
+1	Proper	Dingo
+1	Proper	Patsy
+1	Proper	Uther Pendragon
 
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.
@@ -247,10 +247,10 @@
 
 # More proper nouns, not people.
 
-1	Proper_other	Camelot
-1	Proper_other	England
-1	Proper_other	Holy Grail
-1	Proper_other	Round Table
+1	Proper	Camelot
+1	Proper	England
+1	Proper	Holy Grail
+1	Proper	Round Table
 
 # Plural proper nouns.
 1	Misc	Britons
