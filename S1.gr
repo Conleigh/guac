@@ -18,6 +18,7 @@
 
 1 Vinf_Cl NP VinfP
 1 Vinf_Cl_pl NP_pl VinfP
+1 Vinf_Cl_conj Vinf_subj Vinf_Cl
 
 1 Q Q_do
 1 Q Q_wh 
@@ -28,6 +29,7 @@
 
 1 Q_do do_pl Vinf_Cl_pl
 1 Q_do do_sing Vinf_Cl
+1 Q_do do_sing Vinf_Cl_conj
 
 ###
 1 Q_do do_sing Vinf_subj_Cl
