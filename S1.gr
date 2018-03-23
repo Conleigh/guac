@@ -12,9 +12,9 @@
 1	VP Be_conj	GP
 
 1 Q Do_Q
-1 Q Wh_prn_Q
+100 Q Wh_prn_Q
 
-1 Wh_prn_Q Do_Q
+1 Wh_prn_Q Wh_pronouns Do_Q
 
 1 Do_Q Do_pl Cl_pl
 1 Do_Q Do_sing Cl_sing
