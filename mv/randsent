@@ -33,7 +33,7 @@ with open(args.grammar, 'r') as grammar_file:
     start = items[1]
     tokens = []
     for token in items[2:]:
-        if token == '#': break
+        if token.startswith('#'): break
         tokens.append(token)
     if start not in grammar_dict:
         grammar_dict[start] = []

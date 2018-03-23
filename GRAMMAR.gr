@@ -16,12 +16,15 @@
 1	VP VerbT NP
 1	VP VerbI
 .3 VP VerbC CC
+1	VP Be_conj JJ
+
 1 VP_pl VP_pl PP
 1	VP_pl VerbT_pl NP_pl
 1	VP_pl VerbI_pl
 .3 VP_pl VerbC_pl CC
 2	NP Det Noun
 .2 NP NP PP
+.3 NP Proper
 .3 NP Noun
 .2 NP_pl NP_pl PP
 .3 NP_pl Noun_pl
@@ -29,14 +32,15 @@
 1	PP Prep NP_pl
 2	Noun JJ Noun
 2	Noun_pl JJ Noun_pl
-1 CC Comp S 
+1 CC Comp S
 1 GP VerbG PP
 1 GP VerbG
 
-#1   Be_conj is
-#1   Be_conj was
-#1   Be_conj Modals be
-#1   Be_conj Modals have been #can have been?
+
+1   Be_conj is
+1   Be_conj was
+1   Be_conj Modal be
+1   Be_conj Modal have been #can have been?
 # This is a hand_generated set of preterminal rules.
 # It specifies a simple tag set which will be handled by the S2
 # grammar and which can (though doesn't necessarily need to be)
