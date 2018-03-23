@@ -89,8 +89,8 @@
 1 BE_pl VCop-pl
 1 BE_p VCop_p
 1 BE_pl_p VCop_pl_p
-#1 BE Modal be #TODO add modals
-#1 BE Modal have been #TODO add modals; can have been?
+1 BE Modal be #TODO add modals
+1 BE Modal have been #TODO add modals; can have been?
 
 
 ####MOSTLY ALEX STUFF
