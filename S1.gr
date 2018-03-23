@@ -14,11 +14,11 @@
 1 VP_subj_inf Vinf_subj SubjP
 
 
-1 SubjP PRP_subj Vinf 
-1 SubjP PRP_subj_pl Vinf
-1 SubjP NP VP
 
-1 S1 NP VP # TAKE OUT
+1 VinfP Vinf 
+1 VinfP VinfP PP
+
+1 Vinf_Cl NP VinfP
 
 
 1 Q Q_do
@@ -32,13 +32,13 @@
 1 Q_do_prep Q_do Prep
 
 1 Q_do do_pl InfP_pl
-1 Q_do do_sing InfP_sing
+1 Q_do do_sing InfP
 
 1 InfP_pl NP_pl VP_inf
 1 InfP_pl NP_pl VP_inf_ext
-1 InfP_sing NP VP_inf
-1 InfP_sing NP VP_inf_ext
-1 InfP_sing NP VP_subj_inf
+1 InfP NP VP_inf
+1 InfP NP VP_inf_ext
+1 InfP NP VP_subj_inf
 1 InfP_pl NP_pl VP_subj_inf
 
 1 VP_inf_ext V_inf_1 NP
@@ -50,10 +50,7 @@
 1 Is_phrase_pl VCop_pl PRP_subj_pl
 
 1 PresPP VerbG
-1 PresPP VerbGC SubjP
-
-1 VP_inf Vinf
-0.2 VP_inf VP_inf PP
+1 PresPP VerbGC Vinf_Cl
 
 1 VP_pl VP_pl PP
 1	VP_pl VerbT_pl NP_pl
