@@ -11,13 +11,8 @@
 1	VP Be_conj 	JJ
 1	VP Be_conj	GP
 
-1 Q Do_Q
-1 Q Wh_prn_Q
-
-1 Wh_prn_Q Do_Q
-
-1 Do_Q Do_pl Cl_pl
-1 Do_Q Do_sing Cl_sing
+1 Q do_pl Cl_pl
+100 Q do_sing Cl_sing
 
 1 Cl_pl NP_pl VP_inf
 1 Cl_sing NP VP_inf

@@ -363,8 +363,8 @@
 1	Misc	unfortunately
 
 # 'do'/'does'
-1	Do_pl	do
-1	Do_sing	does
+1	do_pl	do
+1	do_sing	does
 
 # 'to'
 1	'to'	to
