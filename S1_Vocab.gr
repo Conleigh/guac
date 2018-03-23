@@ -162,6 +162,17 @@
 # also might be used to trip up other teams
 1   Vinf_subj suggest
 
+# Verbs (infinite) (one argument)
+1   V_inf_1 have
+1   V_inf_1 cover
+1   V_inf_1 ride
+1   V_inf_1 drink
+1   V_inf_1 grow
+1   V_inf_1 caryy
+1   V_inf_1 suggest
+1   V_inf_1 migrate
+1   V_inf_1 know
+
 
 # Verbs (past tense).
 1	VerbT_p	had

@@ -28,9 +28,14 @@
 1 Q_do do_sing InfP_sing
 
 1 InfP_pl NP_pl VP_inf
+1 InfP_pl NP_pl VP_inf_ext
 1 InfP_sing NP VP_inf
 1 InfP_sing NP VP_subj
 1 InfP_pl NP_pl VP_subj
+
+1 VP_inf_ext V_inf_1 NP
+
+
 
 1 VP_inf Vinf
 1 VP_inf VP_inf PP
