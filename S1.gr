@@ -68,12 +68,39 @@
 1 VP BE_p VerbT_pp #sing
 1 VP_pl BE_pl_p VerbT_pp #pl
 
-#Present Continuous Passive #is being drunk (Note: only transitive.
+#Present Continuous Passive #is being drunk (Note: only transitive.)
 1 VP BE BE_cont VerbT_pp #sing
 1 VP_pl BE_pl BE_cont VerbT_pp #pl
 #Past Continuous Passive
 1 VP BE_p BE_cont VerbT_pp #sing
 1 VP_pl BE_pl_p BE_cont VerbT_pp #pl
+
+#Present Perfect #has drunk
+1 VP HAVE PPP #sing
+1 VP_pl HAVE_pl PPP #pl
+#Past Perfect #had drunk
+1 VP HAVE_p PPP #sing
+1 VP_pl HAVE_pl_p PPP #pl
+
+#Present Perfect Passive #has been drunk (Note: only transitive)
+1 VP HAVE BE_pp VerbT_pp #sing
+1 VP_pl HAVE_pl BE_pp VerbT_pp #pl
+#Past Perfect Passive #had been drunk
+1 VP HAVE_p BE_pp VerbT_pp #sing
+1 VP_pl HAVE_pl_p BE_pp VerbT_pp #pl
+
+#Present Perfect Continuous #has been drinking
+1	VP HAVE BE_pp	GP #sing
+1	VP_pl HAVE_pl BE_pp	GP #pl
+#Past Perfect Continuous #had been drinking
+1	VP HAVE_p BE_pp	GP #sing
+1	VP_pl HAVE_pl_p BE_pp	GP #pl
+
+
+#future add: #should(modal) have been
+
+
+#TODO: subjunctive verbs in "if" etc. clauses
 
 
 ###NOUNS#############################################
@@ -110,7 +137,9 @@
 .2 GP VerbG_C CC
 
 #Past participle phrases
-1 PPP
+1 PPP VerbT_pp NP
+1 PPP VerbI_pp
+1 PPP VerbC_pp CC
 
 
 ####MOSTLY ALEX STUFF
