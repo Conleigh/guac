@@ -15,6 +15,8 @@
 1 Q Q_wh
 
 1 Q_wh Wh_pronouns Q_do
+1 Q_wh Wh_adverbs Q_do
+
 
 1 Q_do do_pl Cl_pl
 1 Q_do do_sing Cl_sing
