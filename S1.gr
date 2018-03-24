@@ -158,6 +158,7 @@
 1 NP PRP_subj
 #Basic NP plural (note all Dets in Vocab are sing)
 .1 NP_pl NP_pl PP
+1 NP_pl PRP_subj_pl
 .05 NP_pl NP conj NP
 .05 NP_pl NP_pl conj NP_pl
 1 NP_pl Noun_pl
@@ -235,11 +236,13 @@
  1 Q_is Is_phrase_pl PresPP
  1 Q_is Is_phrase PresPP
 
- 1 Is_phrase VCop PRP_subj
- 1 Is_phrase_pl VCop_pl PRP_subj_pl
+ 1 Is_phrase BE PRP_subj
+ 1 Is_phrase BE_p PRP_subj
+ 1 Is_phrase_pl BE_pl PRP_subj_pl
+ 1 Is_phrase_pl BE_pl_p PRP_subj_pl
 
  1 PresPP VerbG
- 1 PresPP VerbGC Vinf_Cl
+ 1 PresPP VerbG_C Vinf_Cl
  1 InfP Vinf_subjunct Vinf_Cl
 
 ## END OF ALEX STUFF
