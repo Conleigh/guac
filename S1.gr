@@ -219,7 +219,7 @@
 
  1 Vinf_Cl NP VinfP 
  1 Vinf_Cl_pl NP_pl VinfP 
- 1 Vinf_Cl_subjunct Vinf_subjunct Vinf_Cl 
+ 1 Vinf_Cl_subjunct Vinf_subjunct NP VinfP_OI
 
 
 # Verb, infinitive, intransitive - needs no second object.
@@ -230,6 +230,10 @@
  1 VinfP VinfT NP
  # Verb, transitiv, requires one direct object, works with PP
  1 VinfP VinfTPP NP PP
+
+ # Verb infinitive with object implied (as in who does Arthur suggest she carry ?)
+ 1 VinfP_OI	VinfT
+ 1 VinfP_OI	VinfTPP	PP
 
  1 VP_inf_ext V_inf_1 NP
 
