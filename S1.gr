@@ -5,7 +5,7 @@
 1 S GP VP
 
 #Interrogative sentences
-#1 S1 Q ?
+1 S1 Q ?
 
 ###VERBS#############################################
 #Verb basics
@@ -69,6 +69,7 @@
 1	VP VerbT_pl_p NP
 1	VP VerbI_pl_p
 .3 VP VerbC_pl_p CC
+
 
 #Present continuous - sing. #is drinking
 1	VP BE	GP #sing
@@ -154,6 +155,7 @@
 .2 NP NP PP
 1 NP Proper
 1 NP Det Noun
+1 NP PRP_subj
 #Basic NP plural (note all Dets in Vocab are sing)
 .1 NP_pl NP_pl PP
 .05 NP_pl NP conj NP
@@ -191,6 +193,7 @@
 1 PPP VerbT_pp NP
 1 PPP VerbI_pp
 1 PPP VerbC_pp CC
+
 
 #Infinitive verb phrase
 1 VinfP VinfT NP
@@ -231,5 +234,4 @@
 # 1 PresPP VerbG
 # 1 PresPP VerbG_C Vinf_Cl
 # 1 InfP Vinf_subjunct Vinf_CL
-
 ## END OF ALEX STUFF
