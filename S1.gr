@@ -12,6 +12,7 @@
 1 VP VP PP
 .5 VP VP Adv
 1 VP_pl VP_pl PP
+.5 VP_pl VP_pl Adv
 
 #Copula - pres sing #is yellow, is PP
 1 VP BE PP
