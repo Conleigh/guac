@@ -148,8 +148,6 @@
 # also might be used to trip up other teams
 1 Vinf_subjunct suggest
 
-# Subjunctive ()
-
 # Verbs (infinite) (one argument)
 1 V_inf_1 have
 1 V_inf_1 cover
@@ -162,18 +160,61 @@
 ###################### End TODO############
 
 # Copula
-1	VCop is
-1 VCop_p was
-1	VCop_pl	are
-1	VCop_pl_p	were
+1	BE is
+1 BE_p was
+1	BE_pl	are
+1	BE_pl_p	were
+1	BE_pp been
+1	BE_cont being #is being drunk; is being JJ
+1 BE_inf be
 
-#SPECIAL #TODO
-1	Misc	had #had been etc.
-1 Misc has
-1 Misc have
-1	Misc	been
-1	Misc	being #is being drunk; is being JJ
-1 Misc be
+# Have as auxillary
+1 HAVE has
+1 HAVE_pl have
+1	HAVE_p had
+1	HAVE_pl_p had
+1 HAVE_inf have
+
+# Modals.
+1	Modal	can
+1	Modal	could
+1	Modal	may
+1	Modal	might
+1	Modal	must
+1	Modal	ought to
+1	Modal	shall
+1	Modal	should
+1	Modal	will
+1	Modal	would
+
+
+# Verbs (base form) (infinitive)
+# Transitive
+1	VinfT	have
+1	VinfT	speak
+1	VinfT	cover
+1	VinfT	be
+1	VinfT	ride
+1	VinfT	drink
+1	VinfT	grow
+1	VinfT	carry
+1	VinfT	suggest
+1	VinfT	know
+
+#Intransitive
+1	VinfI	speak
+1	VinfI	be
+1	VinfI	ride
+1	VinfI	drink
+1	VinfI	grow
+1	VinfI	suggest
+1	VinfI	migrate
+1	VinfI	know
+
+# Followed by complementizer
+1 Vinf_C suggest
+1 Vinf_C know
+
 
 # Verbs (third person singular present).
 # Note that only transitive verbs get our VerbT tag,
@@ -287,20 +328,51 @@
 1	VerbG	migrating
 1	VerbG	knowing
 
+# Transitive
+1	VerbT_G	having
+1	VerbT_G	speaking
+1	VerbT_G	covering
+1	VerbT_G	riding
+1	VerbT_G	drinking
+1	VerbT_G	growing
+1	VerbT_G	carrying
+1	VerbT_G	knowing
+
+# Intransitive
+1	VerbI_G	migrating
+1	VerbI_G	speaking
+1	VerbI_G	riding
+1	VerbI_G	drinking
+1	VerbI_G	growing
+1 VerbI_G	knowing
+
 #Gerund with complentizer that
 #"is/was knowing that" ungrammatical
-1 VerbGC suggesting
+1 VerbG_C suggesting
 
 # Verbs (past participle).
-1	Verb_pp	spoken #TODO: special "to"
-1	Verb_pp	covered
-1	Verb_pp	ridden
-1	Verb_pp	drunk
-1	Verb_pp	grown
-1	Verb_pp	carried
-1	Verb_pp	suggested
-1	Verb_pp	migrated
-1	Verb_pp	known
+# - Transitive
+1	VerbT_pp	spoken #TODO: special "to"
+1	VerbT_pp	covered
+1	VerbT_pp	ridden
+1	VerbT_pp	drunk
+1	VerbT_pp	grown
+1	VerbT_pp	carried
+1	VerbT_pp	suggested
+1	VerbT_pp	known
+
+# - Intransitive
+1 VerbI_pp	migrated
+1	VerbI_pp	suggested
+1	VerbI_pp	known
+1	VerbI_pp	ridden
+1	VerbI_pp	drunk
+1	VerbI_pp	grown
+1	VerbI_pp	spoken
+
+# - followed by complementizer
+1	VerbC_pp	suggested
+1	VerbC_pp	known
 
 ###NOUNS############################################################
 
@@ -337,6 +409,8 @@
 1	Noun	home
 1	Noun	weight
 1	Noun	story
+1	Noun	Holy Grail
+1	Noun	Round Table
 
 # Plural nouns.
 1	Noun_pl	coconuts
@@ -358,8 +432,8 @@
 1	Proper	the Round Table
 
 # Plural proper nouns.
-1	Misc	Britons
-1	Misc	Saxons
+1	Proper_pl	Britons
+1	Proper_pl	Saxons
 
 # Personal pronouns.
 1	PRP_subj	he
@@ -391,6 +465,34 @@
 
 ###OTHER################################################################
 
+# Adverbs.
+1	Adv	again
+1	Adv	already
+1	Adv	currently
+1	Adv	frequently
+1	Adv	precisely
+1	Adv	south
+1	Adv	successfully
+1	Adv	unfortunately
+
+# Numbers.
+1	Num	eight
+1	Num	five
+1	Num	one
+1	Num	5.5
+1	Num	sixty
+1	Num	5,000
+
+#TODO: much more with conjunctions
+# Coordinating conjunctions, sentence_level
+1 Conj and
+1 Conj but
+
+# Coordinating conjunctions, NP/VP_level
+1 conj and
+
+
+
 # End_of_sentence.
 1	Misc	!
 1	Misc	.
@@ -404,27 +506,12 @@
 1	Misc	:
 
 
-# Coordinating conjunctions, sentence_level
-1 Conj and
-1 Conj but
-
-# Coordinating conjunctions, NP/VP_level
-1 conj and
-
 # Coordinating conjunctions.
 1	Misc	or
 1	Misc	either
 1	Misc	nor
 1	Misc	neither
 1	Misc	so
-
-# Numbers.
-1	Number	eight
-1	Number	five
-#1	Number	one # Might be a det instead of number - would need special case for not plural 
-1	Number	5.5
-1	Number	sixty
-1	Number	5,000
 
 # Expletive.
 1	Misc	there
@@ -439,29 +526,9 @@
 1	Misc	because
 1	Misc	if
 
-# Modals.
-1	Modal	can
-1	Modal	could
-1	Modal	may
-1	Modal	might
-1	Modal	must
-1	Modal	ought to
-1	Modal	shall
-1	Modal	should
-1	Modal	will
-1	Modal	would
 
 
 
-# Adverbs.
-1	Misc	again
-1	Misc	already
-1	Misc	currently
-1	Misc	frequently
-1	Misc	precisely
-1	Misc	south
-1	Misc	successfully
-1	Misc	unfortunately
 
 # 'do'/'does'
 1	do_pl	do
