@@ -134,6 +134,10 @@
 1 VP Modal HAVE_inf BE_pp GP
 1 VP_pl Modal HAVE_inf BE_pp GP
 
+#Unknown #should have been drunk (Note: only transitive)
+1 VP Modal HAVE_inf BE_pp VerbT_pp
+1 VP_pl Modal HAVE_inf BE_pp VerbT_pp
+
 
 #TODO: incorporate these conditional statements.
 #TODO #Real Conditional #if he drinks wine, I will drive home
