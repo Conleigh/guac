@@ -9,8 +9,8 @@
 
 ###VERBS#############################################
 #Verb basics
-1 VP VP PP
-.5 VP VP Adv
+.2 VP VP PP
+.2 VP VP Adv
 1 VP_pl VP_pl PP
 .5 VP_pl VP_pl Adv
 
@@ -151,11 +151,13 @@
 
 ###NOUNS#############################################
 
+#TODO: pronouns
+#1 NP PRP_subj
+
 #Basic NP
 .2 NP NP PP
 1 NP Proper
 1 NP Det Noun
-1 NP PRP_subj
 #Basic NP plural (note all Dets in Vocab are sing)
 .1 NP_pl NP_pl PP
 1 NP_pl PRP_subj_pl
@@ -217,8 +219,8 @@
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
 
- 1 Vinf_Cl NP VinfP 
- 1 Vinf_Cl_pl NP_pl VinfP 
+ 1 Vinf_Cl NP VinfP
+ 1 Vinf_Cl_pl NP_pl VinfP
  1 Vinf_Cl_subjunct Vinf_subjunct NP VinfP_OI
 
 
