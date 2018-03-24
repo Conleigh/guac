@@ -219,7 +219,7 @@
 
  1 Vinf_Cl NP VinfP 
  1 Vinf_Cl_pl NP_pl VinfP 
- 1 Vinf_Cl_subjunct Vinf_subjunct Vinf_Cl 
+ 1 Vinf_Cl_subjunct NP Vinf_subjunct Vinf_Cl 
 
 
 # Verb, infinitive, intransitive - needs no second object.
