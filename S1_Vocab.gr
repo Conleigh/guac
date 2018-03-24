@@ -438,6 +438,14 @@
 1	Num	sixty
 1	Num	5,000
 
+#TODO: much more with conjunctions
+# Coordinating conjunctions, sentence_level
+1 Conj and
+1 Conj but
+
+# Coordinating conjunctions, NP/VP_level
+1 conj and
+
 
 
 # End_of_sentence.
@@ -452,13 +460,6 @@
 1	Misc	;
 1	Misc	:
 
-
-# Coordinating conjunctions, sentence_level
-1 Conj and
-1 Conj but
-
-# Coordinating conjunctions, NP/VP_level
-1 conj and
 
 # Coordinating conjunctions.
 1	Misc	or
