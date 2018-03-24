@@ -366,6 +366,8 @@
 1	Noun	home
 1	Noun	weight
 1	Noun	story
+1	Noun	Holy Grail
+1	Noun	Round Table
 
 # Plural nouns.
 1	Noun_pl	coconuts
@@ -383,8 +385,6 @@
 
 1	Proper	Camelot
 1	Proper	England
-1	Proper	Holy Grail
-1	Proper	Round Table
 
 # Plural proper nouns.
 1	Proper_pl	Britons
