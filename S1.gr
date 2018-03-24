@@ -10,7 +10,7 @@
 ###VERBS#############################################
 #Verb basics
 1 VP VP PP
-1 VP VP Adv
+.5 VP VP Adv
 1 VP_pl VP_pl PP
 
 #Copula - pres sing #is yellow, is PP
@@ -151,11 +151,11 @@
 
 #Basic NP
 .2 NP NP PP
-.05 NP NP conj NP
 1 NP Proper
 1 NP Det Noun
 #Basic NP plural (note all Dets in Vocab are sing)
 .1 NP_pl NP_pl PP
+.05 NP_pl NP conj NP
 .05 NP_pl NP_pl conj NP_pl
 1 NP_pl Noun_pl
 .2 NP_pl Proper_pl
