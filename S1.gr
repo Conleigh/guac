@@ -151,8 +151,9 @@
 
 ###NOUNS#############################################
 
-#TODO: pronouns
+#TODO: pronouns need to distinguish between subject and object
 #1 NP PRP_subj
+#1 NP_pl PRP_subj_pl
 
 #Basic NP
 .2 NP NP PP
@@ -160,7 +161,6 @@
 1 NP Det Noun
 #Basic NP plural (note all Dets in Vocab are sing)
 .1 NP_pl NP_pl PP
-1 NP_pl PRP_subj_pl
 .05 NP_pl NP conj NP
 .05 NP_pl NP_pl conj NP_pl
 1 NP_pl Noun_pl
