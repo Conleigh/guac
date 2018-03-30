@@ -225,8 +225,6 @@
  1 Vinf_Cl_pl NP_pl VinfP
  1 Vinf_Cl_subjunct Vinf_subjunct NP VinfP_OI #can we split into 3? Does is need to be binary?
 
- 1 Vinf_Cl_subjunct Vinf_subjunct Subjunct_Phrase
- 1 Subjunct_Phrase NP VinfP_OI
 
 
 # Verb, infinitive, intransitive - needs no second object.
