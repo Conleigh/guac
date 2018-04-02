@@ -15,8 +15,8 @@
 #Verb basics
 .2 VP VP PP
 .2 VP_pl VP_pl PP
-.1 VP conj VP
-.1 VP_pl conj VP_pl
+.1 VP VP conj VP
+.1 VP_pl VP_pl conj VP_pl
 
 #Adverbs
 .3 VP VP Adv
