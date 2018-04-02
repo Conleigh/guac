@@ -158,7 +158,6 @@
 
 
 ###NOUNS#############################################
-
 #Group of NP and NP_pl
 1 NP_all NP
 1 NP_all NP_pl
@@ -237,6 +236,10 @@
 ###IMPERATIVE SENTENCES################################################
 1 Imp do_imp VinfP
 1 Imp do_imp Neg VinfP
+
+###QUESTIONS################################################
+#TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
+# "does her king suggest Uther Pendragon carry ?" is wrong
 
 ###QUESTIONS################################################
 #TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
