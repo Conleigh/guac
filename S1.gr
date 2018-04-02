@@ -8,8 +8,8 @@
 1 S1 Q ?
 
 #Imperative sentences
-1 S1 Imp !
-1 S1 Imp .
+.1 S1 Imp !
+.1 S1 Imp .
 
 ###VERBS#############################################
 #Verb basics
@@ -190,10 +190,12 @@
 .05 NP_pl NP_pl Comp VP_pl
 
 #Possessive pronouns e.g. "his"
+#TODO: does not agree with antecedent yet
 .2 NP PRP_poss Noun
 .2 NP_pl PRP_poss Noun_pl
 
-#TODO: pronouns
+#Pronouns
+#TODO: need to distinguish NP that is subject vs object
 #1 NP PRP_subj
 #1 NP_pl PRP_subj_pl
 
@@ -223,6 +225,14 @@
 1 VinfP VinfI
 1 VinfP Vinf_C CC
 
+#Nonrestrictive clause #"Arthur, (who is) sixty inches, ..."
+#TODO: don't allow PP between N and clause?
+#TODO: doesn't work for more than 1 NRC linked together (multiple commas)
+.01 NP NP NRC
+.01 NP_pl NP_pl NRC
+.01 NRC , NP ,
+#TODO: add "who is sixty inches"
+
 ###IMPERATIVE SENTENCES################################################
 #TODO:
 1 Imp do_imp VinfP
@@ -230,6 +240,7 @@
 
 ###QUESTIONS################################################
 #TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
+# "does her king suggest Uther Pendragon carry ?" is wrong
 
  1 Q Q_do
  1 Q Q_wh
