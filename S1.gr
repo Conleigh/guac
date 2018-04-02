@@ -56,22 +56,22 @@
 1 VP HAVE_pl BE_pp BE_cont AP #pl
 
 #Verbs - pres sing. #he drinks
-1	VP VerbT NP
+1	VP VerbT NP_all
 1	VP VerbI
 .3 VP VerbC CC
 #Verbs - pres pl
-1	VP_pl VerbT_pl NP_pl
+1	VP_pl VerbT_pl NP_all
 1	VP_pl VerbI_pl
 .3 VP_pl VerbC_pl CC
 
 #Verbs - past sing. #he drank
-1	VP VerbT_p NP
+1	VP VerbT_p NP_all
 1	VP VerbI_p
 .3 VP VerbC_p CC
 #Verbs - past pl.
-1	VP VerbT_pl_p NP
-1	VP VerbI_pl_p
-.3 VP VerbC_pl_p CC
+1	VP_pl VerbT_pl_p NP_all
+1	VP_pl VerbI_pl_p
+.3 VP_pl VerbC_pl_p CC
 
 
 #Present continuous - sing. #is drinking
@@ -154,6 +154,10 @@
 
 ###NOUNS#############################################
 
+#Group of NP and NP_pl
+1 NP_all NP
+1 NP_all NP_pl
+
 #Basic NP
 .2 NP NP PP
 1 NP Proper
@@ -200,17 +204,17 @@
 
 #Gerund phrases
 1 GP GP PP
-1 GP VerbT_G NP
+1 GP VerbT_G NP_all
 1 GP VerbI_G
 .2 GP VerbG_C CC
 
 #Past participle phrases
-1 PPP VerbT_pp NP
+1 PPP VerbT_pp NP_all
 1 PPP VerbI_pp
 1 PPP VerbC_pp CC
 
 #Infinitive verb phrase
-1 VinfP VinfT NP
+1 VinfP VinfT NP_all
 1 VinfP VinfI
 1 VinfP Vinf_C CC
 
