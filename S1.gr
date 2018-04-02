@@ -14,11 +14,12 @@
 ###VERBS#############################################
 #Verb basics
 .2 VP VP PP
+.2 VP_pl VP_pl PP
+.1 VP conj VP
+.1 VP_pl conj VP_pl
 
 #Adverbs
 .3 VP VP Adv
-.2 VP VP Adv
-1 VP_pl VP_pl PP
 .5 VP_pl VP_pl Adv
 
 #Copula - pres sing #is yellow, is PP
@@ -230,11 +231,10 @@
 .01 NP NP NRC
 .01 NP_pl NP_pl NRC
 .01 NRC , NP_all ,
-.01 NRC , NP_all #TODO: temporary fix for end of sentences
+.01 NRC , NP_all #TODO: TEMPORARY FIX for end of sentences
 #TODO: add "who is sixty inches"
 
 ###IMPERATIVE SENTENCES################################################
-#TODO:
 1 Imp do_imp VinfP
 1 Imp do_imp Neg VinfP
 
