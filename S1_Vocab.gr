@@ -528,7 +528,7 @@
 # 'do'/'does'
 1	do_pl	do
 1	do_sing	does
-1	do_imp do
+1	do_imp do #imperative mood
 
 # 'to'
 1	'to'	to

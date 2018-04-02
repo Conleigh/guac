@@ -225,8 +225,8 @@
 
 ###IMPERATIVE SENTENCES################################################
 #TODO:
-1 do_imp VinfP
-1 do_imp Neg VinfP
+1 Imp do_imp VinfP
+1 Imp do_imp Neg VinfP
 
 ###QUESTIONS################################################
 #TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
