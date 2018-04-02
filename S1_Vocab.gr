@@ -525,13 +525,10 @@
 1	Misc	because
 1	Misc	if
 
-
-
-
-
 # 'do'/'does'
 1	do_pl	do
 1	do_sing	does
+1	do_imp do
 
 # 'to'
 1	'to'	to
