@@ -177,15 +177,12 @@
 2	Noun_pl AP Noun_pl
 
 #NP qualified with "that", e.g., "the castle that was his home"
-.05 NP NP C VP
-.05 NP_pl NP_pl C VP_pl
+.05 NP NP Comp VP
+.05 NP_pl NP_pl Comp VP_pl
 
 #Possessive pronouns e.g. "his"
-.2 NP PRP_poss N_PRP_poss
-.2 NP_pl PRP_poss N_PRP_poss
-.5 N_PRP_poss Noun
-.5 N_PRP_poss Noun_pl
-
+.2 NP PRP_poss Noun
+.2 NP_pl PRP_poss Noun_pl
 
 #TODO: pronouns
 #1 NP PRP_subj
@@ -199,6 +196,7 @@
 
 #Complementizer
 1 CC Comp S
+1 CC S #hidden "that"
 
 #Gerund phrases
 1 GP GP PP
@@ -210,7 +208,6 @@
 1 PPP VerbT_pp NP
 1 PPP VerbI_pp
 1 PPP VerbC_pp CC
-
 
 #Infinitive verb phrase
 1 VinfP VinfT NP
