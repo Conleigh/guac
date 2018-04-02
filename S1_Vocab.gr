@@ -537,7 +537,7 @@
 1	'to'	to
 
 # 'not'
-1	Misc	not
+1	Neg	not
 
 # Wh_determiners.
 1	Misc	that

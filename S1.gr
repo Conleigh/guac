@@ -7,6 +7,10 @@
 #Interrogative sentences
 1 S1 Q ?
 
+#Imperative sentences
+1 S1 Imp !
+1 S1 Imp .
+
 ###VERBS#############################################
 #Verb basics
 .2 VP VP PP
@@ -219,8 +223,14 @@
 1 VinfP VinfI
 1 VinfP Vinf_C CC
 
+###IMPERATIVE SENTENCES################################################
+#TODO:
+1 do_sing VinfP
+1 do_sing Neg VinfP
 
-####MOSTLY ALEX STUFF
+###QUESTIONS################################################
+#TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
+
  1 Q Q_do
  1 Q Q_wh
  1 Q Q_is
@@ -266,5 +276,3 @@
  1 PresPP VerbG
  1 PresPP VerbG_C Vinf_Cl
  1 InfP NP Vinf_Cl_subjunct
-
-## END OF ALEX STUFF
