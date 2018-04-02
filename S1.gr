@@ -226,11 +226,11 @@
 1 VinfP Vinf_C CC
 
 #Nonrestrictive clause #"Arthur, (who is) sixty inches, ..."
-#TODO: don't allow PP between N and clause?
-#TODO: doesn't work for more than 1 NRC linked together (multiple commas)
+#TODO: doesn't work for more than 1 NRC linked together (multiple commas) or end of sentence
 .01 NP NP NRC
 .01 NP_pl NP_pl NRC
-.01 NRC , NP ,
+.01 NRC , NP_all ,
+.01 NRC , NP_all #TODO: temporary fix for end of sentences
 #TODO: add "who is sixty inches"
 
 ###IMPERATIVE SENTENCES################################################
