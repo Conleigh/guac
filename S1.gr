@@ -10,6 +10,8 @@
 ###VERBS#############################################
 #Verb basics
 .2 VP VP PP
+
+#Adverbs
 .3 VP VP Adv
 .2 VP VP Adv
 1 VP_pl VP_pl PP
@@ -152,16 +154,12 @@
 
 ###NOUNS#############################################
 
-#TODO: pronouns
-#1 NP PRP_subj
-
 #Basic NP
 .2 NP NP PP
 1 NP Proper
 1 NP Det Noun
 #Basic NP plural (note all Dets in Vocab are sing)
 .1 NP_pl NP_pl PP
-1 NP_pl PRP_subj_pl
 .05 NP_pl NP conj NP
 .05 NP_pl NP_pl conj NP_pl
 1 NP_pl Noun_pl
@@ -177,6 +175,21 @@
 #Basic Noun
 2	Noun AP Noun
 2	Noun_pl AP Noun_pl
+
+#NP qualified with "that", e.g., "the castle that was his home"
+.05 NP NP C VP
+.05 NP_pl NP_pl C VP_pl
+
+#Possessive pronouns e.g. "his"
+.2 NP PRP_poss N_PRP_poss
+.2 NP_pl PRP_poss N_PRP_poss
+.5 N_PRP_poss Noun
+.5 N_PRP_poss Noun_pl
+
+
+#TODO: pronouns
+#1 NP PRP_subj
+#1 NP_pl PRP_subj_pl
 
 ###OTHER##############################################
 

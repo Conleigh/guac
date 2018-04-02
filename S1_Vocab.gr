@@ -447,19 +447,16 @@
 1	PRP_obj_pl	them
 
 # Possessive personal pronouns
-1	PRP_poss	her
+1	PRP_poss her
 1	PRP_poss	his
 1	PRP_poss	its
+1 PRP_poss their # Possessive personal pronouns (plural) #TODO: separation needed?
 
 
-# Possessive personal pronouns (plural)
-1   PRP_poss_pl   their
 
 
 # un-classified pronouns
-1	PRP_misc one
-
-
+1	PRP_misc one #TODO
 
 ####################################################################
 
