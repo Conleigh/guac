@@ -60,11 +60,11 @@
 
 #Copula: has been yellow
 1 VP HAVE BE_pp AP #sing
-1 VP HAVE_pl BE_pp AP #pl
+1 VP_pl HAVE_pl BE_pp AP #pl
 
 #Copula: has been being
 1 VP HAVE BE_pp BE_cont AP #sing
-1 VP HAVE_pl BE_pp BE_cont AP #pl
+1 VP_pl HAVE_pl BE_pp BE_cont AP #pl
 
 #Verbs - pres sing. #he drinks
 1	VP VerbT ONP
