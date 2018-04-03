@@ -241,10 +241,6 @@
 #TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
 # "does her king suggest Uther Pendragon carry ?" is wrong -Why is the second one wrong?
 
-###QUESTIONS################################################
-#TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
-# "does her king suggest Uther Pendragon carry ?" is wrong
-
  1 Q Q_do
  1000 Q Q_wh
  1 Q Q_is
@@ -262,7 +258,7 @@
  1 Vinf_Cl NP VinfP
  1 Vinf_Cl_pl NP_pl VinfP
  1 Vinf_Cl_subjunct Vinf_subjunct VinfP_OI_bar
- 1 VinfP_OI_bar NP VinfP_OI #Split the above further because Vinf_Cl_subjunct split into 3 instead of 2
+ 1 VinfP_OI_bar NP VinfP_OI 
 
 # Verb, infinitive, intransitive - needs no second object.
  1 VinfP VinfI
@@ -274,7 +270,7 @@
  1 VinfP VinfTPP NP PP
 
  # Verb infinitive with object implied (as in who does Arthur suggest she carry ?)
- 1 VinfP_OI	VinfT
+ 1 VinfP_OI VinfTPP
  1 VinfP_OI	VinfTPP	PP
 
  1 VP_inf_ext V_inf_1 NP
