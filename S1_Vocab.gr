@@ -437,10 +437,15 @@
 1	Proper_pl	Britons
 1	Proper_pl	Saxons
 
-# Personal pronouns.
+# Personal pronouns (sing) (subjective)
 1	PRP_subj	he
 1   PRP_subj    she
 1   PRP_subj    it
+
+# Personal pronouns (sing) (objective)
+1	PRP_obj	him
+1   PRP_obj    her
+1   PRP_obj    it
 
 # Personal pronouns (plural) (subjective)
 1	PRP_subj_pl	they
@@ -453,8 +458,6 @@
 1	PRP_poss	his
 1	PRP_poss	its
 1 PRP_poss their # Possessive personal pronouns (plural) #TODO: separation needed?
-
-
 
 
 # un-classified pronouns
