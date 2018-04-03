@@ -21,6 +21,8 @@
 1	Det	the
 1	Det	this
 
+1	Det_pl	the
+
 # Prepositions.
 1	Prep	above
 1	Prep	across
@@ -447,19 +449,16 @@
 1	PRP_obj_pl	them
 
 # Possessive personal pronouns
-1	PRP_poss	her
+1	PRP_poss her
 1	PRP_poss	his
 1	PRP_poss	its
+1 PRP_poss their # Possessive personal pronouns (plural) #TODO: separation needed?
 
 
-# Possessive personal pronouns (plural)
-1   PRP_poss_pl   their
 
 
 # un-classified pronouns
-1	PRP_misc one
-
-
+1	PRP_misc one #TODO
 
 ####################################################################
 
@@ -489,7 +488,6 @@
 
 # Coordinating conjunctions, NP/VP_level
 1 conj and
-
 
 
 # End_of_sentence.
@@ -525,19 +523,16 @@
 1	Misc	because
 1	Misc	if
 
-
-
-
-
 # 'do'/'does'
 1	do_pl	do
 1	do_sing	does
+1	do_imp do #imperative mood
 
 # 'to'
 1	'to'	to
 
 # 'not'
-1	Misc	not
+1	Neg	not
 
 # Wh_determiners.
 1	Misc	that
