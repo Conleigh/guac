@@ -194,10 +194,15 @@
 .2 NP PRP_poss Noun
 .2 NP_pl PRP_poss Noun_pl
 
-#Pronouns
-#TODO: need to distinguish NP that is subject vs object
-#1 NP PRP_subj
-#1 NP_pl PRP_subj_pl
+# Subjective vs Objective nouns (most notably she/her. 'What does Arthur think of her', 'What does she think of arthur?')
+#TODO: Need to specify where object pronouns and where subject pronouns can be used
+1 NP_subj PRP_subj
+1 NP_subj_pl PRP_subj_pl
+1 NP_obj PRP_obj
+1 NP_obj_pl PRP_obj_pl
+ 
+
+
 
 ###OTHER##############################################
 
@@ -258,7 +263,7 @@
  1 Vinf_Cl NP VinfP
  1 Vinf_Cl_pl NP_pl VinfP
  1 Vinf_Cl_subjunct Vinf_subjunct VinfP_OI_bar
- 1 VinfP_OI_bar NP VinfP_OI 
+ 1 VinfP_OI_bar NP_subj VinfP_OI 
 
 # Verb, infinitive, intransitive - needs no second object.
  1 VinfP VinfI
