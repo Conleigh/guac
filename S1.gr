@@ -5,7 +5,7 @@
 1 S GP VP
 
 #Interrogative sentences
-1 S1 Q ?
+1000 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
@@ -239,13 +239,13 @@
 
 ###QUESTIONS################################################
 #TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
-# "does her king suggest Uther Pendragon carry ?" is wrong
+# "does her king suggest Uther Pendragon carry ?" is wrong -Why is the second one wrong?
 
 ###QUESTIONS################################################
 #TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
 # "does her king suggest Uther Pendragon carry ?" is wrong
 
- 1 Q Q_do
+ 1000 Q Q_do
  1 Q Q_wh
  1 Q Q_is
 
@@ -254,7 +254,7 @@
 
  1 Q_do do_sing Vinf_Cl #e.g. does the coconut drink ?
  1 Q_do do_pl Vinf_Cl_pl #e.g. do coconuts drink ?
- 1 Q_do do_sing InfP #e.g. does arthur suggest she drink ?
+ 100 Q_do do_sing InfP #e.g. does arthur suggest she drink ?
 
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
