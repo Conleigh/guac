@@ -1,11 +1,17 @@
 #Declarative sentences
 1 S1 S .
-1 S NP VP
-1 S NP_pl VP_pl
+1 S SNP VP #subject NP
+1 SNP NP
+.2 SNP sNP #NP specifically marked with subject, e.g., she
+1 S SNP_pl VP_pl #subject NP
+1 SNP_pl NP_pl
+.2 SNP_pl sNP_pl #NP specifically marked with subject, e.g., they
 1 S GP VP
+1 ONP NP_all #object NP
+.2 ONP oNP_all #NP specifically marked with object, e.g., her
 
 #Interrogative sentences
-1 S1 Q ?
+.1 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
@@ -54,27 +60,27 @@
 
 #Copula: has been yellow
 1 VP HAVE BE_pp AP #sing
-1 VP HAVE_pl BE_pp AP #pl
+1 VP_pl HAVE_pl BE_pp AP #pl
 
 #Copula: has been being
 1 VP HAVE BE_pp BE_cont AP #sing
-1 VP HAVE_pl BE_pp BE_cont AP #pl
+1 VP_pl HAVE_pl BE_pp BE_cont AP #pl
 
 #Verbs - pres sing. #he drinks
-1	VP VerbT NP_all
+1	VP VerbT ONP
 1	VP VerbI
 .3 VP VerbC CC
 #Verbs - pres pl
-1	VP_pl VerbT_pl NP_all
+1	VP_pl VerbT_pl ONP
 1	VP_pl VerbI_pl
 .3 VP_pl VerbC_pl CC
 
 #Verbs - past sing. #he drank
-1	VP VerbT_p NP_all
+1	VP VerbT_p ONP
 1	VP VerbI_p
 .3 VP VerbC_p CC
 #Verbs - past pl.
-1	VP_pl VerbT_pl_p NP_all
+1	VP_pl VerbT_pl_p ONP
 1	VP_pl VerbI_pl_p
 .3 VP_pl VerbC_pl_p CC
 
@@ -190,17 +196,18 @@
 .05 NP_pl NP_pl Comp VP_pl
 
 #Possessive pronouns e.g. "his"
-#TODO: does not agree with antecedent yet
+#TODO: add logic so that agrees with antecedent?
 .2 NP PRP_poss Noun
 .2 NP_pl PRP_poss Noun_pl
 
-# Subjective vs Objective nouns (most notably she/her. 'What does Arthur think of her', 'What does she think of arthur?')
-#TODO: Need to specify where object pronouns and where subject pronouns can be used
-1 NP_subj PRP_subj
-1 NP_subj_pl PRP_subj_pl
-1 NP_obj PRP_obj
-1 NP_obj_pl PRP_obj_pl
- 
+#Pronouns
+#TODO: add logic so that agrees with antecedent?
+1 sNP PRP_subj
+1 sNP_pl PRP_subj_pl
+1 oNP_all oNP
+1 oNP_all oNP_pl
+1 oNP PRP_obj
+1 oNP_pl PRP_obj_pl
 
 
 
@@ -216,22 +223,23 @@
 
 #Gerund phrases
 1 GP GP PP
-1 GP VerbT_G NP_all
+1 GP VerbT_G ONP
 1 GP VerbI_G
 .2 GP VerbG_C CC
 
 #Past participle phrases
-1 PPP VerbT_pp NP_all
+1 PPP VerbT_pp ONP
 1 PPP VerbI_pp
 1 PPP VerbC_pp CC
 
 #Infinitive verb phrase
-1 VinfP VinfT NP_all
+1 VinfP VinfT ONP
 1 VinfP VinfI
 1 VinfP Vinf_C CC
 
 #Nonrestrictive clause #"Arthur, (who is) sixty inches, ..."
 #TODO: doesn't work for more than 1 NRC linked together (multiple commas) or end of sentence
+#TODO: include pronouns (currently pronouns under sNP and oNP)
 .01 NP NP NRC
 .01 NP_pl NP_pl NRC
 .01 NRC , NP_all ,
@@ -244,6 +252,10 @@
 
 ###QUESTIONS################################################
 #TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
+<<<<<<< HEAD
+=======
+# "does her king suggest Uther Pendragon carry ?" is wrong
+>>>>>>> parent of 57c4a4b... Revert "Merge branch 'master' into Alex"
 
  1 Q Q_do
  1 Q Q_wh
