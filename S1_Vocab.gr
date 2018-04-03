@@ -452,7 +452,7 @@
 1	PRP_poss her
 1	PRP_poss	his
 1	PRP_poss	its
-1 PRP_poss their # Possessive personal pronouns (plural) #TODO: separation needed?
+1   PRP_poss their # Possessive personal pronouns (plural) #TODO: separation needed?
 
 
 
