@@ -255,7 +255,7 @@
 
  1 Q_do do_sing Vinf_Cl #e.g. does the coconut drink ?
  1 Q_do do_pl Vinf_Cl_pl #e.g. do coconuts drink ?
- 100 Q_do do_sing InfP #e.g. does arthur suggest she drink ?
+ 1 Q_do do_sing InfP #e.g. does arthur suggest she drink ?
 
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
