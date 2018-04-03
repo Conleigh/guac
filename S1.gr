@@ -244,7 +244,6 @@
 
 ###QUESTIONS################################################
 #TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
-# "does her king suggest Uther Pendragon carry ?" is wrong -Why is the second one wrong?
 
  1 Q Q_do
  1 Q Q_wh
@@ -265,15 +264,18 @@
  1 Q_do do_pl Vinf_Cl_pl 
 
 #e.g. does arthur suggest she drink ?
- 1 Q_do do_sing InfP 
- 
+ 1 Q_do do_sing InfP
+ #Arthur Suggest she drink - is this coming up somewhere else too?
+ 1 InfP NP Vinf_Cl_subjunct
+ 1 Vinf_Cl_subjunct Vinf_subjunct VinfP_OI_bar
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
-
+#E.g. She carry / the snakes carry
  1 Vinf_Cl NP VinfP
  1 Vinf_Cl_pl NP_pl VinfP
- 1 Vinf_Cl_subjunct Vinf_subjunct VinfP_OI_bar
- 1 VinfP_OI_bar NP_subj VinfP_OI 
+
+ 1 VinfP_OI_bar SNP VinfP_OI 
+ 1 VinfP_OI_bar SNP_pl VinfP_OI
 
 # Verb, infinitive, intransitive - needs no second object.
  1 VinfP VinfI
@@ -300,4 +302,4 @@
 
  1 PresPP VerbG
  1 PresPP VerbG_C Vinf_Cl
- 1 InfP NP Vinf_Cl_subjunct
+ 
