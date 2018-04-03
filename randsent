@@ -62,7 +62,8 @@ for i in range(0,args.count): #for each sentence
                         candR.append(k) #add as candidate rule
                 #print 'candidate rules: ', candR
                 # Randomly choose one of candidate rules according to weights
-                rnum = random.random() #TODO: seed?
+                # rnum = random.random() #TODO: seed?
+                rnum = rng.random()
                 sumW = 0
                 for r in candR:
                     sumW += d[r].w
