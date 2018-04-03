@@ -270,7 +270,7 @@
  1 VinfP VinfTPP NP PP
 
  # Verb infinitive with object implied (as in who does Arthur suggest she carry ?)
- 1 VinfP_OI VinfTPP
+ 1 VinfP_OI VinfT
  #1 VinfP_OI	VinfTPP	PP
 
  1 VP_inf_ext V_inf_1 NP
