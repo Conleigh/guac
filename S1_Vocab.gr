@@ -440,7 +440,7 @@
 # Personal pronouns (subjective)
 1	PRP_subj	he
 1   PRP_subj    she
-1   PRP_subj    it
+1   PRP_subj it
 
 # Personal pronouns (plural) (subjective)
 1	PRP_subj_pl	they
