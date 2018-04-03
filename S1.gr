@@ -250,13 +250,23 @@
  1 Q Q_wh
  1 Q Q_is
 
- 1 Q_wh Wh_pronouns Q_do
+# Wh-questions pronouns
+# What does Arthur eat ? who does Arthur eat?
+ 1 Q_wh Wh_pronouns Q_do_pronoun
+ 1 Q_do_pronoun do_sing 
+
+# Wh-questions adverbs
+# When does Arthur eat? Why does Arthur eat the horse?
  1 Q_wh Wh_adverbs Q_do
 
- 1 Q_do do_sing Vinf_Cl #e.g. does the coconut drink ?
- 1 Q_do do_pl Vinf_Cl_pl #e.g. do coconuts drink ?
- 1 Q_do do_sing InfP #e.g. does arthur suggest she drink ?
+#Do questions
+#e.g. does the coconut drink ?
+ 1 Q_do do_sing Vinf_Cl 
+ 1 Q_do do_pl Vinf_Cl_pl 
 
+#e.g. does arthur suggest she drink ?
+ 1 Q_do do_sing InfP 
+ 
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
 
