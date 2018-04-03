@@ -147,7 +147,6 @@
 1	Vinf	know
 
 # Subjunctive - see https://www.englishpage.com/minitutorials/subjunctive.html
-# also might be used to trip up other teams
 1 Vinf_subjunct suggest
 
 # Verbs (infinite) (one argument)
@@ -440,7 +439,7 @@
 # Personal pronouns (sing) (subjective)
 1	PRP_subj	he
 1   PRP_subj    she
-1   PRP_subj    it
+1   PRP_subj    it 
 
 # Personal pronouns (sing) (objective)
 1	PRP_obj	him
@@ -454,11 +453,10 @@
 1	PRP_obj_pl	them
 
 # Possessive personal pronouns
-1	PRP_poss her
+1	PRP_poss    her
 1	PRP_poss	his
 1	PRP_poss	its
-1 PRP_poss their # Possessive personal pronouns (plural) #TODO: separation needed?
-
+1   PRP_poss    their # Possessive personal pronouns (plural) #TODO: separation needed?
 
 # un-classified pronouns
 1	PRP_misc one #TODO
