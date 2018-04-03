@@ -439,7 +439,7 @@
 # Personal pronouns (subjective)
 1	PRP_subj	he
 1   PRP_subj    she
-1   PRP_subj    it
+1   PRP_subj    it #TODO: was getting a weird bug with some of the questions where a random 'j' gets inserted before 
 
 # Personal pronouns (plural) (subjective)
 1	PRP_subj_pl	they

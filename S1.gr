@@ -5,7 +5,7 @@
 1 S GP VP
 
 #Interrogative sentences
-1000 S1 Q ?
+1 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
@@ -247,7 +247,7 @@
 # "does her king suggest Uther Pendragon carry ?" is wrong -Why is the second one wrong?
 
  1 Q Q_do
- 1000 Q Q_wh
+ 1 Q Q_wh
  1 Q Q_is
 
  1 Q_wh Wh_pronouns Q_do
