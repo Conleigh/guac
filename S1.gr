@@ -261,8 +261,8 @@
 
  1 Vinf_Cl NP VinfP
  1 Vinf_Cl_pl NP_pl VinfP
- 1 Vinf_Cl_subjunct Vinf_subjunct VinfP_OI'
- 1 VinfP_OI' NP VinfP_OI #Split the above further because Vinf_Cl_subjunct split into 3 instead of 2
+ 1 Vinf_Cl_subjunct Vinf_subjunct VinfP_OI_bar
+ 1 VinfP_OI_bar NP VinfP_OI #Split the above further because Vinf_Cl_subjunct split into 3 instead of 2
 
 # Verb, infinitive, intransitive - needs no second object.
  1 VinfP VinfI
