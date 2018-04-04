@@ -92,6 +92,8 @@
 #TODO: break up Vinf to I and T forms and others as needed
 # Verbs (base form) (infinitive)
 
+
+#CAN DELETE?
 # Verb, infinitive, intransitive - needs no second object.
 # Does NP VinfI ?
 1 	VinfI	speak
@@ -101,6 +103,7 @@
 1 	VinfI	migrate
 1 	VinfI	know
 
+#CAN DELETE?
 # Verb, transitive, requires one direct object.
 # Does NP VinfT NP ?
 1	VinfT 	have
@@ -112,7 +115,7 @@
 1	VinfT 	ride
 # 1	VinfT 	speak - maybe??? Only really valid with languages. Is that grammatical tho?
 
-
+# CAN DELETE?
 # Verb, infinitive, intransitive, works with PP
 # Does NP VinfIPP PP ?
 1 	VinfIPP	speak
@@ -211,6 +214,19 @@
 1	VinfI	suggest
 1	VinfI	migrate
 1	VinfI	know
+
+#TODO: 'What does Arthur speak?' As in the question for: Arthur speaks German.
+#Infinitive verbs for what/who questions that don't need prepositions (what does Arthur drink? who does Zoot know ?)
+# (mainly added for exception: 'be'. What does arthur be? doesn't make sense) [When do we have use VinfT -> be?]
+1 Vinf_whQ have
+1 Vinf_whQ cover
+1 Vinf_whQ ride
+1 Vinf_whQ drink
+1 Vinf_whQ grow
+1 Vinf_whQ carry
+1 Vinf_whQ suggest
+1 Vinf_whQ know
+
 
 # Followed by complementizer
 1 Vinf_C suggest
