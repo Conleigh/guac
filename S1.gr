@@ -260,7 +260,7 @@
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
- 100 Q_wh Wh_pronouns Q_do_pronoun
+ 1 Q_wh Wh_pronouns Q_do_pronoun
  1 Q_do_pronoun do_sing Vinf_Cl_noarg
  1 Q_do_pronoun do_pl Vinf_Cl_pl_noarg
 
@@ -271,7 +271,7 @@
 #TODO: Are some of these verbs limited to certain prepositions? E.g. what does arthur drink on? what does arthur drink across? do they both work?
 #Infinitive verb phrases for what/who questions that work with prepositions (who does arthur speak to? What does she ride at ? )
 #i.e. the 'Arthur eat' in 'What does arthur eat? ', but not 'Arthur eat snakes'
-0.5 VinfP_whQ Vinf_whQ
+5 VinfP_whQ Vinf_whQ
 1 VinfP_whQ ride Prep
 1 VinfP_whQ speak Prep #Does this work? What does Arthur speak at?
 1 VinfP_whQ drink Prep
@@ -280,15 +280,20 @@
 1 VinfP_whQ migrate from
 
 
-
 # Wh-questions adverbs
 # When does Arthur eat? Why does Arthur eat the horse?
- 1 Q_wh Wh_adverbs Q_do
+ 100 Q_wh Wh_adverbs Q_do
+ 1 Q_do do_sing Vinf_Cl #Do question: do horses eat ?
+ 1 Q_do do_sing Vinf_Cl_pl Does question: Does Arthur eat ?
 
-#Do questions
-#e.g. does the coconut drink ?
- 1 Q_do do_sing Vinf_Cl 
- 1 Q_do do_pl Vinf_Cl_pl 
+ #E.g. She carry / the snakes carry in 'why does she carry?' 'when do the snakes carry ?'
+ 1 Vinf_Cl SNP Vinf_whQ
+ 1 Vinf_Cl_pl SNP_pl Vinf_whQ
+ #Infinitive clauses with an additional argument. 'Why does she carry the snake? '
+ 1 Vinf_Cl SNP VinfT ONP
+ 1 Vinf_Cl_pl SNP_pl VinfT ONP 
+
+
 
 
 
@@ -302,7 +307,7 @@
  1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
 #E.g. She carry / the snakes carry
  1 Vinf_Cl SNP VinfP
- 1 Vinf_Cl_pl NP_pl VinfP
+ 1 Vinf_Cl_pl NP_pl VinfP 
 
  1 VinfP_OI_bar SNP VinfP_OI 
  1 VinfP_OI_bar SNP_pl VinfP_OI

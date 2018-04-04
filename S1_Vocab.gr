@@ -216,7 +216,7 @@
 1	VinfI	know
 
 #TODO: 'What does Arthur speak?' As in the question for: Arthur speaks German.
-#Infinitive verbs for what/who questions that don't need prepositions (what does Arthur drink? who does Zoot know ?)
+#Infinitive verbs for wh-questions that don't need prepositions (what does Arthur drink? who does Zoot know ?)
 # (mainly added for exception: 'be'. What does arthur be? doesn't make sense) [When do we have use VinfT -> be?]
 1 Vinf_whQ have
 1 Vinf_whQ cover
