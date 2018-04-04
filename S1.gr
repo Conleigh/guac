@@ -28,11 +28,11 @@
 .05 S subConj S , S
 
 #TODO: either / or not working well yet...
-#1 S S3
-#1 S3 EITHER S OR Sbar
+1 S S3
+1 S3 EITHER S OR S
 
 #Sbar is to handle possible omission #"either Arthur knows or Patsy does"
-#TODO: overgenerates b/c really need agreement with prior verb. e.g.: "either he ride or she does" not "...or she is"
+#TODO: overgenerates b/c really need agreement with prior verb. e.g.: "either he rides or she does" not "...or she is"
 #1 Sbar S
 #1 Sbar SNP VPbar
 #1 Sbar SNP_pl VP_plbar
