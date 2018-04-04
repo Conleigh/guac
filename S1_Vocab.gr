@@ -383,7 +383,7 @@
 # Personal pronouns (sing) (subjective)
 1	PRP_subj	he
 1   PRP_subj    she
-1   PRP_subj    it 
+1   PRP_subj    it
 
 # Personal pronouns (sing) (objective)
 1	PRP_obj	him
@@ -460,6 +460,8 @@
 
 # Complementizers
 1 Comp that
+1 Comp1 that #Comp1 is for "the castle that, the King who"
+1 Comp1 who
 
 # Subordinating conjunctions.
 1	Misc	that

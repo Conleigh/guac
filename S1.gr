@@ -196,8 +196,9 @@
 2	Noun_pl AP Noun_pl
 
 #NP qualified with "that", e.g., "the castle that was his home"
-.05 NP NP Comp VP
-.05 NP_pl NP_pl Comp VP_pl
+#NP qualified with "who", e.g., "the castle that was his home"
+.05 NP NP Comp1 VP
+.05 NP_pl NP_pl Comp1 VP_pl
 
 #Possessive pronouns e.g. "his"
 .2 NP PRP_poss Noun
