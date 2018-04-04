@@ -301,13 +301,13 @@
 1 Q_subjunct do_sing Vinf_Cl_subjunct
 1 Q_subjunct do_pl Vinf_Cl_subjunct_pl
 
-1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP VinfI #..Arthur suggest she ride
-1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfI #..Arthur suggest the snakes ride
+1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP Vinf_whQ #..Arthur suggest she ride
+1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl Vinf_whQ #..Arthur suggest the snakes ride
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP VinfT ONP #..Arthur suggest she eat the snakes
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfT ONP #..ARthur suggest the strangers eat the snakes
 
-1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP VinfI #..Arthur suggest she ride
-1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl VinfI #..Arthur suggest the snakes ride
+1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP Vinf_whQ #..Arthur suggest she ride
+1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl Vinf_whQ #..Arthur suggest the snakes ride
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP VinfT ONP #..Arthur suggest she eat the snakes
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl VinfT ONP #..ARthur suggest the strangers eat the snakes
 
