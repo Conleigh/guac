@@ -1,14 +1,15 @@
 #Declarative sentences
 1 S1 S .
+.05 S1 S !
 1 S SNP VP #subject NP
 1 SNP NP
-.2 SNP sNP #NP specifically marked with subject, e.g., she
+.1 SNP sNP #NP specifically marked with subject, e.g., she
 1 S SNP_pl VP_pl #subject NP
 1 SNP_pl NP_pl
-.2 SNP_pl sNP_pl #NP specifically marked with subject, e.g., they
+.1 SNP_pl sNP_pl #NP specifically marked with subject, e.g., they
 1 S GP VP
-1 ONP NP_all #object NP
-.2 ONP oNP_all #NP specifically marked with object, e.g., her
+1 ONP_all NP_all #object NP
+.1 ONP_all oNP_all #NP specifically marked with object, e.g., her
 
 #Interrogative sentences
 1 S1 Q ?
@@ -67,20 +68,20 @@
 1 VP_pl HAVE_pl BE_pp BE_cont AP #pl
 
 #Verbs - pres sing. #he drinks
-1	VP VerbT ONP
+1	VP VerbT ONP_all
 1	VP VerbI
 .3 VP VerbC CC
 #Verbs - pres pl
-1	VP_pl VerbT_pl ONP
+1	VP_pl VerbT_pl ONP_all
 1	VP_pl VerbI_pl
 .3 VP_pl VerbC_pl CC
 
 #Verbs - past sing. #he drank
-1	VP VerbT_p ONP
+1	VP VerbT_p ONP_all
 1	VP VerbI_p
 .3 VP VerbC_p CC
 #Verbs - past pl.
-1	VP_pl VerbT_pl_p ONP
+1	VP_pl VerbT_pl_p ONP_all
 1	VP_pl VerbI_pl_p
 .3 VP_pl VerbC_pl_p CC
 
@@ -164,28 +165,31 @@
 
 
 ###NOUNS#############################################
+#Prepositional phrases
+.2 SNP SNP PP
+.2 SNP_pl SNP_pl PP
+.2 ONP_all ONP_all PP
+1	PP Prep ONP_all
+
 #Group of NP and NP_pl
 1 NP_all NP
 1 NP_all NP_pl
 
+#Noun conjunctions
+#TODO: add possibility of "he and she rode"
+.05 NP_pl NP conj NP
+.05 NP_pl NP_pl conj NP_pl
+
 #Basic NP
-.2 NP NP PP
 1 NP Proper
 1 NP Det Noun
 #Basic NP plural
-.1 NP_pl NP_pl PP
-.05 NP_pl NP conj NP
-.05 NP_pl NP_pl conj NP_pl
 1 NP_pl Noun_pl
 .2 NP_pl Det_pl Noun_pl
 .2 NP_pl Proper_pl
 #Numbers
 .3 NP_pl Num Noun_pl
 .1 NP_pl Num Proper_pl
-
-#Basic PP
-1	PP Prep NP
-1	PP Prep NP_pl
 
 #Basic Noun
 2	Noun AP Noun
@@ -196,12 +200,11 @@
 .05 NP_pl NP_pl Comp VP_pl
 
 #Possessive pronouns e.g. "his"
-#TODO: add logic so that agrees with antecedent?
 .2 NP PRP_poss Noun
 .2 NP_pl PRP_poss Noun_pl
 
 #Pronouns
-#TODO: add logic so that agrees with antecedent?
+#TODO: add logic to other parts of grammar so that things that follow agree with pl/sing , e.g. "he who was"
 1 sNP PRP_subj
 1 sNP_pl PRP_subj_pl
 1 oNP_all oNP
@@ -223,17 +226,17 @@
 
 #Gerund phrases
 1 GP GP PP
-1 GP VerbT_G ONP
+1 GP VerbT_G ONP_all
 1 GP VerbI_G
 .2 GP VerbG_C CC
 
 #Past participle phrases
-1 PPP VerbT_pp ONP
+1 PPP VerbT_pp ONP_all
 1 PPP VerbI_pp
 1 PPP VerbC_pp CC
 
 #Infinitive verb phrase
-1 VinfP VinfT ONP
+1 VinfP VinfT ONP_all
 1 VinfP VinfI
 1 VinfP Vinf_C CC
 
@@ -267,7 +270,7 @@
 #Infinite clause where argument is implied ('What does Arthur eat ?', not 'What does arthur eat the bread ?')
  1 Vinf_Cl_noarg SNP VinfP_whQ
  1 Vinf_Cl_pl_noarg SNP_pl VinfP_whQ
- 
+
 #TODO: Are some of these verbs limited to certain prepositions? E.g. what does arthur drink on? what does arthur drink across? do they both work?
 #Infinitive verb phrases for what/who questions that work with prepositions (who does arthur speak to? What does she ride at ? )
 #i.e. the 'Arthur eat' in 'What does arthur eat? ', but not 'Arthur eat snakes'
@@ -290,8 +293,8 @@
  1 Vinf_Cl SNP VinfI
  1 Vinf_Cl_pl SNP_pl VinfI
  #Infinitive clauses with an additional argument. 'Why does she carry the snake? '
- 1 Vinf_Cl SNP VinfT ONP
- 1 Vinf_Cl_pl SNP_pl VinfT ONP 
+ 1 Vinf_Cl SNP VinfT ONP_all
+ 1 Vinf_Cl_pl SNP_pl VinfT ONP_all
 
 
 #subjunctive questions: a special form of do-questions like 'Does arthur suggest she eat ?'
@@ -303,13 +306,13 @@
 
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP Vinf_whQ #..Arthur suggest she ride
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl Vinf_whQ #..Arthur suggest the snakes ride
-1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP VinfT ONP #..Arthur suggest she eat the snakes
-1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfT ONP #..ARthur suggest the strangers eat the snakes
+1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP VinfT ONP_all #..Arthur suggest she eat the snakes
+1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfT ONP_all #..ARthur suggest the strangers eat the snakes
 
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP Vinf_whQ #..Arthur suggest she ride
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl Vinf_whQ #..Arthur suggest the snakes ride
-1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP VinfT ONP #..Arthur suggest she eat the snakes
-1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl VinfT ONP #..ARthur suggest the strangers eat the snakes
+1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP VinfT ONP_all #..Arthur suggest she eat the snakes
+1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl VinfT ONP_all #..ARthur suggest the strangers eat the snakes
 
 
 #Are/is questions
