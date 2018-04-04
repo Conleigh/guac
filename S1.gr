@@ -255,8 +255,8 @@
 # "does her king suggest Uther Pendragon carry ?" is wrong
 
  1 Q Q_do
- 100 Q Q_wh
- 1 Q Q_is
+ 1 Q Q_wh
+ 100 Q Q_is
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -310,6 +310,13 @@
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl Vinf_whQ #..Arthur suggest the snakes ride
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP VinfT ONP #..Arthur suggest she eat the snakes
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl VinfT ONP #..ARthur suggest the strangers eat the snakes
+
+
+#Are/is questions
+#TODO: 'is this an elephant?' etc.
+1 Q_is BE PPP
+
+
 
 
 #e.g. does arthur suggest she drink ?
