@@ -287,8 +287,8 @@
  1 Q_do do_pl Vinf_Cl_pl #Does question: Does Arthur eat ?
 
  #E.g. She carry / the snakes carry in 'why does she carry?' 'when do the snakes carry ?'
- 1 Vinf_Cl SNP Vinf_whQ
- 1 Vinf_Cl_pl SNP_pl Vinf_whQ
+ 1 Vinf_Cl SNP VinfI
+ 1 Vinf_Cl_pl SNP_pl VinfI
  #Infinitive clauses with an additional argument. 'Why does she carry the snake? '
  1 Vinf_Cl SNP VinfT ONP
  1 Vinf_Cl_pl SNP_pl VinfT ONP 
