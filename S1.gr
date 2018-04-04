@@ -271,7 +271,7 @@
 #TODO: Are some of these verbs limited to certain prepositions? E.g. what does arthur drink on? what does arthur drink across? do they both work?
 #Infinitive verb phrases for what/who questions that work with prepositions (who does arthur speak to? What does she ride at ? )
 #i.e. the 'Arthur eat' in 'What does arthur eat? ', but not 'Arthur eat snakes'
-10 VinfP_whQ Vinf_whQ
+0.5 VinfP_whQ Vinf_whQ
 1 VinfP_whQ ride Prep
 1 VinfP_whQ speak Prep #Does this work? What does Arthur speak at?
 1 VinfP_whQ drink Prep
