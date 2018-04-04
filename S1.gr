@@ -284,7 +284,7 @@
 # When does Arthur eat? Why does Arthur eat the horse?
  100 Q_wh Wh_adverbs Q_do
  1 Q_do do_sing Vinf_Cl #Do question: do horses eat ?
- 1 Q_do do_sing Vinf_Cl_pl Does question: Does Arthur eat ?
+ 1 Q_do do_sing Vinf_Cl_pl #Does question: Does Arthur eat ?
 
  #E.g. She carry / the snakes carry in 'why does she carry?' 'when do the snakes carry ?'
  1 Vinf_Cl SNP Vinf_whQ
