@@ -12,18 +12,55 @@
 .1 ONP_all oNP_all #NP specifically marked with object, e.g., her
 
 #Interrogative sentences
-1 S1 Q ?
+.1 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
 .1 S1 Imp .
 
+#Conjunctions, sentence-level
+.05 S S , Conj S
+
+#TODO: for Conj and subConj, this method could be very recursive very fast...
+
+#Subordinating conjunctions
+.05 S S subConj S
+
+#TODO: either / or not working well yet...
+#1 S S3
+#1 S3 EITHER S OR Sbar
+
+#Sbar is to handle possible omission #"either Arthur knows or Patsy does"
+#TODO: overgenerates b/c really need agreement with prior verb. e.g.: "either he ride or she does" not "...or she is"
+#1 Sbar S
+#1 Sbar SNP VPbar
+#1 Sbar SNP_pl VP_plbar
+#1 VPbar do_sing
+#1 VPbar BE
+#1 VPbar BE_p
+#1 VP_plbar do_pl
+#1 VP_plbar BE_pl
+#1 VP_plbar BE_pl_p
+
+#TODO: "he neither ran nor did he ride"
+#TODO: add sentence-level conjunction logic for Q
+#TODO: add lists with conjunction for VP/NP-level, e.g. "he rode, ate, and jumped"
+#TODO: "neither king rides"
+
 ###VERBS#############################################
 #Verb basics
 .2 VP VP PP
 .2 VP_pl VP_pl PP
+
+#Verb Conjunctions
 .1 VP VP conj VP
 .1 VP_pl VP_pl conj VP_pl
+#TODO: "he did not ride but ate"
+#TODO: either/or neither/nor not working ...
+#.05 VP EITHER VP OR VP
+#.05 VP_pl EITHER VP_pl OR VP_pl
+#.05 VP NEITHER VP NOR VP
+#.05 VP_pl NEITHER VP_pl NOR VP_pl
 
 #Adverbs
 .3 VP VP Adv
@@ -162,6 +199,8 @@
 #TODO #Unreal Conditional #if he drank wine, I would drive home.
 #TODO #Past Unreal Conditional #If he had drunk wine, I would have driven home.
 
+#TODO: Negating sentences. ex: "he was not riding" (note: no "did" in Vocab)
+
 
 
 ###NOUNS#############################################
@@ -176,9 +215,14 @@
 1 NP_all NP_pl
 
 #Noun conjunctions
-#TODO: add possibility of "he and she rode"
-.05 NP_pl NP conj NP
-.05 NP_pl NP_pl conj NP_pl
+#TODO: add possibility of pronouns "he and she rode"
+.05 NP_pl NP_all conj NP_all
+#TODO: either/or could use more work...
+.05 NP EITHER NP_all OR NP #verb agrees with last subject
+.05 NP_pl EITHER NP_all OR NP_pl
+.05 NP NEITHER NP_all NOR NP #verb agrees with last subject
+.05 NP_pl NEITHER NP_all NOR NP_pl
+
 
 #Basic NP
 1 NP Proper
@@ -196,8 +240,9 @@
 2	Noun_pl AP Noun_pl
 
 #NP qualified with "that", e.g., "the castle that was his home"
-.05 NP NP Comp VP
-.05 NP_pl NP_pl Comp VP_pl
+#NP qualified with "who", e.g., "the castle that was his home"
+.05 NP NP Comp1 VP
+.05 NP_pl NP_pl Comp1 VP_pl
 
 #Possessive pronouns e.g. "his"
 .2 NP PRP_poss Noun
@@ -247,7 +292,9 @@
 .01 NP_pl NP_pl NRC
 .01 NRC , NP_all ,
 .01 NRC , NP_all #TODO: TEMPORARY FIX for end of sentences
-#TODO: add "who is sixty inches"
+#TODO: add ",who is sixty inches,"
+
+
 
 ###IMPERATIVE SENTENCES################################################
 1 Imp do_imp VinfP
