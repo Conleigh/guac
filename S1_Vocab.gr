@@ -492,6 +492,10 @@
 # 'not'
 1	Neg	not
 
+# Wh_det
+1	Wh_det	what
+1	Wh_det	that which
+
 # Wh_determiners.
 1	Misc	that
 1	Misc	what
