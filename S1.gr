@@ -265,12 +265,12 @@
  1 Q_do_pronoun do_pl Vinf_Cl_pl_noarg
 
 #Infinite clause where argument is implied ('What does Arthur eat ?', not 'What does arthur eat the bread ?')
- 1 Vinf_Cl_noarg SNP VinfP_noarg
- 1 Vinf_Cl_pl_noarg SNP_pl VinfP_noarg
- 1 VinfP_noarg SNP VinfP_whQ    # 'Arthur eat' in 'What does arthur eat? ', but not 'Arthur eat snakes'
-
+ 1 Vinf_Cl_noarg SNP VinfP_whQ
+ 1 Vinf_Cl_pl_noarg SNP_pl VinfP_whQ
+ 
 #TODO: Are some of these verbs limited to certain prepositions? E.g. what does arthur drink on? what does arthur drink across? do they both work?
-#Infinitive verbs for what/who questions that work with prepositions (who does arthur speak to? What does she ride at ? )
+#Infinitive verb phrases for what/who questions that work with prepositions (who does arthur speak to? What does she ride at ? )
+#i.e. the 'Arthur eat' in 'What does arthur eat? ', but not 'Arthur eat snakes'
 10 VinfP_whQ Vinf_whQ
 1 VinfP_whQ ride Prep
 1 VinfP_whQ speak Prep #Does this work? What does Arthur speak at?
