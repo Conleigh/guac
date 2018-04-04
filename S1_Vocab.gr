@@ -430,9 +430,15 @@
 # Coordinating conjunctions, sentence_level
 1 Conj and
 1 Conj but
+1	Conj so
 
 # Coordinating conjunctions, NP/VP_level
 1 conj and
+
+1	OR	or
+1	EITHER	either
+1	NOR	nor
+1	NEITHER	neither
 
 
 # End_of_sentence.
