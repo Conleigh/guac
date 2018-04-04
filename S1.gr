@@ -11,7 +11,7 @@
 .2 ONP oNP_all #NP specifically marked with object, e.g., her
 
 #Interrogative sentences
-100 S1 Q ?
+1 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
