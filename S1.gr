@@ -356,14 +356,14 @@
 #TODO: add ",who is sixty inches,"
 
 # #"he knows what they are covering"
-#TODO: FINISH. could this be like question grammar?
 # Need all transitive verb conjugations possible after but without their objects
-#TODO: add possibility of Wh_det being the object of a PP
-#TODO: add possibility of "he knows what they are covering that existed before" (like "the castle that...")
-#1 ONP Wh_det SNP VerbTALL
-#1 ONP Wh_det SNP_pl VerbTALL_pl
+1 ONP Wh_det SNP VerbTALL
+1 ONP Wh_det SNP_pl VerbTALL_pl
 .2 VerbTALL VerbTALL PP
 .2 VerbTALL_pl VerbTALL_pl PP
+#TODO: add possibility of Wh_det being the object of a PP; intransitive verb and then Prep without its object
+#TODO: add possibility of "he knows what they are covering that existed before" (like "the castle that...")
+
 
 
 ###IMPERATIVE SENTENCES################################################
