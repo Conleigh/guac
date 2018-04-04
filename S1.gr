@@ -25,6 +25,7 @@
 
 #Subordinating conjunctions
 .05 S S subConj S
+.05 S subConj S , S
 
 #TODO: either / or not working well yet...
 #1 S S3
@@ -46,6 +47,9 @@
 #TODO: add sentence-level conjunction logic for Q
 #TODO: add lists with conjunction for VP/NP-level, e.g. "he rode, ate, and jumped"
 #TODO: "neither king rides"
+
+
+
 
 ###VERBS#############################################
 #Verb basics

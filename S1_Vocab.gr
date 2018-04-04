@@ -444,6 +444,9 @@
 # Subordinating conjunctions.
 1	subConj	because
 1	subConj	while
+1 subConj if
+1 subConj when
+1 subConj where
 
 
 # End_of_sentence.
