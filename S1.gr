@@ -260,17 +260,16 @@
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
- 1 Q_wh Wh_pronouns Q_do_pronoun
+ 100 Q_wh Wh_pronouns Q_do_pronoun
  1 Q_do_pronoun do_sing Vinf_Cl_noarg
  1 Q_do_pronoun do_pl Vinf_Cl_pl_noarg
 
 #Infinite clause where argument is implied ('What does Arthur eat ?', not 'What does arthur eat the bread ?')
  1 Vinf_Cl_noarg SNP VinfP_noarg
  1 Vinf_Cl_pl_noarg SNP_pl VinfP_noarg
-
  1 VinfP_noarg SNP VinfP_whQ    # 'Arthur eat' in 'What does arthur eat? ', but not 'Arthur eat snakes'
 
-#TODO: Are some of these verbs limited by the particular preposition? E.g. what does arthur drink on? what does arthur drink across?
+#TODO: Are some of these verbs limited to certain prepositions? E.g. what does arthur drink on? what does arthur drink across? do they both work?
 #Infinitive verbs for what/who questions that work with prepositions (who does arthur speak to? What does she ride at ? )
 10 VinfP_whQ Vinf_whQ
 1 VinfP_whQ ride Prep
@@ -279,6 +278,8 @@
 1 VinfP_whQ grow Prep
 1 VinfP_whQ migrate to
 1 VinfP_whQ migrate from
+
+
 
 # Wh-questions adverbs
 # When does Arthur eat? Why does Arthur eat the horse?
