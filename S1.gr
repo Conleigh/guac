@@ -349,6 +349,7 @@
 #Nonrestrictive clause #"Arthur, (who is) sixty inches, ..."
 #TODO: doesn't work for more than 1 NRC linked together (multiple commas) or end of sentence
 #TODO: include pronouns (currently pronouns under sNP and oNP)
+#TODO: need to allow "the castle that he rode (it)", VerbT without its object
 .01 NP NP NRC
 .01 NP_pl NP_pl NRC
 .01 NRC , NP_all ,
@@ -357,8 +358,8 @@
 
 # #"he knows what they are covering"
 # Need all transitive verb conjugations possible after but without their objects
-1 ONP Wh_det SNP VerbTALL
-1 ONP Wh_det SNP_pl VerbTALL_pl
+1 ONP_all Wh_det SNP VerbTALL
+1 ONP_all Wh_det SNP_pl VerbTALL_pl
 .2 VerbTALL VerbTALL PP
 .2 VerbTALL_pl VerbTALL_pl PP
 #TODO: add possibility of Wh_det being the object of a PP; intransitive verb and then Prep without its object
