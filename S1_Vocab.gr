@@ -441,6 +441,11 @@
 1	NEITHER	neither
 
 
+# Subordinating conjunctions.
+1	subConj	because
+1	subConj	while
+
+
 # End_of_sentence.
 1	Misc	!
 1	Misc	.

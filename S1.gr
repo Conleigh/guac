@@ -20,13 +20,15 @@
 
 #Conjunctions, sentence-level
 .05 S S , Conj S
-#TODO: either / or not working yet...
-#.1 S S2
-#1 S2 EITHER S OR Sbar
-#TODO: "he neither ran nor did he ride"
-#TODO: add sentence-level conjunction logic for Q
-#TODO: add lists with conjunction for VP/NP-level, e.g. "he rode, ate, and jumped"
-#TODO: "neither king rides"
+
+#TODO: for Conj and subConj, this method could be very recursive very fast...
+
+#Subordinating conjunctions
+.05 S S subConj S
+
+#TODO: either / or not working well yet...
+#1 S S3
+#1 S3 EITHER S OR Sbar
 
 #Sbar is to handle possible omission #"either Arthur knows or Patsy does"
 #TODO: overgenerates b/c really need agreement with prior verb. e.g.: "either he ride or she does" not "...or she is"
@@ -39,6 +41,11 @@
 #1 VP_plbar do_pl
 #1 VP_plbar BE_pl
 #1 VP_plbar BE_pl_p
+
+#TODO: "he neither ran nor did he ride"
+#TODO: add sentence-level conjunction logic for Q
+#TODO: add lists with conjunction for VP/NP-level, e.g. "he rode, ate, and jumped"
+#TODO: "neither king rides"
 
 ###VERBS#############################################
 #Verb basics
