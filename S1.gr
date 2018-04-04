@@ -314,8 +314,6 @@
 
 #Are/is questions
 #TODO: 'is this an elephant?' etc.
-1 Q_is it BE PPP
-1 Q_is BE it PPP
 1 Q_is BE_pl SNP_pl GP_subjunct
 1 Q_is BE SNP GP_subjunct
 
