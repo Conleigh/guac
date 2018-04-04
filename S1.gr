@@ -194,8 +194,8 @@
 1 VP_pl Modal HAVE_inf BE_pp VerbT_pp
 
 # Subjunctive tense #"he suggested that the castle be carried"
-1 VP_subj BE VerbT_pp
-1 VP_subj_pl BE VerbT_pp
+1 VP_subj BE_inf VerbT_pp
+1 VP_subj_pl BE_inf VerbT_pp
 
 
 #TODO: incorporate these conditional statements.
