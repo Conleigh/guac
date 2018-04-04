@@ -217,7 +217,7 @@
 
 #Infinitive verbs for wh-questions that don't need prepositions (what does Arthur drink? who does Zoot know ?)
 # (mainly added for exception: 'be'. What does arthur be? doesn't make sense) [When do we have use VinfT -> be?]
-#TODO: 'What does Arthur speak?' As in the question for: Arthur speaks German. but not who does arthur speak?
+#TODO: Fix:  'who does arthur speak?'-should be speak to? Do we need to seperate what and who questions entirely?
 1 Vinf_whQ have
 1 Vinf_whQ cover
 1 Vinf_whQ ride
@@ -226,6 +226,7 @@
 1 Vinf_whQ carry
 1 Vinf_whQ suggest
 1 Vinf_whQ know
+1 Vinf_whQ speak
 
 
 
