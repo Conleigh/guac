@@ -93,84 +93,82 @@
 # Verbs (base form) (infinitive)
 
 
-#CAN DELETE?
-# Verb, infinitive, intransitive - needs no second object.
-# Does NP VinfI ?
-1 	VinfI	speak
-1 	VinfI	ride
-1 	VinfI	grow
-1 	VinfI	drink
-1 	VinfI	migrate
-1 	VinfI	know
+##CAN DELETE?
+## Verb, infinitive, intransitive - needs no second object.
+## Does NP VinfI ?
+#1 	VinfI	speak
+#1 	VinfI	ride
+#1 	VinfI	grow
+#1 	VinfI	drink
+#1 	VinfI	migrate
+#1 	VinfI	know
 
-#CAN DELETE?
-# Verb, transitive, requires one direct object.
-# Does NP VinfT NP ?
-1	VinfT 	have
-1	VinfT 	cover
-1	VinfT 	drink
-1	VinfT 	grow
-1	VinfT 	carry
-1	VinfT 	know
-1	VinfT 	ride
-# 1	VinfT 	speak - maybe??? Only really valid with languages. Is that grammatical tho?
+##CAN DELETE?
+## Verb, transitive, requires one direct object.
+## Does NP VinfT NP ?
+#1	VinfT 	have
+#1	VinfT 	cover
+#1	VinfT 	drink
+#1	VinfT 	grow
+#1	VinfT 	carry
+#1	VinfT 	know
+#1	VinfT 	ride
+## 1	VinfT 	speak - maybe??? Only really valid with languages. Is that grammatical tho?
 
-# CAN DELETE?
-# Verb, infinitive, intransitive, works with PP
-# Does NP VinfIPP PP ?
-1 	VinfIPP	speak
-1 	VinfIPP	ride
-1 	VinfIPP	grow
-1 	VinfIPP	drink
-1 	VinfIPP	migrate
+## CAN DELETE?
+## Verb, infinitive, intransitive, works with PP
+## Does NP VinfIPP PP ?
+#1 	VinfIPP	speak
+#1 	VinfIPP	ride
+#1 	VinfIPP	grow
+#1 	VinfIPP	drink
+#1 	VinfIPP	migrate
 
-# Verb, transitive, requires one direct object, works with PP
-# Does NP VinfTPP NP PP ?
-# 1	VinfTPP 	have # Works with locations, but not that generally. Have a coconut on the bridge, not have a coconut to the bridge
-# 1	VinfTPP 	cover # only seems to work with "with"
-1	VinfTPP 	drink
-1	VinfTPP 	grow
-1	VinfTPP 	carry
-1	VinfTPP 	know
-1	VinfTPP 	ride
-# 1	VinfTPP 	speak - maybe??? Only really valid with languages. Is that grammatical tho?
+## Verb, transitive, requires one direct object, works with PP
+## Does NP VinfTPP NP PP ?
+## 1	VinfTPP 	have # Works with locations, but not that generally. Have a coconut on the bridge, not have a coconut to the bridge
+## 1	VinfTPP 	cover # only seems to work with "with"
+#1	VinfTPP 	drink
+#1	VinfTPP 	grow
+#1	VinfTPP 	carry
+#1	VinfTPP 	know
+#1	VinfTPP 	ride
+## 1	VinfTPP 	speak - maybe??? Only really valid with languages. Is that grammatical tho?
 
-
-
-1	Vinf	have
-1	Vinf	speak #TODO weird with what questions: (what does arthur speak) but might be fine (e.g. what language does arthur speak)
-1	Vinf	cover
-1	Vinf	be #TODO this is weird in questions (does arthur be? do coconuts be?)
-1	Vinf	ride
-1	Vinf	drink
-1	Vinf	grow
-1	Vinf	carry
-1	Vinf	suggest
-1	Vinf	migrate
-1	Vinf	know
+#1	Vinf	have
+#1	Vinf	speak #TODO weird with what questions: (what does arthur speak) but might be fine (e.g. what language does arthur speak)
+#1	Vinf	cover
+#1	Vinf	be #TODO this is weird in questions (does arthur be? do coconuts be?)
+#1	Vinf	ride
+#1	Vinf	drink
+#1	Vinf	grow
+#1	Vinf	carry
+#1	Vinf	suggest
+#1	Vinf	migrate
+#1	Vinf	know
 
 # Subjunctive - see https://www.englishpage.com/minitutorials/subjunctive.html
 1 Vinf_subjunct suggest
-
-# Verbs (infinite) (one argument)
-1 V_inf_1 have
-1 V_inf_1 cover
-1 V_inf_1 ride
-1 V_inf_1 drink
-1 V_inf_1 grow
-1 V_inf_1 carry
-1 V_inf_1 suggest
-1 V_inf_1 know
+#
+## Verbs (infinite) (one argument)
+#1 V_inf_1 have
+#1 V_inf_1 cover
+#1 V_inf_1 ride
+#1 V_inf_1 drink
+#1 V_inf_1 grow
+#1 V_inf_1 carry
+#1 V_inf_1 suggest
+#1 V_inf_1 know
 ###################### End TODO############
 
 # Copula
 1	BE is
-1 BE_p was
+1   BE_p was
 1	BE_pl	are
 1	BE_pl_p	were
 1	BE_pp been
 1	BE_cont being #is being drunk; is being JJ
-1 BE_inf be
+1   BE_inf be
 
 # Have as auxillary
 1 HAVE has
@@ -228,9 +226,6 @@
 1 Vinf_whQ know
 1 Vinf_whQ speak
 
-
-
-
 # Followed by complementizer
 1 Vinf_C suggest
 1 Vinf_C know
@@ -245,9 +240,9 @@
 1	VerbT	carries
 1	VerbT	rides
 1	VerbT	grows
-1 VerbT suggests
+1   VerbT suggests
 1	VerbT	knows
-1 VerbT is
+1   VerbT is
 
 #Verbs followed by complementizer
 1	VerbC	suggests

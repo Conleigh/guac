@@ -256,7 +256,7 @@
 
  1 Q Q_do
  1 Q Q_wh
- 100 Q Q_is
+ 1 Q Q_is
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -319,47 +319,3 @@
 
 1 GP_subjunct VerbG_C SNP VinfT PP
 1 GP_subjunct VerbG_C SNP VinfI
-
-
-
-
-#e.g. does arthur suggest she drink ?
- #1 Q_do do_sing InfP
- ##Arthur Suggest she drink - is this coming up somewhere else too?
- #1 InfP SNP Vinf_Cl_subjunct
- #1 Vinf_Cl_subjunct Vinf_subjunct VinfP_OI_bar
- #1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl
- #1 Vinf_subjunct_Cl Vinf_subjunct Vinf_Cl_pl
-##E.g. She carry / the snakes carry
- #1 Vinf_Cl SNP VinfP
- #1 Vinf_Cl_pl NP_pl VinfP 
-#
- #1 VinfP_OI_bar SNP VinfP_OI 
- #1 VinfP_OI_bar SNP_pl VinfP_OI
-#
-## Verb, infinitive, intransitive - needs no second object.
- #1   VinfI
- ## Verb, infinitive, intransitive, works with PP
- #1 VinfP VinfIPP PP
-## Verb, transitive, requires one direct object
- #1 VinfP VinfT NP
- ## Verb, transitiv, requires one direct object, works with PP
- #1 VinfP VinfTPP NP PP
-#
- ## Verb infinitive with object implied (as in who does Arthur suggest she carry ?)
- #1 VinfP_OI VinfT
- ##1 VinfP_OI	VinfTPP	PP
-#
- #1 VP_inf_ext V_inf_1 NP
-#
- #1 Q_is Is_phrase_pl PresPP
- #1 Q_is Is_phrase PresPP
-#
- #1 Is_phrase BE PRP_subj
- #1 Is_phrase BE_p PRP_subj
- #1 Is_phrase_pl BE_pl PRP_subj_pl
- #1 Is_phrase_pl BE_pl_p PRP_subj_pl
-#
- #1 PresPP VerbG
- #1 PresPP VerbG_C Vinf_Cl
-# 
