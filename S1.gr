@@ -212,17 +212,17 @@
 1 VerbTALL HAVE BE_pp BE_cont
 1 VerbTALL VerbT
 1 VerbTALL VerbT_p
-1 VerbTALL BE	GP
-1 VerbTALL BE_p	GP
-1 VerbTALL HAVE PPP
-1 VerbTALL HAVE_p PPP
-1 VerbTALL HAVE BE_pp	GP
-1 VerbTALL HAVE_p BE_pp	GP
+1 VerbTALL BE	VerbT_G
+1 VerbTALL BE_p	VerbT_G
+1 VerbTALL HAVE VerbT_pp
+1 VerbTALL HAVE_p VerbT_pp
+1 VerbTALL HAVE BE_pp	VerbT_G
+1 VerbTALL HAVE_p BE_pp	VerbT_G
 1 VerbTALL Modal VinfT
 1 VerbTALL Modal BE_inf VerbT_pp
-1 VerbTALL Modal BE_inf GP
-1 VerbTALL Modal HAVE_inf PPP
-1 VerbTALL Modal HAVE_inf BE_pp GP
+1 VerbTALL Modal BE_inf VerbT_G
+1 VerbTALL Modal HAVE_inf VerbT_pp
+1 VerbTALL Modal HAVE_inf BE_pp VerbT_G
 
 #All transitive verbs (plural)
 1 VerbTALL_pl BE_pl
@@ -235,17 +235,17 @@
 1 VerbTALL_pl HAVE_pl BE_pp BE_cont
 1 VerbTALL_pl VerbT_pl
 1 VerbTALL_pl VerbT_pl_p
-1 VerbTALL_pl BE_pl	GP
+1 VerbTALL_pl BE_pl	VerbT_G
 1 VerbTALL_pl BE_pl_p
-1 VerbTALL_pl HAVE_pl PPP
+1 VerbTALL_pl HAVE_pl VerbT_pp
 1 VerbTALL_pl HAVE_pl_p
 1 VerbTALL_pl HAVE_pl BE_pp
 1 VerbTALL_pl HAVE_pl_p BE_pp
 1 VerbTALL_pl Modal VinfT
 1 VerbTALL_pl Modal BE_inf VerbT_pp
-1 VerbTALL_pl Modal BE_inf GP
-1 VerbTALL_pl Modal HAVE_inf PPP
-1 VerbTALL_pl Modal HAVE_inf BE_pp GP
+1 VerbTALL_pl Modal BE_inf VerbT_G
+1 VerbTALL_pl Modal HAVE_inf VerbT_pp
+1 VerbTALL_pl Modal HAVE_inf BE_pp VerbT_G
 
 
 #TODO: incorporate these conditional statements.
