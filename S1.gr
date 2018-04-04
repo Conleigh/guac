@@ -201,6 +201,52 @@
 1 VP_subj BE_inf VerbT_pp
 1 VP_subj_pl BE_inf VerbT_pp
 
+#All transitive verbs (sing) [for "he knows what they ride"]
+1 VerbTALL BE
+1 VerbTALL BE_p
+1 VerbTALL Modal BE_inf
+1 VerbTALL Modal HAVE_inf BE_pp
+1 VerbTALL BE BE_cont
+1 VerbTALL BE_p BE_cont
+1 VerbTALL HAVE BE_pp
+1 VerbTALL HAVE BE_pp BE_cont
+1 VerbTALL VerbT
+1 VerbTALL VerbT_p
+1 VerbTALL BE	GP
+1 VerbTALL BE_p	GP
+1 VerbTALL HAVE PPP
+1 VerbTALL HAVE_p PPP
+1 VerbTALL HAVE BE_pp	GP
+1 VerbTALL HAVE_p BE_pp	GP
+1 VerbTALL Modal VinfT
+1 VerbTALL Modal BE_inf VerbT_pp
+1 VerbTALL Modal BE_inf GP
+1 VerbTALL Modal HAVE_inf PPP
+1 VerbTALL Modal HAVE_inf BE_pp GP
+
+#All transitive verbs (plural)
+1 VerbTALL_pl BE_pl
+1 VerbTALL_pl BE_pl_p
+1 VerbTALL_pl Modal BE_inf
+1 VerbTALL_pl Modal HAVE_inf BE_pp
+1 VerbTALL_pl BE_pl BE_cont
+1 VerbTALL_pl BE_p_pl BE_cont
+1 VerbTALL_pl HAVE_pl BE_pp
+1 VerbTALL_pl HAVE_pl BE_pp BE_cont
+1 VerbTALL_pl VerbT_pl
+1 VerbTALL_pl VerbT_pl_p
+1 VerbTALL_pl BE_pl	GP
+1 VerbTALL_pl BE_pl_p
+1 VerbTALL_pl HAVE_pl PPP
+1 VerbTALL_pl HAVE_pl_p
+1 VerbTALL_pl HAVE_pl BE_pp
+1 VerbTALL_pl HAVE_pl_p BE_pp
+1 VerbTALL_pl Modal VinfT
+1 VerbTALL_pl Modal BE_inf VerbT_pp
+1 VerbTALL_pl Modal BE_inf GP
+1 VerbTALL_pl Modal HAVE_inf PPP
+1 VerbTALL_pl Modal HAVE_inf BE_pp GP
+
 
 #TODO: incorporate these conditional statements.
 #TODO #Real Conditional #if he drinks wine, I will drive home
@@ -266,10 +312,6 @@
 1 oNP PRP_obj
 1 oNP_pl PRP_obj_pl
 
-# #"he knows what they are covering"
-#TODO: FINISH. could this be like question grammar?
-#1 ONP Wh_det
-
 
 
 ###OTHER##############################################
@@ -313,6 +355,15 @@
 .01 NRC , NP_all #TODO: TEMPORARY FIX for end of sentences
 #TODO: add ",who is sixty inches,"
 
+# #"he knows what they are covering"
+#TODO: FINISH. could this be like question grammar?
+# Need all transitive verb conjugations possible after but without their objects
+#TODO: add possibility of Wh_det being the object of a PP
+#TODO: add possibility of "he knows what they are covering that existed before" (like "the castle that...")
+#1 ONP Wh_det SNP VerbTALL
+#1 ONP Wh_det SNP_pl VerbTALL_pl
+.2 VerbTALL VerbTALL PP
+.2 VerbTALL_pl VerbTALL_pl PP
 
 
 ###IMPERATIVE SENTENCES################################################
