@@ -296,7 +296,7 @@
 
 #subjunctive questions: a special form of do-questions like 'Does arthur suggest she eat ?'
 #TODO: do I need to split some of these up? It makes it much messier
-1 Q_wh Q_subjunct
+1 Q_wh Wh_pronouns Q_subjunct
 1 Q_subjunct do_sing Vinf_Cl_subjunct
 1 Q_subjunct do_pl Vinf_Cl_subjunct_pl
 
