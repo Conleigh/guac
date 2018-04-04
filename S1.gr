@@ -193,6 +193,10 @@
 1 VP Modal HAVE_inf BE_pp VerbT_pp
 1 VP_pl Modal HAVE_inf BE_pp VerbT_pp
 
+# Subjunctive tense #"he suggested that the castle be carried"
+1 VP_subj BE VerbT_pp
+1 VP_subj_pl BE VerbT_pp
+
 
 #TODO: incorporate these conditional statements.
 #TODO #Real Conditional #if he drinks wine, I will drive home
@@ -200,6 +204,7 @@
 #TODO #Past Unreal Conditional #If he had drunk wine, I would have driven home.
 
 #TODO: Negating sentences. ex: "he was not riding" (note: no "did" in Vocab)
+
 
 
 
@@ -257,6 +262,10 @@
 1 oNP PRP_obj
 1 oNP_pl PRP_obj_pl
 
+# #"he knows what they are covering"
+#TODO: FINISH. could this be like question grammar?
+#1 ONP Wh_det
+
 
 
 ###OTHER##############################################
@@ -268,6 +277,12 @@
 #Complementizer
 1 CC Comp S
 1 CC S #hidden "that"
+1 CC Comp S_subj #subjunctive sentence #"he suggested that the castle be carried"
+1 CC S_subj
+1 S_subj SNP VP_subj
+1 S_subj SNP_pl VP_subj_pl
+.2 VP_subj VP_subj PP
+.2 VP_subj_pl VP_subj_pl PP
 
 #Gerund phrases
 1 GP GP PP
@@ -303,6 +318,7 @@
 ###QUESTIONS################################################
 #TODO: distinguish T from I verbs; "what do strangers migrate ? " is wrong
 # "does her king suggest Uther Pendragon carry ?" is wrong
+# should be able to produce: "was he suggesting that the castle be carried?"
 
  1 Q Q_do
  1 Q Q_wh
