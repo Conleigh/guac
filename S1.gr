@@ -438,9 +438,8 @@
 #Are/is questions
 1 Q_is BE SNP GP
 1 Q_is BE_pl SNP_pl GP
-1 Q_is SNP BE AP
-1 Q_is SNP_pl BE_pl AP
-
+#1 Q_is SNP BE AP
+#1 Q_is SNP_pl BE_pl AP
 
 # Are you suggesting (subjunctive)
 1 Q_is BE_pl SNP_pl GP_subjunct
@@ -454,7 +453,6 @@
 # And also have an agreement in the modal ('Zoot can carry the snake, will she not?' doesn't seem grammatical)
 # So it requires a lot of tokens to get right
 # TODO : Do we need pronoun gender agreement? Can we say 'England can carry, can she not ?' 'Zoot can carry, can it now ?') Is that semantic or syntactic?
-
 1 Q_dyn Q_dyn_can
 1 Q_dyn Q_dyn_verb
 1 Q_dyn Q_dyn_could
@@ -469,12 +467,10 @@
 1 Q_dyn_verb SNP_pl dyn_P_verb_pl
 1 dyn_P_verb_pl VP_pres_pl , dyn_P2_verb_pl
 1 dyn_P2_verb_pl do PRP_subj_pl not
-
 1 VP_pres_sing VerbI 
 1 VP_pres_sing VerbT ONP_all
 1 VP_pres_pl VerbI_pl
 1 VP_pres_pl VerbT_pl ONP_all
-
 
 #Zoot can eat the snake, can she not?
 1 Q_dyn_can SNP dyn_P_can_sing 
