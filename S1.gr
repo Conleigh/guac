@@ -28,20 +28,32 @@
 .05 S subConj S , S
 
 #TODO: either / or not working well yet...
-#1 S S3
-#1 S3 EITHER S OR Sbar
+.1 S1 EITHER Sbar .
+.005 S1 EITHER Sbar !
 
-#Sbar is to handle possible omission #"either Arthur knows or Patsy does"
-#TODO: overgenerates b/c really need agreement with prior verb. e.g.: "either he ride or she does" not "...or she is"
-#1 Sbar S
-#1 Sbar SNP VPbar
-#1 Sbar SNP_pl VP_plbar
-#1 VPbar do_sing
-#1 VPbar BE
-#1 VPbar BE_p
-#1 VP_plbar do_pl
-#1 VP_plbar BE_pl
-#1 VP_plbar BE_pl_p
+# Either he is a monkey or she rides
+5 Sbar S OR S
+
+# Either he moves or she does - only for present-tense verbs.
+1 Sbar SNP VP_Present OR Does_Phrase
+1 Sbar SNP_pl VP_pl_Present OR Does_Phrase
+# Does phrase, corresponds only to non-copular initial verb phrases
+1 Does_Phrase SNP do_sing
+1 Does_Phrase SNP_pl do_pl
+
+# Phrases involving copula can have a be-phrase instead of a second complete sentence
+1 Sbar SNP VP_Cop OR Be_Phrase
+1 Sbar SNP_pl VP_Cop_pl OR Be_Phrase
+1 Be_Phrase SNP BE
+1 Be_Phrase SNP_pl BE_pl
+1 Be_Phrase SNP BE_p
+1 Be_Phrase SNP_pl BE_pl_p
+1 Be_Phrase	SNP Modal BE_inf
+1 Be_Phrase SNP_pl Modal BE_inf
+1 Be_Phrase	SNP Modal HAVE_inf BE_inf
+1 Be_Phrase SNP_pl Modal HAVE_inf BE_inf
+1 Be_Phrase SNP HAVE BE_pp
+1 Be_Phrase SNP_pl HAVE_pl BE_pp
 
 #TODO: "he neither ran nor did he ride"
 #TODO: add sentence-level conjunction logic for Q
@@ -52,6 +64,7 @@
 
 
 ###VERBS#############################################
+# Need to reclassify - VP goes to copula, present, past, plural, etc. From there, can do a better sentence thing.
 #Verb basics
 .2 VP VP PP
 .2 VP_pl VP_pl PP
@@ -70,52 +83,59 @@
 .3 VP VP Adv
 .5 VP_pl VP_pl Adv
 
+1 VP VP_Cop # Present, copula forms
+1 VP_pl VP_Cop_pl
+
 #Copula - pres sing #is yellow, is PP
-1 VP BE PP
-1	VP BE AP
+1 VP_Cop BE PP
+1	VP_Cop BE AP
 #Copula - pres pl
-1	VP_pl BE_pl PP
-1	VP_pl BE_pl AP
+1	VP_Cop_pl BE_pl PP
+1	VP_Cop_pl BE_pl AP
 #Copula - past sing #was yellow, was PP
-1	VP BE_p PP
-1	VP BE_p AP
+1	VP_Cop BE_p PP
+1	VP_Cop BE_p AP
 #Copula - past pl
-1	VP_pl BE_pl_p PP
-1	VP_pl BE_pl_p AP
+1	VP_Cop_pl BE_pl_p PP
+1	VP_Cop_pl BE_pl_p AP
 #Copula - #might be yellow, might be PP
-1 VP Modal BE_inf PP
-1 VP Modal BE_inf AP
-1 VP_pl Modal BE_inf PP
-1 VP_pl Modal BE_inf AP
+1 VP_Cop Modal BE_inf PP
+1 VP_Cop Modal BE_inf AP
+1 VP_Cop_pl Modal BE_inf PP
+1 VP_Cop_pl Modal BE_inf AP
 #Copula - #might have been
-1 VP Modal HAVE_inf BE_pp PP
-1 VP Modal HAVE_inf BE_pp AP
-1 VP_pl Modal HAVE_inf BE_pp PP
-1 VP_pl Modal HAVE_inf BE_pp AP
+1 VP_Cop Modal HAVE_inf BE_pp PP
+1 VP_Cop Modal HAVE_inf BE_pp AP
+1 VP_Cop_pl Modal HAVE_inf BE_pp PP
+1 VP_Cop_pl Modal HAVE_inf BE_pp AP
 
 #Copula: is being yellow - pres
-1 VP BE BE_cont AP #sing
-1 VP_pl BE_pl BE_cont AP #pl
-#was being being yellow - past
-1 VP BE_p BE_cont AP #sing
-1 VP_pl BE_pl_p BE_cont AP #pl
+1 VP_Cop BE BE_cont AP #sing
+1 VP_Cop_pl BE_pl BE_cont AP #pl
+#was being yellow - past
+1 VP_Cop BE_p BE_cont AP #sing
+1 VP_Cop_pl BE_pl_p BE_cont AP #pl
 
 #Copula: has been yellow
-1 VP HAVE BE_pp AP #sing
-1 VP_pl HAVE_pl BE_pp AP #pl
+1 VP_Cop HAVE BE_pp AP #sing
+1 VP_Cop_pl HAVE_pl BE_pp AP #pl
 
 #Copula: has been being
-1 VP HAVE BE_pp BE_cont AP #sing
-1 VP_pl HAVE_pl BE_pp BE_cont AP #pl
+1 VP_Cop HAVE BE_pp BE_cont AP #sing
+1 VP_Cop_pl HAVE_pl BE_pp BE_cont AP #pl
+
+# Expanding VP into VP_Present enables "either he knows or she does"
+2 VP VP_Present
+2 VP_pl VP_pl_Present
 
 #Verbs - pres sing. #he drinks
-1	VP VerbT ONP_all
-1	VP VerbI
-.3 VP VerbC CC
+1	VP_Present VerbT ONP_all
+1	VP_Present VerbI
+.3 VP_Present VerbC CC
 #Verbs - pres pl
-1	VP_pl VerbT_pl ONP_all
-1	VP_pl VerbI_pl
-.3 VP_pl VerbC_pl CC
+1	VP_pl_Present VerbT_pl ONP_all
+1	VP_pl_Present VerbI_pl
+.3 VP_pl_Present VerbC_pl CC
 
 #Verbs - past sing. #he drank
 1	VP VerbT_p ONP_all
