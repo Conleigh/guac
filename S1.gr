@@ -378,7 +378,8 @@
 
  1 Q Q_do
  1 Q Q_wh
- 100 Q Q_is
+ 1 Q Q_is
+ 100 Q Q_dyn
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -437,8 +438,8 @@
 #Are/is questions
 1 Q_is BE SNP GP
 1 Q_is BE_pl SNP_pl GP
-50 Q_is SNP BE AP
-50 Q_is SNP_pl BE_pl AP
+1 Q_is SNP BE AP
+1 Q_is SNP_pl BE_pl AP
 
 
 # Are you suggesting (subjunctive)
@@ -447,3 +448,19 @@
 
 1 GP_subjunct VerbG_C SNP VinfT PP
 1 GP_subjunct VerbG_C SNP VinfI
+
+#'did you not ' type questions: Zoot will carry the snake, will she not?
+# problem is that you need agreement in the nouns ('The strangers will carry the snake, will she not?' doesn't work)
+# And also have an agreement in the modal ('Zoot can carry the snake, will she not?' doesn't seem grammatical)
+1 Q_dyn Q_dyn_can
+
+#Zoot can eat the snake, can she not?
+1 Q_dyn_can SNP dyn_P_can_sing 
+1 dyn_P_can_sing can VP_pres , dyn_P2_can_sing 
+1 VP_pres VinfP
+1 dyn_P2_can_sing can PRP_subj not 
+1 Q_dyn_can SNP_pl dyn_P_can_pl
+1 dyn_P_can_pl can VP_pres , dyn_P2_can_pl
+1 VP_pres VinfP
+1 dyn_P2_can_pl can PRP_subj_pl not 
+
