@@ -452,7 +452,9 @@
 #'do you not ' type questions: Zoot will carry the snake, will she not?
 # problem is that you need agreement in the nouns ('The strangers will carry the snake, will she not?' doesn't work)
 # And also have an agreement in the modal ('Zoot can carry the snake, will she not?' doesn't seem grammatical)
-#So it requires a lot of tokens to get correct
+# So it requires a lot of tokens to get right
+# TODO : Do we need pronoun gender agreement? Can we say 'England can carry, can she not ?' 'Zoot can carry, can it now ?')
+
 1 Q_dyn Q_dyn_can
 1 Q_dyn Q_dyn_verb
 1 Q_dyn Q_dyn_could
