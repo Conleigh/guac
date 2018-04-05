@@ -436,7 +436,10 @@
 
 #Are/is questions
 1 Q_is BE SNP GP
-50 Q_is BE_pl SNP_pl GP
+1 Q_is BE_pl SNP_pl GP
+50 Q_is BE AP
+50 Q_is BE_pl AP
+
 
 # Are you suggesting (subjunctive)
 1 Q_is BE_pl SNP_pl GP_subjunct
