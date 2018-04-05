@@ -28,7 +28,7 @@
 .05 S subConj S , S
 
 #TODO: either / or not working well yet...
-100 S1 EITHER Sbar .
+.1 S1 EITHER Sbar .
 .005 S1 EITHER Sbar !
 
 # Either he is a monkey or she rides
@@ -54,20 +54,6 @@
 1 Be_Phrase SNP_pl Modal HAVE_inf BE_inf
 1 Be_Phrase SNP HAVE BE_pp
 1 Be_Phrase SNP_pl HAVE_pl BE_pp
-
-
-
-#Sbar is to handle possible omission #"either Arthur knows or Patsy does"
-#TODO: overgenerates b/c really need agreement with prior verb. e.g.: "either he rides or she does" not "...or she is"
-#1 Sbar S
-#1 Sbar SNP VPbar
-#1 Sbar SNP_pl VP_plbar
-#1 VPbar do_sing
-#1 VPbar BE
-#1 VPbar BE_p
-#1 VP_plbar do_pl
-#1 VP_plbar BE_pl
-#1 VP_plbar BE_pl_p
 
 #TODO: "he neither ran nor did he ride"
 #TODO: add sentence-level conjunction logic for Q
