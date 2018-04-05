@@ -449,11 +449,29 @@
 1 GP_subjunct VerbG_C SNP VinfT PP
 1 GP_subjunct VerbG_C SNP VinfI
 
-#'did you not ' type questions: Zoot will carry the snake, will she not?
+#'do you not ' type questions: Zoot will carry the snake, will she not?
 # problem is that you need agreement in the nouns ('The strangers will carry the snake, will she not?' doesn't work)
 # And also have an agreement in the modal ('Zoot can carry the snake, will she not?' doesn't seem grammatical)
+#So it requires a lot of tokens to get correct
 1 Q_dyn Q_dyn_can
+1 Q_dyn Q_dyn_verb
 
+#Zoot drinks the snake, does she not?
+1 Q_dyn_verb SNP dyn_P_verb_sing
+1 dyn_P_verb_sing VP_pres_sing , dyn_P2_verb_sing 
+1 dyn_P2_verb_sing does PRP_subj not
+1 Q_dyn_verb SNP_pl dyn_P_verb_pl
+1 dyn_P_verb_pl VP_pres_pl , dyn_P2_verb_pl
+1 dyn_P2_verb_pl does PRP_subj_pl not
+
+1 VP_pres_sing VerbI 
+1 VP_pres_sing VerbT ONP_all
+1 VP_pres_pl VerbI_pl
+1 VP_pres_pl VerbT_pl ONP_all
+
+
+
+#copy paste this with the modal replaced
 #Zoot can eat the snake, can she not?
 1 Q_dyn_can SNP dyn_P_can_sing 
 1 dyn_P_can_sing can VP_pres , dyn_P2_can_sing 
@@ -463,4 +481,7 @@
 1 dyn_P_can_pl can VP_pres , dyn_P2_can_pl
 1 VP_pres VinfP
 1 dyn_P2_can_pl can PRP_subj_pl not 
+
+
+#add Q_dyn_can's etc to link to Q_dyn
 
