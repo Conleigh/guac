@@ -379,7 +379,7 @@
  1 Q Q_do
  1 Q Q_wh
  1 Q Q_is
- 100 Q Q_dyn
+ 1 Q Q_dyn
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -453,7 +453,7 @@
 # problem is that you need agreement in the nouns ('The strangers will carry the snake, will she not?' doesn't work)
 # And also have an agreement in the modal ('Zoot can carry the snake, will she not?' doesn't seem grammatical)
 # So it requires a lot of tokens to get right
-# TODO : Do we need pronoun gender agreement? Can we say 'England can carry, can she not ?' 'Zoot can carry, can it now ?')
+# TODO : Do we need pronoun gender agreement? Can we say 'England can carry, can she not ?' 'Zoot can carry, can it now ?') Is that semantic or syntactic?
 
 1 Q_dyn Q_dyn_can
 1 Q_dyn Q_dyn_verb
