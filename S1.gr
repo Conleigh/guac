@@ -12,7 +12,7 @@
 .1 ONP_all oNP_all #NP specifically marked with object, e.g., her
 
 #Interrogative sentences
-.1 S1 Q ?
+100 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
@@ -378,7 +378,7 @@
 
  1 Q Q_do
  1 Q Q_wh
- 1 Q Q_is
+ 100 Q Q_is
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -435,7 +435,9 @@
 
 
 #Are/is questions
-#TODO: 'is this an elephant?' etc.
+100 Q_is BE SNP GP
+
+# Are you suggesting (subjunctive)
 1 Q_is BE_pl SNP_pl GP_subjunct
 1 Q_is BE SNP GP_subjunct
 
