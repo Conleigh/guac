@@ -28,7 +28,7 @@
 .05 S subConj S , S
 
 #TODO: either / or not working well yet...
-.1 S1 EITHER Sbar .
+100 S1 EITHER Sbar .
 .005 S1 EITHER Sbar !
 
 # Either he is a monkey or she rides
