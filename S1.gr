@@ -19,7 +19,11 @@
 .1 S1 Imp .
 
 #Conjunctions, sentence-level
-.05 S S , Conj S
+1000 S1 sent_level 
+.05 sent_level S , Conj S
+.05 sent_level Q , Conj Q 
+#.05 S S , Conj S
+#.05 Q Q , Conj Q 
 
 #TODO: for Conj and subConj, this method could be very recursive very fast...
 
