@@ -40,8 +40,10 @@
 1 Sbar SNP VP_Present OR Does_Phrase
 1 Sbar SNP_pl VP_pl_Present OR Does_Phrase
 # Does phrase, corresponds only to non-copular initial verb phrases
-1 Does_Phrase SNP do_sing
+1 Does_Phrase SNP do_sing  
+.2 Does_Phrase SNP do_sing Neg
 1 Does_Phrase SNP_pl do_pl
+.2 Does_Phrase SNP_pl do_pl Neg
 
 # Phrases involving copula can have a be-phrase instead of a second complete sentence
 1 Sbar SNP VP_Cop OR Be_Phrase
