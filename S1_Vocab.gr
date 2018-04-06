@@ -207,6 +207,7 @@
 1	VerbI_pl	grow
 1	VerbI_pl	migrate
 1	VerbI_pl	know
+1	VerbI_pl 	do
 
 #Verbs followed by complementizer - pres pl
 1	VerbC_pl	suggest
@@ -336,6 +337,7 @@
 1	Noun	castle
 1	Noun	king
 1	Noun	defeater
+1 	Noun 	covering
 1	Noun	sovereign
 1	Noun	servant
 1	Noun	corner
@@ -448,27 +450,6 @@
 1 subConj when
 1 subConj where
 
-
-# End_of_sentence.
-1	Misc	!
-1	Misc	.
-1	Misc	?
-
-# Pauses.
-1	Misc	,
-1	Misc	...
-1	Misc	__
-1	Misc	;
-1	Misc	:
-
-
-# Coordinating conjunctions.
-1	Misc	or
-1	Misc	either
-1	Misc	nor
-1	Misc	neither
-1	Misc	so
-
 # Expletive.
 1	Misc	there
 
@@ -476,13 +457,6 @@
 1 Comp that
 1 Comp1 that #Comp1 is for "the castle that, the King who"
 1 Comp1 who
-
-# Subordinating conjunctions.
-1	Misc	that
-1	Misc	so
-1	Misc	while
-1	Misc	because
-1	Misc	if
 
 # 'do'/'does'
 1	do_pl	do
@@ -499,17 +473,9 @@
 1	Wh_det	what
 1	Wh_det	that which
 
-# Wh_determiners.
-1	Misc	that
-1	Misc	what
-1	Misc	which
-
 # Wh_pronouns.
 1	Wh_pronouns	what
 1	Wh_pronouns	who
-
-# Wh possessive pronoun.
-1	Misc	whose
 
 # Wh_adverbs
 1	Wh_adverbs	how
@@ -519,3 +485,12 @@
 
 # Possessive marker.
 1	Misc	's
+
+# Wh possessive pronoun.
+1	Misc	whose
+
+# Pauses.
+1	Misc	...
+1	Misc	__
+1	Misc	;
+1	Misc	:
