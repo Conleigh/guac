@@ -313,6 +313,8 @@
 #Basic Noun
 2	Noun AP Noun
 2	Noun_pl AP Noun_pl
+2	Proper AP Proper
+2	Proper_pl AP Proper_pl
 
 #NP qualified with "that", e.g., "the castle that was his home"
 #NP qualified with "who", e.g., "the castle that was his home"
@@ -482,61 +484,61 @@
 
 #Zoot drinks the snake, does she not?
 1 Q_dyn_verb SNP dyn_P_verb_sing
-1 dyn_P_verb_sing VP_pres_sing , dyn_P2_verb_sing 
+1 dyn_P_verb_sing VP_pres_sing , dyn_P2_verb_sing
 1 dyn_P2_verb_sing does PRP_subj not
 1 Q_dyn_verb SNP_pl dyn_P_verb_pl
 1 dyn_P_verb_pl VP_pres_pl , dyn_P2_verb_pl
 1 dyn_P2_verb_pl do PRP_subj_pl not
-1 VP_pres_sing VerbI 
+1 VP_pres_sing VerbI
 1 VP_pres_sing VerbT ONP_all
 1 VP_pres_pl VerbI_pl
 1 VP_pres_pl VerbT_pl ONP_all
 
 #Zoot can eat the snake, can she not?
-1 Q_dyn_can SNP dyn_P_can_sing 
-1 dyn_P_can_sing can VP_pres , dyn_P2_can_sing 
+1 Q_dyn_can SNP dyn_P_can_sing
+1 dyn_P_can_sing can VP_pres , dyn_P2_can_sing
 1 VP_pres VinfP
-1 dyn_P2_can_sing can PRP_subj not 
+1 dyn_P2_can_sing can PRP_subj not
 1 Q_dyn_can SNP_pl dyn_P_can_pl
 1 dyn_P_can_pl can VP_pres , dyn_P2_can_pl
 1 VP_pres VinfP
-1 dyn_P2_can_pl can PRP_subj_pl not 
+1 dyn_P2_can_pl can PRP_subj_pl not
 
 #Zoot could eat the snake, could she not?
-1 Q_dyn_could SNP dyn_P_could_sing 
-1 dyn_P_could_sing could VP_pres , dyn_P2_could_sing 
+1 Q_dyn_could SNP dyn_P_could_sing
+1 dyn_P_could_sing could VP_pres , dyn_P2_could_sing
 1 VP_pres VinfP
-1 dyn_P2_could_sing could PRP_subj not 
+1 dyn_P2_could_sing could PRP_subj not
 1 Q_dyn_could SNP_pl dyn_P_could_pl
 1 dyn_P_could_pl could VP_pres , dyn_P2_could_pl
 1 VP_pres VinfP
 1 dyn_P2_could_pl could PRP_subj_pl not
 
 #Zoot should eat the snake, should she not?
-1 Q_dyn_should SNP dyn_P_should_sing 
-1 dyn_P_should_sing should VP_pres , dyn_P2_should_sing 
+1 Q_dyn_should SNP dyn_P_should_sing
+1 dyn_P_should_sing should VP_pres , dyn_P2_should_sing
 1 VP_pres VinfP
-1 dyn_P2_should_sing should PRP_subj not 
+1 dyn_P2_should_sing should PRP_subj not
 1 Q_dyn_should SNP_pl dyn_P_should_pl
 1 dyn_P_should_pl should VP_pres , dyn_P2_should_pl
 1 VP_pres VinfP
 1 dyn_P2_should_pl should PRP_subj_pl not
 
 #Zoot would eat the snake, would she not?
-1 Q_dyn_would SNP dyn_P_would_sing 
-1 dyn_P_would_sing would VP_pres , dyn_P2_would_sing 
+1 Q_dyn_would SNP dyn_P_would_sing
+1 dyn_P_would_sing would VP_pres , dyn_P2_would_sing
 1 VP_pres VinfP
-1 dyn_P2_would_sing would PRP_subj not 
+1 dyn_P2_would_sing would PRP_subj not
 1 Q_dyn_would SNP_pl dyn_P_would_pl
 1 dyn_P_would_pl would VP_pres , dyn_P2_would_pl
 1 VP_pres VinfP
 1 dyn_P2_would_pl would PRP_subj_pl not
 
 #Zoot will eat the snake, will she not?
-1 Q_dyn_will SNP dyn_P_will_sing 
-1 dyn_P_will_sing will VP_pres , dyn_P2_will_sing 
+1 Q_dyn_will SNP dyn_P_will_sing
+1 dyn_P_will_sing will VP_pres , dyn_P2_will_sing
 1 VP_pres VinfP
-1 dyn_P2_will_sing will PRP_subj not 
+1 dyn_P2_will_sing will PRP_subj not
 1 Q_dyn_will SNP_pl dyn_P_will_pl
 1 dyn_P_will_pl will VP_pres , dyn_P2_will_pl
 1 VP_pres VinfP
