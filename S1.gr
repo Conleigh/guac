@@ -175,77 +175,115 @@
 
 #Present continuous - sing. #is drinking
 1	VP BE	GP #sing
+1	VP BE Neg	GP #sing
 1	VP_pl BE_pl	GP #pl
+1	VP_pl BE_pl Neg	GP #pl
 #Past continuous
 1	VP BE_p	GP #sing
+1	VP BE_p	Neg GP #sing
 1	VP_pl BE_pl_p	GP #pl
+1	VP_pl BE_pl_p	Neg GP #pl
 
 #Present Simple Passive #is drunk (Note: only transitive)
 1 VP BE VerbT_pp #sing
+1 VP BE Neg VerbT_pp #sing
 1 VP_pl BE_pl VerbT_pp #pl
+1 VP_pl Neg BE_pl VerbT_pp #pl
 #Past Simple Passive
 1 VP BE_p VerbT_pp #sing
+1 VP BE_p Neg VerbT_pp #sing
 1 VP_pl BE_pl_p VerbT_pp #pl
+1 VP_pl BE_pl_p Neg VerbT_pp #pl
 
 #Present Continuous Passive #is being drunk (Note: only transitive.)
 1 VP BE BE_cont VerbT_pp #sing
+1 VP BE Neg BE_cont VerbT_pp #sing
 1 VP_pl BE_pl BE_cont VerbT_pp #pl
+1 VP_pl BE_pl Neg BE_cont VerbT_pp #pl
 #Past Continuous Passive
 1 VP BE_p BE_cont VerbT_pp #sing
+1 VP BE_p Neg BE_cont VerbT_pp #sing
 1 VP_pl BE_pl_p BE_cont VerbT_pp #pl
+1 VP_pl BE_pl_p Neg BE_cont VerbT_pp #pl
 
 #Present Perfect #has drunk
 1 VP HAVE PPP #sing
+1 VP HAVE Neg PPP #sing
 1 VP_pl HAVE_pl PPP #pl
+1 VP_pl HAVE_pl Neg PPP #pl
 #Past Perfect #had drunk
 1 VP HAVE_p PPP #sing
+1 VP HAVE_p Neg PPP #sing
 1 VP_pl HAVE_pl_p PPP #pl
+1 VP_pl HAVE_pl_p Neg PPP #pl
 
 #Present Perfect Passive #has been drunk (Note: only transitive)
 1 VP HAVE BE_pp VerbT_pp #sing
+1 VP HAVE Neg BE_pp VerbT_pp #sing
 1 VP_pl HAVE_pl BE_pp VerbT_pp #pl
+1 VP_pl HAVE_pl Neg BE_pp VerbT_pp #pl
 #Past Perfect Passive #had been drunk
 1 VP HAVE_p BE_pp VerbT_pp #sing
+1 VP HAVE_p Neg BE_pp VerbT_pp #sing
 1 VP_pl HAVE_pl_p BE_pp VerbT_pp #pl
+1 VP_pl HAVE_pl_p Neg BE_pp VerbT_pp #pl
 
 #Present Perfect Continuous #has been drinking
 1	VP HAVE BE_pp	GP #sing
+1	VP HAVE Neg BE_pp	GP #sing
 1	VP_pl HAVE_pl BE_pp	GP #pl
+1	VP_pl HAVE_pl Neg BE_pp	GP #pl
 #Past Perfect Continuous #had been drinking
 1	VP HAVE_p BE_pp	GP #sing
+1	VP HAVE_p Neg BE_pp	GP #sing
 1	VP_pl HAVE_pl_p BE_pp	GP #pl
+1	VP_pl HAVE_pl_p Neg BE_pp	GP #pl
 
 #Future (will) #will drink
 #Future Possibility #might drink
 #Present Modal #should drink
 1 VP Modal VinfP #sing
+1 VP Modal Neg VinfP #sing
 1 VP_pl Modal VinfP #pl
+1 VP_pl Modal Neg VinfP #pl
 
 #Future (will) Passive #will be drunk (Note: only transitive)
 1 VP Modal BE_inf VerbT_pp
+1 VP Modal Neg BE_inf VerbT_pp
 1 VP_pl Modal BE_inf VerbT_pp
+1 VP_pl Modal Neg BE_inf VerbT_pp
 
 #Future Continuous #will be drinking #Future Possible continuous
 1 VP Modal BE_inf GP
+1 VP Modal Neg BE_inf GP
 1 VP_pl Modal BE_inf GP
+1 VP_pl Modal Neg BE_inf GP
 
 #Future Perfect #will have drunk
 #Past Modal #should have drunk
 #Past Unreal Conditional #would have drunk
 1 VP Modal HAVE_inf PPP
+1 VP Modal Neg HAVE_inf PPP
 1 VP_pl Modal HAVE_inf PPP
+1 VP_pl Modal Neg HAVE_inf PPP
 
 #Unknown #should have been drinking
 1 VP Modal HAVE_inf BE_pp GP
+1 VP Modal Neg HAVE_inf BE_pp GP
 1 VP_pl Modal HAVE_inf BE_pp GP
+1 VP_pl Modal Neg HAVE_inf BE_pp GP
 
 #Unknown #should have been drunk (Note: only transitive)
 1 VP Modal HAVE_inf BE_pp VerbT_pp
+1 VP Modal Neg HAVE_inf BE_pp VerbT_pp
 1 VP_pl Modal HAVE_inf BE_pp VerbT_pp
+1 VP_pl Modal Neg HAVE_inf BE_pp VerbT_pp
 
 # Subjunctive tense #"he suggested that the castle be carried"
 1 VP_subj BE_inf VerbT_pp
+1 VP_subj Neg BE_inf VerbT_pp
 1 VP_subj_pl BE_inf VerbT_pp
+1 VP_subj_pl Neg BE_inf VerbT_pp
 
 #All transitive verbs (sing) [for "he knows what they ride"]
 1 VerbTALL BE
