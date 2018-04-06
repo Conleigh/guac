@@ -250,7 +250,7 @@
 1 VerbTALL_pl Modal BE_inf
 1 VerbTALL_pl Modal HAVE_inf BE_pp
 1 VerbTALL_pl BE_pl BE_cont
-1 VerbTALL_pl BE_p_pl BE_cont
+1 VerbTALL_pl BE_pl_p BE_cont
 1 VerbTALL_pl HAVE_pl BE_pp
 1 VerbTALL_pl HAVE_pl BE_pp BE_cont
 1 VerbTALL_pl VerbT_pl
