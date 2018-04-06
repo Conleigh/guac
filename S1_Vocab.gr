@@ -238,6 +238,7 @@
 1	VerbT_p suggested
 1	VerbT_p	migrated
 1	VerbT_p	knew
+1   VerbT_p ate
 
 # Verbs (past tense). Transitive - pl
 1	VerbT_pl_p	were
@@ -250,6 +251,7 @@
 1	VerbT_pl_p	carried
 1	VerbT_pl_p suggested
 1	VerbT_pl_p	knew
+1   VerbT_pl_p  ate
 
 # Verbs (past tense). Intransitive - sing
 1	VerbI_p	migrated
@@ -258,6 +260,7 @@
 1	VerbI_p	spoke
 1	VerbI_p	grew
 1	VerbI_p	knew
+1   VerbI_p ate
 
 # Verbs (past tense). Intransitive - pl
 1	VerbI_pl_p	migrated
@@ -266,6 +269,7 @@
 1	VerbI_pl_p	spoke
 1	VerbI_pl_p	grew
 1	VerbI_pl_p	knew
+1   VerbI_pl_p  ate
 
 #Verbs followed by complementizer - past sing
 1	VerbC_p	suggested
