@@ -20,6 +20,8 @@
 
 #Conjunctions, sentence-level
 .05 S S , Conj S
+.05 S S ; S
+.05 S S : S
 
 #TODO: for Conj and subConj, this method could be very recursive very fast...
 
