@@ -20,8 +20,10 @@
 
 #Conjunctions, sentence-level
 .05 S S , Conj S
+.05 Q Q , Conj Q 
 .05 S S ; S
 .05 S S : S
+
 
 #TODO: for Conj and subConj, this method could be very recursive very fast...
 
@@ -517,10 +519,14 @@
 1 Q_dyn_verb SNP_pl dyn_P_verb_pl
 1 dyn_P_verb_pl VP_pres_pl , dyn_P2_verb_pl
 1 dyn_P2_verb_pl do PRP_subj_pl not
+
+1 VP_pres_sing VerbI 
+1 VP_pres_sing VerbT_bar ONP_all
 1 VP_pres_sing VerbI
 1 VP_pres_sing VerbT ONP_all
+
 1 VP_pres_pl VerbI_pl
-1 VP_pres_pl VerbT_pl ONP_all
+1 VP_pres_pl VerbT_pl_bar ONP_all
 
 #Zoot can eat the snake, can she not?
 1 Q_dyn_can SNP dyn_P_can_sing
