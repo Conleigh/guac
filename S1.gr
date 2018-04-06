@@ -489,9 +489,9 @@
 1 dyn_P_verb_pl VP_pres_pl , dyn_P2_verb_pl
 1 dyn_P2_verb_pl do PRP_subj_pl not
 1 VP_pres_sing VerbI 
-1 VP_pres_sing VerbT ONP_all
+1 VP_pres_sing VerbT_bar ONP_all
 1 VP_pres_pl VerbI_pl
-1 VP_pres_pl VerbT_pl ONP_all
+1 VP_pres_pl VerbT_pl_bar ONP_all
 
 #Zoot can eat the snake, can she not?
 1 Q_dyn_can SNP dyn_P_can_sing 

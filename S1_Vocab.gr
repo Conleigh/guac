@@ -182,6 +182,17 @@
 1	VerbT	knows
 1   VerbT is
 
+#VerbT but for dyn questions
+#mostly to remove 'is' because 'arthur is a drink, does he not' doesn't make sense
+1	VerbT_bar has
+1	VerbT_bar covers
+1	VerbT_bar drinks
+1	VerbT_bar	carries
+1	VerbT_bar	rides
+1	VerbT_bar	grows
+1   VerbT_bar suggests
+1	VerbT_bar	knows
+
 #Verbs followed by complementizer
 1	VerbC	suggests
 1	VerbC	knows
