@@ -459,6 +459,7 @@
 
 ###IMPERATIVE SENTENCES################################################
 1 Imp do_imp VinfP
+1 Imp VinfP
 1 Imp do_imp Neg VinfP
 
 ###QUESTIONS################################################
