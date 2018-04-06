@@ -162,11 +162,11 @@
 #Verbs - pres sing. #he drinks
 1	VP_Present VerbT ONP_all
 1	VP_Present VerbI
-.3 VP_Present VerbC CC
+.3 VP VerbC CC
 #Verbs - pres pl
 1	VP_pl_Present VerbT_pl ONP_all
 1	VP_pl_Present VerbI_pl
-.3 VP_pl_Present VerbC_pl CC
+.3 VP_pl VerbC_pl CC
 
 #Verbs - past sing. #he drank
 1	VP VerbT_p ONP_all
