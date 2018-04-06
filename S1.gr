@@ -1,6 +1,7 @@
 #Declarative sentences
 1 S1 S .
 .05 S1 S !
+.005 S1 it is not that S , but ...
 1 S SNP VP #subject NP
 1 SNP NP
 .1 SNP sNP #NP specifically marked with subject, e.g., she
