@@ -21,6 +21,9 @@
 #Conjunctions, sentence-level
 .05 S S , Conj S
 .05 Q Q , Conj Q 
+.05 S S ; S
+.05 S S : S
+
 
 #TODO: for Conj and subConj, this method could be very recursive very fast...
 
@@ -39,8 +42,10 @@
 1 Sbar SNP VP_Present OR Does_Phrase
 1 Sbar SNP_pl VP_pl_Present OR Does_Phrase
 # Does phrase, corresponds only to non-copular initial verb phrases
-1 Does_Phrase SNP do_sing
+1 Does_Phrase SNP do_sing  
+.2 Does_Phrase SNP do_sing Neg
 1 Does_Phrase SNP_pl do_pl
+.2 Does_Phrase SNP_pl do_pl Neg
 
 # Phrases involving copula can have a be-phrase instead of a second complete sentence
 1 Sbar SNP VP_Cop OR Be_Phrase
@@ -89,41 +94,65 @@
 
 #Copula - pres sing #is yellow, is PP
 1 VP_Cop BE PP
+1 VP_Cop BE Neg PP
 1	VP_Cop BE AP
+1 VP_Cop BE Neg AP
 #Copula - pres pl
 1	VP_Cop_pl BE_pl PP
+1	VP_Cop_pl BE_pl Neg PP
 1	VP_Cop_pl BE_pl AP
+1	VP_Cop_pl BE_pl Neg AP
 #Copula - past sing #was yellow, was PP
 1	VP_Cop BE_p PP
+1	VP_Cop BE_p Neg PP
 1	VP_Cop BE_p AP
+1	VP_Cop BE_p Neg AP
 #Copula - past pl
 1	VP_Cop_pl BE_pl_p PP
+1	VP_Cop_pl BE_pl_p Neg PP
 1	VP_Cop_pl BE_pl_p AP
+1	VP_Cop_pl BE_pl_p Neg AP
 #Copula - #might be yellow, might be PP
 1 VP_Cop Modal BE_inf PP
+1 VP_Cop Modal Neg BE_inf PP
 1 VP_Cop Modal BE_inf AP
+1 VP_Cop Modal Neg BE_inf AP
 1 VP_Cop_pl Modal BE_inf PP
+1 VP_Cop_pl Modal Neg BE_inf PP
 1 VP_Cop_pl Modal BE_inf AP
+1 VP_Cop_pl Modal Neg BE_inf AP
 #Copula - #might have been
 1 VP_Cop Modal HAVE_inf BE_pp PP
+1 VP_Cop Modal Neg HAVE_inf BE_pp PP
 1 VP_Cop Modal HAVE_inf BE_pp AP
+1 VP_Cop Modal Neg HAVE_inf BE_pp AP
 1 VP_Cop_pl Modal HAVE_inf BE_pp PP
+1 VP_Cop_pl Modal Neg PHAVE_inf BE_pp P
 1 VP_Cop_pl Modal HAVE_inf BE_pp AP
+1 VP_Cop_pl Modal Neg HAVE_inf BE_pp AP
 
 #Copula: is being yellow - pres
 1 VP_Cop BE BE_cont AP #sing
+1 VP_Cop BE Neg BE_cont AP #sing
 1 VP_Cop_pl BE_pl BE_cont AP #pl
+1 VP_Cop_pl BE_pl Neg BE_cont AP #pl
 #was being yellow - past
 1 VP_Cop BE_p BE_cont AP #sing
+1 VP_Cop BE_p Neg BE_cont AP #sing
 1 VP_Cop_pl BE_pl_p BE_cont AP #pl
+1 VP_Cop_pl BE_pl_p Neg BE_cont AP #pl
 
 #Copula: has been yellow
 1 VP_Cop HAVE BE_pp AP #sing
+1 VP_Cop HAVE Neg BE_pp AP #sing
 1 VP_Cop_pl HAVE_pl BE_pp AP #pl
+1 VP_Cop_pl HAVE_pl Neg BE_pp AP #pl
 
 #Copula: has been being
 1 VP_Cop HAVE BE_pp BE_cont AP #sing
+1 VP_Cop HAVE Neg BE_pp BE_cont AP #sing
 1 VP_Cop_pl HAVE_pl BE_pp BE_cont AP #pl
+1 VP_Cop_pl HAVE_pl Neg BE_pp BE_cont AP #pl
 
 # Expanding VP into VP_Present enables "either he knows or she does"
 2 VP VP_Present
@@ -274,7 +303,7 @@
 #TODO #Unreal Conditional #if he drank wine, I would drive home.
 #TODO #Past Unreal Conditional #If he had drunk wine, I would have driven home.
 
-#TODO: Negating sentences. ex: "he was not riding" (note: no "did" in Vocab)
+#TODO: Negating sentences. ex: "he was not riding" (note: no "did" in Vocab, but there is a does)
 
 
 
@@ -314,6 +343,8 @@
 #Basic Noun
 2	Noun AP Noun
 2	Noun_pl AP Noun_pl
+2	Proper AP Proper
+2	Proper_pl AP Proper_pl
 
 #NP qualified with "that", e.g., "the castle that was his home"
 #NP qualified with "who", e.g., "the castle that was his home"
@@ -483,61 +514,65 @@
 
 #Zoot drinks the snake, does she not?
 1 Q_dyn_verb SNP dyn_P_verb_sing
-1 dyn_P_verb_sing VP_pres_sing , dyn_P2_verb_sing 
+1 dyn_P_verb_sing VP_pres_sing , dyn_P2_verb_sing
 1 dyn_P2_verb_sing does PRP_subj not
 1 Q_dyn_verb SNP_pl dyn_P_verb_pl
 1 dyn_P_verb_pl VP_pres_pl , dyn_P2_verb_pl
 1 dyn_P2_verb_pl do PRP_subj_pl not
+
 1 VP_pres_sing VerbI 
 1 VP_pres_sing VerbT_bar ONP_all
+1 VP_pres_sing VerbI
+1 VP_pres_sing VerbT ONP_all
+
 1 VP_pres_pl VerbI_pl
 1 VP_pres_pl VerbT_pl_bar ONP_all
 
 #Zoot can eat the snake, can she not?
-1 Q_dyn_can SNP dyn_P_can_sing 
-1 dyn_P_can_sing can VP_pres , dyn_P2_can_sing 
+1 Q_dyn_can SNP dyn_P_can_sing
+1 dyn_P_can_sing can VP_pres , dyn_P2_can_sing
 1 VP_pres VinfP
-1 dyn_P2_can_sing can PRP_subj not 
+1 dyn_P2_can_sing can PRP_subj not
 1 Q_dyn_can SNP_pl dyn_P_can_pl
 1 dyn_P_can_pl can VP_pres , dyn_P2_can_pl
 1 VP_pres VinfP
-1 dyn_P2_can_pl can PRP_subj_pl not 
+1 dyn_P2_can_pl can PRP_subj_pl not
 
 #Zoot could eat the snake, could she not?
-1 Q_dyn_could SNP dyn_P_could_sing 
-1 dyn_P_could_sing could VP_pres , dyn_P2_could_sing 
+1 Q_dyn_could SNP dyn_P_could_sing
+1 dyn_P_could_sing could VP_pres , dyn_P2_could_sing
 1 VP_pres VinfP
-1 dyn_P2_could_sing could PRP_subj not 
+1 dyn_P2_could_sing could PRP_subj not
 1 Q_dyn_could SNP_pl dyn_P_could_pl
 1 dyn_P_could_pl could VP_pres , dyn_P2_could_pl
 1 VP_pres VinfP
 1 dyn_P2_could_pl could PRP_subj_pl not
 
 #Zoot should eat the snake, should she not?
-1 Q_dyn_should SNP dyn_P_should_sing 
-1 dyn_P_should_sing should VP_pres , dyn_P2_should_sing 
+1 Q_dyn_should SNP dyn_P_should_sing
+1 dyn_P_should_sing should VP_pres , dyn_P2_should_sing
 1 VP_pres VinfP
-1 dyn_P2_should_sing should PRP_subj not 
+1 dyn_P2_should_sing should PRP_subj not
 1 Q_dyn_should SNP_pl dyn_P_should_pl
 1 dyn_P_should_pl should VP_pres , dyn_P2_should_pl
 1 VP_pres VinfP
 1 dyn_P2_should_pl should PRP_subj_pl not
 
 #Zoot would eat the snake, would she not?
-1 Q_dyn_would SNP dyn_P_would_sing 
-1 dyn_P_would_sing would VP_pres , dyn_P2_would_sing 
+1 Q_dyn_would SNP dyn_P_would_sing
+1 dyn_P_would_sing would VP_pres , dyn_P2_would_sing
 1 VP_pres VinfP
-1 dyn_P2_would_sing would PRP_subj not 
+1 dyn_P2_would_sing would PRP_subj not
 1 Q_dyn_would SNP_pl dyn_P_would_pl
 1 dyn_P_would_pl would VP_pres , dyn_P2_would_pl
 1 VP_pres VinfP
 1 dyn_P2_would_pl would PRP_subj_pl not
 
 #Zoot will eat the snake, will she not?
-1 Q_dyn_will SNP dyn_P_will_sing 
-1 dyn_P_will_sing will VP_pres , dyn_P2_will_sing 
+1 Q_dyn_will SNP dyn_P_will_sing
+1 dyn_P_will_sing will VP_pres , dyn_P2_will_sing
 1 VP_pres VinfP
-1 dyn_P2_will_sing will PRP_subj not 
+1 dyn_P2_will_sing will PRP_subj not
 1 Q_dyn_will SNP_pl dyn_P_will_pl
 1 dyn_P_will_pl will VP_pres , dyn_P2_will_pl
 1 VP_pres VinfP
