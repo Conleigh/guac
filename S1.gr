@@ -12,7 +12,7 @@
 .1 ONP_all oNP_all #NP specifically marked with object, e.g., her
 
 #Interrogative sentences
-0.3 S1 Q ?
+.1 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
@@ -28,32 +28,20 @@
 .05 S subConj S , S
 
 #TODO: either / or not working well yet...
-.1 S1 EITHER Sbar .
-.005 S1 EITHER Sbar !
+#1 S S3
+#1 S3 EITHER S OR Sbar
 
-# Either he is a monkey or she rides
-5 Sbar S OR S
-
-# Either he moves or she does - only for present-tense verbs.
-1 Sbar SNP VP_Present OR Does_Phrase
-1 Sbar SNP_pl VP_pl_Present OR Does_Phrase
-# Does phrase, corresponds only to non-copular initial verb phrases
-1 Does_Phrase SNP do_sing
-1 Does_Phrase SNP_pl do_pl
-
-# Phrases involving copula can have a be-phrase instead of a second complete sentence
-1 Sbar SNP VP_Cop OR Be_Phrase
-1 Sbar SNP_pl VP_Cop_pl OR Be_Phrase
-1 Be_Phrase SNP BE
-1 Be_Phrase SNP_pl BE_pl
-1 Be_Phrase SNP BE_p
-1 Be_Phrase SNP_pl BE_pl_p
-1 Be_Phrase	SNP Modal BE_inf
-1 Be_Phrase SNP_pl Modal BE_inf
-1 Be_Phrase	SNP Modal HAVE_inf BE_inf
-1 Be_Phrase SNP_pl Modal HAVE_inf BE_inf
-1 Be_Phrase SNP HAVE BE_pp
-1 Be_Phrase SNP_pl HAVE_pl BE_pp
+#Sbar is to handle possible omission #"either Arthur knows or Patsy does"
+#TODO: overgenerates b/c really need agreement with prior verb. e.g.: "either he ride or she does" not "...or she is"
+#1 Sbar S
+#1 Sbar SNP VPbar
+#1 Sbar SNP_pl VP_plbar
+#1 VPbar do_sing
+#1 VPbar BE
+#1 VPbar BE_p
+#1 VP_plbar do_pl
+#1 VP_plbar BE_pl
+#1 VP_plbar BE_pl_p
 
 #TODO: "he neither ran nor did he ride"
 #TODO: add sentence-level conjunction logic for Q
@@ -64,7 +52,6 @@
 
 
 ###VERBS#############################################
-# Need to reclassify - VP goes to copula, present, past, plural, etc. From there, can do a better sentence thing.
 #Verb basics
 .2 VP VP PP
 .2 VP_pl VP_pl PP
@@ -83,59 +70,52 @@
 .3 VP VP Adv
 .5 VP_pl VP_pl Adv
 
-1 VP VP_Cop # Present, copula forms
-1 VP_pl VP_Cop_pl
-
 #Copula - pres sing #is yellow, is PP
-1 VP_Cop BE PP
-1	VP_Cop BE AP
+1 VP BE PP
+1	VP BE AP
 #Copula - pres pl
-1	VP_Cop_pl BE_pl PP
-1	VP_Cop_pl BE_pl AP
+1	VP_pl BE_pl PP
+1	VP_pl BE_pl AP
 #Copula - past sing #was yellow, was PP
-1	VP_Cop BE_p PP
-1	VP_Cop BE_p AP
+1	VP BE_p PP
+1	VP BE_p AP
 #Copula - past pl
-1	VP_Cop_pl BE_pl_p PP
-1	VP_Cop_pl BE_pl_p AP
+1	VP_pl BE_pl_p PP
+1	VP_pl BE_pl_p AP
 #Copula - #might be yellow, might be PP
-1 VP_Cop Modal BE_inf PP
-1 VP_Cop Modal BE_inf AP
-1 VP_Cop_pl Modal BE_inf PP
-1 VP_Cop_pl Modal BE_inf AP
+1 VP Modal BE_inf PP
+1 VP Modal BE_inf AP
+1 VP_pl Modal BE_inf PP
+1 VP_pl Modal BE_inf AP
 #Copula - #might have been
-1 VP_Cop Modal HAVE_inf BE_pp PP
-1 VP_Cop Modal HAVE_inf BE_pp AP
-1 VP_Cop_pl Modal HAVE_inf BE_pp PP
-1 VP_Cop_pl Modal HAVE_inf BE_pp AP
+1 VP Modal HAVE_inf BE_pp PP
+1 VP Modal HAVE_inf BE_pp AP
+1 VP_pl Modal HAVE_inf BE_pp PP
+1 VP_pl Modal HAVE_inf BE_pp AP
 
 #Copula: is being yellow - pres
-1 VP_Cop BE BE_cont AP #sing
-1 VP_Cop_pl BE_pl BE_cont AP #pl
-#was being yellow - past
-1 VP_Cop BE_p BE_cont AP #sing
-1 VP_Cop_pl BE_pl_p BE_cont AP #pl
+1 VP BE BE_cont AP #sing
+1 VP_pl BE_pl BE_cont AP #pl
+#was being being yellow - past
+1 VP BE_p BE_cont AP #sing
+1 VP_pl BE_pl_p BE_cont AP #pl
 
 #Copula: has been yellow
-1 VP_Cop HAVE BE_pp AP #sing
-1 VP_Cop_pl HAVE_pl BE_pp AP #pl
+1 VP HAVE BE_pp AP #sing
+1 VP_pl HAVE_pl BE_pp AP #pl
 
 #Copula: has been being
-1 VP_Cop HAVE BE_pp BE_cont AP #sing
-1 VP_Cop_pl HAVE_pl BE_pp BE_cont AP #pl
-
-# Expanding VP into VP_Present enables "either he knows or she does"
-2 VP VP_Present
-2 VP_pl VP_pl_Present
+1 VP HAVE BE_pp BE_cont AP #sing
+1 VP_pl HAVE_pl BE_pp BE_cont AP #pl
 
 #Verbs - pres sing. #he drinks
-1	VP_Present VerbT ONP_all
-1	VP_Present VerbI
-.3 VP_Present VerbC CC
+1	VP VerbT ONP_all
+1	VP VerbI
+.3 VP VerbC CC
 #Verbs - pres pl
-1	VP_pl_Present VerbT_pl ONP_all
-1	VP_pl_Present VerbI_pl
-.3 VP_pl_Present VerbC_pl CC
+1	VP_pl VerbT_pl ONP_all
+1	VP_pl VerbI_pl
+.3 VP_pl VerbC_pl CC
 
 #Verbs - past sing. #he drank
 1	VP VerbT_p ONP_all
@@ -399,7 +379,6 @@
  1 Q Q_do
  1 Q Q_wh
  1 Q Q_is
- 1 Q Q_dyn
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -456,88 +435,9 @@
 
 
 #Are/is questions
-1 Q_is BE SNP GP
-1 Q_is BE_pl SNP_pl GP
-#1 Q_is SNP BE AP
-#1 Q_is SNP_pl BE_pl AP
-
-# Are you suggesting (subjunctive)
+#TODO: 'is this an elephant?' etc.
 1 Q_is BE_pl SNP_pl GP_subjunct
 1 Q_is BE SNP GP_subjunct
 
 1 GP_subjunct VerbG_C SNP VinfT PP
 1 GP_subjunct VerbG_C SNP VinfI
-
-#'do you not ' type questions: Zoot will carry the snake, will she not?
-# problem is that you need agreement in the nouns ('The strangers will carry the snake, will she not?' doesn't work)
-# And also have an agreement in the modal ('Zoot can carry the snake, will she not?' doesn't seem grammatical)
-# So it requires a lot of tokens to get right
-# TODO : Do we need pronoun gender agreement? Can we say 'England can carry, can she not ?' 'Zoot can carry, can it now ?') Is that semantic or syntactic?
-1 Q_dyn Q_dyn_can
-1 Q_dyn Q_dyn_verb
-1 Q_dyn Q_dyn_could
-1 Q_dyn Q_dyn_should
-1 Q_dyn Q_dyn_would
-1 Q_dyn Q_dyn_will
-
-#Zoot drinks the snake, does she not?
-1 Q_dyn_verb SNP dyn_P_verb_sing
-1 dyn_P_verb_sing VP_pres_sing , dyn_P2_verb_sing 
-1 dyn_P2_verb_sing does PRP_subj not
-1 Q_dyn_verb SNP_pl dyn_P_verb_pl
-1 dyn_P_verb_pl VP_pres_pl , dyn_P2_verb_pl
-1 dyn_P2_verb_pl do PRP_subj_pl not
-1 VP_pres_sing VerbI 
-1 VP_pres_sing VerbT ONP_all
-1 VP_pres_pl VerbI_pl
-1 VP_pres_pl VerbT_pl ONP_all
-
-#Zoot can eat the snake, can she not?
-1 Q_dyn_can SNP dyn_P_can_sing 
-1 dyn_P_can_sing can VP_pres , dyn_P2_can_sing 
-1 VP_pres VinfP
-1 dyn_P2_can_sing can PRP_subj not 
-1 Q_dyn_can SNP_pl dyn_P_can_pl
-1 dyn_P_can_pl can VP_pres , dyn_P2_can_pl
-1 VP_pres VinfP
-1 dyn_P2_can_pl can PRP_subj_pl not 
-
-#Zoot could eat the snake, could she not?
-1 Q_dyn_could SNP dyn_P_could_sing 
-1 dyn_P_could_sing could VP_pres , dyn_P2_could_sing 
-1 VP_pres VinfP
-1 dyn_P2_could_sing could PRP_subj not 
-1 Q_dyn_could SNP_pl dyn_P_could_pl
-1 dyn_P_could_pl could VP_pres , dyn_P2_could_pl
-1 VP_pres VinfP
-1 dyn_P2_could_pl could PRP_subj_pl not
-
-#Zoot should eat the snake, should she not?
-1 Q_dyn_should SNP dyn_P_should_sing 
-1 dyn_P_should_sing should VP_pres , dyn_P2_should_sing 
-1 VP_pres VinfP
-1 dyn_P2_should_sing should PRP_subj not 
-1 Q_dyn_should SNP_pl dyn_P_should_pl
-1 dyn_P_should_pl should VP_pres , dyn_P2_should_pl
-1 VP_pres VinfP
-1 dyn_P2_should_pl should PRP_subj_pl not
-
-#Zoot would eat the snake, would she not?
-1 Q_dyn_would SNP dyn_P_would_sing 
-1 dyn_P_would_sing would VP_pres , dyn_P2_would_sing 
-1 VP_pres VinfP
-1 dyn_P2_would_sing would PRP_subj not 
-1 Q_dyn_would SNP_pl dyn_P_would_pl
-1 dyn_P_would_pl would VP_pres , dyn_P2_would_pl
-1 VP_pres VinfP
-1 dyn_P2_would_pl would PRP_subj_pl not
-
-#Zoot will eat the snake, will she not?
-1 Q_dyn_will SNP dyn_P_will_sing 
-1 dyn_P_will_sing will VP_pres , dyn_P2_will_sing 
-1 VP_pres VinfP
-1 dyn_P2_will_sing will PRP_subj not 
-1 Q_dyn_will SNP_pl dyn_P_will_pl
-1 dyn_P_will_pl will VP_pres , dyn_P2_will_pl
-1 VP_pres VinfP
-1 dyn_P2_will_pl will PRP_subj_pl not
