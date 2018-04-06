@@ -90,41 +90,65 @@
 
 #Copula - pres sing #is yellow, is PP
 1 VP_Cop BE PP
+1 VP_Cop BE Neg PP
 1	VP_Cop BE AP
+1 VP_Cop BE Neg AP
 #Copula - pres pl
 1	VP_Cop_pl BE_pl PP
+1	VP_Cop_pl BE_pl Neg PP
 1	VP_Cop_pl BE_pl AP
+1	VP_Cop_pl BE_pl Neg AP
 #Copula - past sing #was yellow, was PP
 1	VP_Cop BE_p PP
+1	VP_Cop BE_p Neg PP
 1	VP_Cop BE_p AP
+1	VP_Cop BE_p Neg AP
 #Copula - past pl
 1	VP_Cop_pl BE_pl_p PP
+1	VP_Cop_pl BE_pl_p Neg PP
 1	VP_Cop_pl BE_pl_p AP
+1	VP_Cop_pl BE_pl_p Neg AP
 #Copula - #might be yellow, might be PP
 1 VP_Cop Modal BE_inf PP
+1 VP_Cop Modal Neg BE_inf PP
 1 VP_Cop Modal BE_inf AP
+1 VP_Cop Modal Neg BE_inf AP
 1 VP_Cop_pl Modal BE_inf PP
+1 VP_Cop_pl Modal Neg BE_inf PP
 1 VP_Cop_pl Modal BE_inf AP
+1 VP_Cop_pl Modal Neg BE_inf AP
 #Copula - #might have been
 1 VP_Cop Modal HAVE_inf BE_pp PP
+1 VP_Cop Modal Neg HAVE_inf BE_pp PP
 1 VP_Cop Modal HAVE_inf BE_pp AP
+1 VP_Cop Modal Neg HAVE_inf BE_pp AP
 1 VP_Cop_pl Modal HAVE_inf BE_pp PP
+1 VP_Cop_pl Modal Neg PHAVE_inf BE_pp P
 1 VP_Cop_pl Modal HAVE_inf BE_pp AP
+1 VP_Cop_pl Modal Neg HAVE_inf BE_pp AP
 
 #Copula: is being yellow - pres
 1 VP_Cop BE BE_cont AP #sing
+1 VP_Cop BE Neg BE_cont AP #sing
 1 VP_Cop_pl BE_pl BE_cont AP #pl
+1 VP_Cop_pl BE_pl Neg BE_cont AP #pl
 #was being yellow - past
 1 VP_Cop BE_p BE_cont AP #sing
+1 VP_Cop BE_p Neg BE_cont AP #sing
 1 VP_Cop_pl BE_pl_p BE_cont AP #pl
+1 VP_Cop_pl BE_pl_p Neg BE_cont AP #pl
 
 #Copula: has been yellow
 1 VP_Cop HAVE BE_pp AP #sing
+1 VP_Cop HAVE Neg BE_pp AP #sing
 1 VP_Cop_pl HAVE_pl BE_pp AP #pl
+1 VP_Cop_pl HAVE_pl Neg BE_pp AP #pl
 
 #Copula: has been being
 1 VP_Cop HAVE BE_pp BE_cont AP #sing
+1 VP_Cop HAVE Neg BE_pp BE_cont AP #sing
 1 VP_Cop_pl HAVE_pl BE_pp BE_cont AP #pl
+1 VP_Cop_pl HAVE_pl Neg BE_pp BE_cont AP #pl
 
 # Expanding VP into VP_Present enables "either he knows or she does"
 2 VP VP_Present
@@ -275,7 +299,7 @@
 #TODO #Unreal Conditional #if he drank wine, I would drive home.
 #TODO #Past Unreal Conditional #If he had drunk wine, I would have driven home.
 
-#TODO: Negating sentences. ex: "he was not riding" (note: no "did" in Vocab)
+#TODO: Negating sentences. ex: "he was not riding" (note: no "did" in Vocab, but there is a does)
 
 
 
