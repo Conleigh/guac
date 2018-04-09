@@ -530,7 +530,8 @@
 0.5 Q_wh Wh_all HAVE_pl_p SNP_pl VerbTP_pp #what had snakes ridden?
 
 1 VerbTP_pp VerbT_pp
-0.01 VerbTP_pp VerbTP_pp Adv
+0.01 VerbTP_pp VerbTP_pp Adv #e.g what have snakes ridden frequently? 
+0.01 VerbTP_pp Adv VerbTP_pp #e.g what have snakes frequently ridden ?
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -544,6 +545,7 @@
  1 Vinf_Cl_pl_noarg SNP_pl VinfPP_whQ
 
  1 VinfPP_whQ VinfP_whQ 
+ 0.02 VinfPP_whQ Adv VinfP_whQ
  0.03 VinfPP_whQ VinfP_whQ Adv
 
 
@@ -572,9 +574,11 @@
  1 Vinf_Cl_pl SNP_pl VinfTP ONP_all
 
  1 VinfIP VinfI
- 0.01 VinfIP VinfT Adv
- 1 VinfTP VinfI
- 0.01 VinfTP VinfT Adv
+ 0.01 VinfIP VinfT Adv #why do the snakes carry frequently? 
+ 0.01 VinfIP Adv VinfT # why do the snakes frequently carry ?
+ 1 VinfTP VinfI  
+ 0.01 VinfTP VinfT Adv # why does the snake carry the snake frequently 
+ 0.01 VinfTP Adv VinfT # why does the snake frequently carry the snake
 
 
 #subjunctive questions: a special form of do-questions like 'Does arthur suggest she eat ?'
@@ -602,6 +606,7 @@
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP VinfT ONP_all #..Arthur suggest she eat the snakes
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl VinfT ONP_all #..ARthur suggest the strangers eat the snakes
 
+0.01 Vinf_subjunct Adv Vinf_subjunct
 
 #Are/is questions
 1 Q_is BE SNP GPP
@@ -699,6 +704,7 @@
 
 1 VinfPP VinfP
 0.01 VinfPP VinfP Adv
+0.01 VinfPP Adv VinfP
 
 #What can arthur ride?
 1 Q_modal Wh_adverbs Modal_Q SNP VinfT_adv
