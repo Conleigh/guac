@@ -377,6 +377,7 @@
 #Basic NP
 1 NP Proper
 1 NP Det Noun
+.05 NP Noun_sp
 #Basic NP plural
 1 NP_pl Noun_pl
 .2 NP_pl Det_pl Noun_pl
