@@ -571,9 +571,9 @@
  1 Vinf_Cl_pl SNP_pl VinfTP ONP_all
 
  1 VinfIP VinfI
- 0.03 VinfIP VinfT Adv
+ 0.01 VinfIP VinfT Adv
  1 VinfTP VinfI
- 0.03 VinfTP VinfT Adv
+ 0.01 VinfTP VinfT Adv
 
 
 #subjunctive questions: a special form of do-questions like 'Does arthur suggest she eat ?'
@@ -701,11 +701,11 @@
 1 Q_modal Wh_pronouns Modal_Q SNP VinfT_adv
 1 Q_modal Wh_pronouns Modal_Q SNP_pl VinfT_adv
 1 VinfT_adv VinfT
-0.01 VinfT_adv Adv
+0.01 VinfT_adv VinfT Adv 
 
 1 Q_modal Modal_Q SNP VinfT_adv
 1 Q_modal Modal_Q SNP_pl VinfT_adv
 1 VinfT_adv VinfT
-0.01 VinfT_adv Adv
+0.01 VinfT_adv VinfT Adv
 
 #
