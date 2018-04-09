@@ -667,8 +667,10 @@
 1 dyn_P2_will_pl will PRP_subj_pl not
 
 #What can arthur ride?
-1 Q_modal Wh_adverbs Modal_Q SNP VinfT
-1 Q_modal Wh_adverbs Modal_Q SNP_pl VinfT
+1 Q_modal Wh_adverbs Modal_Q SNP VinfT_adv
+1 Q_modal Wh_adverbs Modal_Q SNP_pl VinfT_adv
 
-#
+1 VinfT_adv VinfT
+0.05 VinfT_adv Adv
+
 
