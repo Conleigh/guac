@@ -561,15 +561,16 @@
  1 Q_do do_pl Vinf_Cl_pl #Does question: Does Arthur eat ?
 
  #E.g. She carry / the snakes carry in 'why does she carry?' 'when do the snakes carry ?'
- 1 Vinf_Cl SNP VinfI
- 100 Vinf_Cl SNP VinfI Adv
- 1 Vinf_Cl_pl SNP_pl VinfI
- 1 Vinf_Cl_pl SNP_pl VinfI Adv
+ 1 Vinf_Cl SNP VinfIP
+ 1 Vinf_Cl_pl SNP_pl VinfIP
  #Infinitive clauses with an additional argument. 'Why does she carry the snake? '
- 1 Vinf_Cl SNP VinfT ONP_all
- 1 Vinf_Cl SNP VinfT ONP_all Adv
- 1 Vinf_Cl_pl SNP_pl VinfT ONP_all
- 1 Vinf_Cl_pl SNP_pl VinfT ONP_all Adv
+ 1 Vinf_Cl SNP VinfTP ONP_all
+ 1 Vinf_Cl_pl SNP_pl VinfTP ONP_all
+
+ 1 VinfIP VinfI
+ 0.03 VinfIP VinfT Adv
+ 1 VinfTP VinfI
+ 0.03 VinfTP VinfT Adv
 
 
 #subjunctive questions: a special form of do-questions like 'Does arthur suggest she eat ?'
