@@ -534,13 +534,17 @@
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
  1 Q_wh Wh_pronouns Q_do_pronoun
- 1 Q_do_pronoun do_sing Vinf_Cl_noarg
- 1 Q_do_pronoun do_pl Vinf_Cl_pl_noarg
+ 100 Q_do_pronoun do_sing Vinf_Cl_noarg
+ 100 Q_do_pronoun do_pl Vinf_Cl_pl_noarg
 
 
 #Infinite clause where argument is implied ('What does Arthur eat ?', not 'What does arthur eat the bread ?')
- 1 Vinf_Cl_noarg SNP VinfP_whQ
- 1 Vinf_Cl_pl_noarg SNP_pl VinfP_whQ
+ 1 Vinf_Cl_noarg SNP VinfPP_whQ
+ 1 Vinf_Cl_pl_noarg SNP_pl VinfPP_whQ
+
+ 1 VinfPP_whQ VinfP_whQ 
+ 1 VinfPP_whQ VinfP_whQ Adv
+
 
 #TODO: Are some of these verbs limited to certain prepositions? E.g. what does arthur drink on? what does arthur drink across? do they both work?
 #Infinitive verb phrases for what/who questions that work with prepositions (who does arthur speak to? What does she ride at ? )
