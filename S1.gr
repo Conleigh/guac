@@ -507,18 +507,23 @@
 .01 Q Q PP
 .01 Q Q Prep
 1 Q Q_do
-1 Q Q_wh
+100 Q Q_wh
 1 Q Q_is
 1 Q Q_dyn
-100 Q Q_modal
+1 Q Q_modal
+
 
 #what are coconuts?
 1 Wh_all Wh_pronouns
 1 Wh_all Wh_adverbs
-.1 Q Wh_all BE SNP
-.1 Q Wh_all BE_pl SNP_pl
-.1 Q Wh_all BE_p SNP
-.1 Q Wh_all BE_pl_p SNP_pl
+1 Q_wh Wh_all
+1 Q_wh Q_wh_bar
+100 Q_wh Q_wh_bar VerbT_G
+.1 Q_wh_bar Wh_all BE SNP
+.1 Q_wh_bar Wh_all BE_pl SNP_pl
+.1 Q_wh_bar Wh_all BE_p SNP
+.1 Q_wh_bar Wh_all BE_pl_p SNP_pl
+
 
 
 # Wh-questions pronouns
@@ -669,8 +674,7 @@
 #What can arthur ride?
 1 Q_modal Wh_adverbs Modal_Q SNP VinfT_adv
 1 Q_modal Wh_adverbs Modal_Q SNP_pl VinfT_adv
-
 1 VinfT_adv VinfT
 0.05 VinfT_adv Adv
 
-
+#
