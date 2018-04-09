@@ -521,7 +521,7 @@
 1	POS	's
 
 # Wh possessive pronoun.
-1	Misc	whose
+1	WHOSE	whose
 
 # Pauses.
 1	Misc	...
