@@ -518,7 +518,7 @@
 1	Wh_adverbs	why
 
 # Possessive marker.
-1	Misc	's
+1	POS	's
 
 # Wh possessive pronoun.
 1	Misc	whose

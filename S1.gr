@@ -20,7 +20,7 @@
 
 #Conjunctions, sentence-level
 .05 S S , Conj S
-.05 Q Q , Conj Q 
+.05 Q Q , Conj Q
 .05 S S ; S
 .05 S S : S
 
@@ -42,7 +42,7 @@
 1 Sbar SNP VP_Present OR Does_Phrase
 1 Sbar SNP_pl VP_pl_Present OR Does_Phrase
 # Does phrase, corresponds only to non-copular initial verb phrases
-1 Does_Phrase SNP do_sing  
+1 Does_Phrase SNP do_sing
 .2 Does_Phrase SNP do_sing Neg
 1 Does_Phrase SNP_pl do_pl
 .2 Does_Phrase SNP_pl do_pl Neg
@@ -392,6 +392,9 @@
 #Possessive pronouns e.g. "his"
 .2 NP PRP_poss Noun
 .2 NP_pl PRP_poss Noun_pl
+#Possessive 's (singular only)
+.2 NP NP POS NP
+.2 NP_pl NP POS NP_pl
 
 #Pronouns
 #TODO: add logic to other parts of grammar so that things that follow agree with pl/sing , e.g. "he who was"
@@ -559,7 +562,7 @@
 1 dyn_P_verb_pl VP_pres_pl , dyn_P2_verb_pl
 1 dyn_P2_verb_pl do PRP_subj_pl not
 
-1 VP_pres_sing VerbI 
+1 VP_pres_sing VerbI
 1 VP_pres_sing VerbT_bar ONP_all
 1 VP_pres_sing VerbI
 1 VP_pres_sing VerbT ONP_all
