@@ -14,7 +14,7 @@
 .1 ONP_all oNP_all #NP specifically marked with object, e.g., her
 
 #Interrogative sentences
-300 S1 Q ?
+0.3 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
@@ -602,10 +602,13 @@
 
 
 #Are/is questions
-1 Q_is BE SNP GP
-1 Q_is BE_pl SNP_pl GP
+1 Q_is BE SNP GPP
+1 Q_is BE_pl SNP_pl GPP
 #1 Q_is SNP BE AP
 #1 Q_is SNP_pl BE_pl AP
+
+1 GPP GP
+0.05 GPP GPP Adv
 
 # Are you suggesting (subjunctive)
 1 Q_is BE_pl SNP_pl GP_subjunct
