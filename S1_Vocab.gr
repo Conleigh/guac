@@ -119,8 +119,6 @@
 1	Modal	will
 1	Modal	would
 
-
-#modal without 'ought to' for questions:
 1	Modal_Q	can
 1	Modal_Q	could
 1	Modal_Q	may
@@ -130,6 +128,7 @@
 1	Modal_Q	should
 1	Modal_Q	will
 1	Modal_Q	would
+
 
 # Verbs (base form) (infinitive)
 # Transitive
