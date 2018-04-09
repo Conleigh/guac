@@ -444,7 +444,7 @@
 
 #Adjective phrase
 1 AP JJ
-.1 AP Adv JJ
+.05 AP Adv JJ
 
 #Complementizer
 1 CC Comp S
