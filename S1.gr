@@ -510,7 +510,7 @@
 1 Q Q_wh
 1 Q Q_is
 1 Q Q_dyn
-1 Q Q_modal
+100 Q Q_modal
 
 
 #what are coconuts?
@@ -555,7 +555,6 @@
 1 VinfP_whQ drink Prep
 1 VinfP_whQ grow Prep
 1 VinfP_whQ migrate Prep
-1 VinfP_whQ 
 
 
 # Wh-questions adverbs (when/where/how/why)
@@ -699,6 +698,11 @@
 #What can arthur ride?
 1 Q_modal Wh_adverbs Modal_Q SNP VinfT_adv
 1 Q_modal Wh_adverbs Modal_Q SNP_pl VinfT_adv
+1 VinfT_adv VinfT
+0.01 VinfT_adv Adv
+
+1 Q_modal Modal_Q SNP VinfT_adv
+1 Q_modal Modal_Q SNP_pl VinfT_adv
 1 VinfT_adv VinfT
 0.01 VinfT_adv Adv
 
