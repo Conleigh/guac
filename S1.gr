@@ -506,8 +506,8 @@
 
 .01 Q Q PP
 .01 Q Q Prep
-100 Q Q_do
-1 Q Q_wh
+1 Q Q_do
+100 Q Q_wh
 1 Q Q_is
 1 Q Q_dyn
 1 Q Q_modal
