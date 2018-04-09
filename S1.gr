@@ -14,7 +14,7 @@
 .1 ONP_all oNP_all #NP specifically marked with object, e.g., her
 
 #Interrogative sentences
-300 S1 Q ?
+0.3 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
@@ -510,16 +510,28 @@
 1 Q Q_wh
 1 Q Q_is
 1 Q Q_dyn
-100 Q Q_modal
+1 Q Q_modal
+
+
 
 #what are coconuts?
 1 Wh_all Wh_pronouns
 1 Wh_all Wh_adverbs
-.1 Q Wh_all BE SNP
-.1 Q Wh_all BE_pl SNP_pl
-.1 Q Wh_all BE_p SNP
-.1 Q Wh_all BE_pl_p SNP_pl
+1 Q_wh Wh_all
+1 Q_wh Q_wh_bar
+1 Q_wh Q_wh_bar VerbT_G
+.1 Q_wh_bar Wh_all BE SNP
+.1 Q_wh_bar Wh_all BE_pl SNP_pl
+.1 Q_wh_bar Wh_all BE_p SNP
+.1 Q_wh_bar Wh_all BE_pl_p SNP_pl
+0.5 Q_wh Wh_all HAVE SNP VerbTP_pp #what has arthur ridden?
+0.5 Q_wh Wh_all HAVE_pl SNP_pl VerbTP_pp #what have snakes ridden?
+0.5 Q_wh Wh_all HAVE_p SNP VerbTP_pp #what had arthur ridden?
+0.5 Q_wh Wh_all HAVE_pl_p SNP_pl VerbTP_pp #what had snakes ridden?
 
+1 VerbTP_pp VerbT_pp
+0.01 VerbTP_pp VerbTP_pp Adv #e.g what have snakes ridden frequently? 
+0.01 VerbTP_pp Adv VerbTP_pp #e.g what have snakes frequently ridden ?
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -529,8 +541,13 @@
 
 
 #Infinite clause where argument is implied ('What does Arthur eat ?', not 'What does arthur eat the bread ?')
- 1 Vinf_Cl_noarg SNP VinfP_whQ
- 1 Vinf_Cl_pl_noarg SNP_pl VinfP_whQ
+ 1 Vinf_Cl_noarg SNP VinfPP_whQ
+ 1 Vinf_Cl_pl_noarg SNP_pl VinfPP_whQ
+
+ 1 VinfPP_whQ VinfP_whQ 
+ 0.02 VinfPP_whQ Adv VinfP_whQ
+ 0.03 VinfPP_whQ VinfP_whQ Adv
+
 
 #TODO: Are some of these verbs limited to certain prepositions? E.g. what does arthur drink on? what does arthur drink across? do they both work?
 #Infinitive verb phrases for what/who questions that work with prepositions (who does arthur speak to? What does she ride at ? )
@@ -545,41 +562,60 @@
 
 # Wh-questions adverbs (when/where/how/why)
 # When does Arthur eat? Why does Arthur eat the horse?
- 100 Q_wh Wh_adverbs Q_do
+ 1 Q_wh Wh_adverbs Q_do
  1 Q_do do_sing Vinf_Cl #Do question: do horses eat ?
  1 Q_do do_pl Vinf_Cl_pl #Does question: Does Arthur eat ?
 
  #E.g. She carry / the snakes carry in 'why does she carry?' 'when do the snakes carry ?'
- 1 Vinf_Cl SNP VinfI
- 1 Vinf_Cl_pl SNP_pl VinfI
+ 1 Vinf_Cl SNP VinfIP
+ 1 Vinf_Cl_pl SNP_pl VinfIP
  #Infinitive clauses with an additional argument. 'Why does she carry the snake? '
- 1 Vinf_Cl SNP VinfT ONP_all
- 1 Vinf_Cl_pl SNP_pl VinfT ONP_all
+ 1 Vinf_Cl SNP VinfTP ONP_all
+ 1 Vinf_Cl_pl SNP_pl VinfTP ONP_all
+
+ 1 VinfIP VinfI
+ 0.01 VinfIP VinfI Adv #why do the snakes carry frequently? 
+ 0.01 VinfIP Adv VinfI # why do the snakes frequently carry ?
+ 1 VinfTP VinfT 
+ 0.01 VinfTP VinfT Adv # why does the snake carry the snake frequently 
+ 0.01 VinfTP Adv VinfT # why does the snake frequently carry the snake
 
 
 #subjunctive questions: a special form of do-questions like 'Does arthur suggest she eat ?'
 #TODO: do I need to split some of these up? It makes it much messier
 1 Q_wh Wh_pronouns Q_subjunct
 1 Q_wh Wh_adverbs Q_subjunct
+1 Q_do Q_subjunct
 1 Q_subjunct do_sing Vinf_Cl_subjunct
 1 Q_subjunct do_pl Vinf_Cl_subjunct_pl
 
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP Vinf_whQ #..Arthur suggest she ride
+0.3 Vinf_Cl_subjunct SNP Vinf_subjunct SNP Vinf_whQ Adv_recur #..Arthur suggest she ride frequently
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl Vinf_whQ #..Arthur suggest the snakes ride
+0.3 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl Vinf_whQ  Adv_recur #..Arthur suggest the snakes ride frequently
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP VinfT ONP_all #..Arthur suggest she eat the snakes
+0.3 Vinf_Cl_subjunct SNP Vinf_subjunct SNP VinfT ONP_all Adv_recur #..Arthur suggest she eat the snakes frequently
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfT ONP_all #..ARthur suggest the strangers eat the snakes
+0.3 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfT ONP_all Adv_recur #..ARthur suggest the strangers eat the snakes frequently
+
+1 Adv_recur Adv 
+0.05 Adv_recur Adv Adv_recur
 
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP Vinf_whQ #..Arthur suggest she ride
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl Vinf_whQ #..Arthur suggest the snakes ride
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP VinfT ONP_all #..Arthur suggest she eat the snakes
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl VinfT ONP_all #..ARthur suggest the strangers eat the snakes
 
+0.01 Vinf_subjunct Adv Vinf_subjunct
 
 #Are/is questions
-1 Q_is BE SNP GP
-1 Q_is BE_pl SNP_pl GP
+1 Q_is BE SNP GPP
+1 Q_is BE_pl SNP_pl GPP
 #1 Q_is SNP BE AP
 #1 Q_is SNP_pl BE_pl AP
+
+1 GPP GP
+0.05 GPP GPP Adv
 
 # Are you suggesting (subjunctive)
 1 Q_is BE_pl SNP_pl GP_subjunct
@@ -619,52 +655,68 @@
 #Zoot can eat the snake, can she not?
 1 Q_dyn_can SNP dyn_P_can_sing
 1 dyn_P_can_sing can VP_pres , dyn_P2_can_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_can_sing can PRP_subj not
 1 Q_dyn_can SNP_pl dyn_P_can_pl
 1 dyn_P_can_pl can VP_pres , dyn_P2_can_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_can_pl can PRP_subj_pl not
 
 #Zoot could eat the snake, could she not?
 1 Q_dyn_could SNP dyn_P_could_sing
 1 dyn_P_could_sing could VP_pres , dyn_P2_could_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_could_sing could PRP_subj not
 1 Q_dyn_could SNP_pl dyn_P_could_pl
 1 dyn_P_could_pl could VP_pres , dyn_P2_could_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_could_pl could PRP_subj_pl not
 
 #Zoot should eat the snake, should she not?
 1 Q_dyn_should SNP dyn_P_should_sing
 1 dyn_P_should_sing should VP_pres , dyn_P2_should_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_should_sing should PRP_subj not
 1 Q_dyn_should SNP_pl dyn_P_should_pl
 1 dyn_P_should_pl should VP_pres , dyn_P2_should_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_should_pl should PRP_subj_pl not
 
 #Zoot would eat the snake, would she not?
 1 Q_dyn_would SNP dyn_P_would_sing
 1 dyn_P_would_sing would VP_pres , dyn_P2_would_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_would_sing would PRP_subj not
 1 Q_dyn_would SNP_pl dyn_P_would_pl
 1 dyn_P_would_pl would VP_pres , dyn_P2_would_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_would_pl would PRP_subj_pl not
 
 #Zoot will eat the snake, will she not?
 1 Q_dyn_will SNP dyn_P_will_sing
 1 dyn_P_will_sing will VP_pres , dyn_P2_will_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_will_sing will PRP_subj not
 1 Q_dyn_will SNP_pl dyn_P_will_pl
 1 dyn_P_will_pl will VP_pres , dyn_P2_will_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_will_pl will PRP_subj_pl not
 
-#e.g. why should arthur ride?
-1 Q_modal Wh_adverbs modal_Q VinfP
+
+1 VinfPP VinfP
+0.01 VinfPP VinfP Adv
+0.01 VinfPP Adv VinfP
+
+#What can arthur ride?
+1 Q_modal Wh_adverbs Modal_Q SNP VinfT_adv
+1 Q_modal Wh_adverbs Modal_Q SNP_pl VinfT_adv
+1 Q_modal Wh_pronouns Modal_Q SNP VinfT_adv
+1 Q_modal Wh_pronouns Modal_Q SNP_pl VinfT_adv
+1 VinfT_adv VinfT
+0.01 VinfT_adv VinfT Adv 
+
+1 Q_modal Modal_Q SNP VinfT_adv
+1 Q_modal Modal_Q SNP_pl VinfT_adv
+1 VinfT_adv VinfT
+0.01 VinfT_adv VinfT Adv
+
