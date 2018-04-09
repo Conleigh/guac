@@ -574,9 +574,9 @@
  1 Vinf_Cl_pl SNP_pl VinfTP ONP_all
 
  1 VinfIP VinfI
- 0.01 VinfIP VinfT Adv #why do the snakes carry frequently? 
- 0.01 VinfIP Adv VinfT # why do the snakes frequently carry ?
- 1 VinfTP VinfI  
+ 0.01 VinfIP VinfI Adv #why do the snakes carry frequently? 
+ 0.01 VinfIP Adv VinfI # why do the snakes frequently carry ?
+ 1 VinfTP VinfT 
  0.01 VinfTP VinfT Adv # why does the snake carry the snake frequently 
  0.01 VinfTP Adv VinfT # why does the snake frequently carry the snake
 
