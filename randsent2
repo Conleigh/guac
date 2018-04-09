@@ -12,7 +12,7 @@ parser.add_argument("--seed", type=int, default=0, help="RNG seed")
 args = parser.parse_args()
 
 # Create a random generator.
-numpy.random.seed(args.seed)
+#numpy.random.seed(args.seed)
 
 # Here's how to access the args.  (You won't print them in your actual program.)
 # print 'path to grammar file:', args.grammar
@@ -44,7 +44,7 @@ def expand(start):
     if start not in grammar_dict: return start + " "
     sentence = ""
     choices = []
-    weights = [] 
+    weights = []
     counter = 0
     hacky = []
     for entry in grammar_dict[start]:
