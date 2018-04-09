@@ -451,7 +451,6 @@
 1	Adv	currently
 1	Adv	frequently
 1	Adv	precisely
-1	Adv	south
 1	Adv	successfully
 1	Adv	unfortunately
 
@@ -485,7 +484,8 @@
 1 subConj where
 
 # Expletive.
-1	Misc	there
+1	Adv1	there
+1	Adv1	south
 
 # Complementizers
 1 Comp that

@@ -91,6 +91,10 @@
 #Adverbs
 .3 VP VP Adv
 .5 VP_pl VP_pl Adv
+.3 VP Adv VP
+.5 VP_pl Adv VP_pl
+.3 VP VP Adv1
+.5 VP_pl VP_pl Adv1
 
 1 VP VP_Cop # Present, copula forms
 1 VP_pl VP_Cop_pl
