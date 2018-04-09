@@ -399,9 +399,11 @@
 #Possessive pronouns e.g. "his"
 .2 NP PRP_poss Noun
 .2 NP_pl PRP_poss Noun_pl
+.2 NP_pl PRP_poss Proper_pl
 #Possessive 's (singular only)
-.2 NP NP POS NP
-.2 NP_pl NP POS NP_pl
+.2 NP NP POS Noun
+.2 NP_pl NP POS Noun_pl
+.2 NP_pl NP POS Proper_pl
 
 #Pronouns
 #TODO: add logic to other parts of grammar so that things that follow agree with pl/sing , e.g. "he who was"
@@ -411,6 +413,30 @@
 1 oNP_all oNP_pl
 1 oNP PRP_obj
 1 oNP_pl PRP_obj_pl
+
+#whose, the king whose castle ate rode.
+#whose, the king whose coconut ate horses rode.
+.05 NP NP WHOSE Noun VP
+.05 NP NP WHOSE Noun_pl VP_pl
+.05 NP NP WHOSE Proper_pl VP_pl
+.05 NP_pl NP_pl WHOSE Noun VP
+.05 NP_pl NP_pl WHOSE Noun_pl VP_pl
+.05 NP_pl NP_pl WHOSE Proper_pl VP_pl
+.05 oNP_all oNP_all WHOSE Noun VP
+.05 oNP_all oNP_all WHOSE Noun_pl VP_pl
+.05 oNP_all oNP_all WHOSE Proper_pl VP_pl
+
+#whose, the king whose coconut horses ate rode.
+.05 NP NP WHOSE Noun VerbTALL
+.05 NP NP WHOSE Noun_pl VerbTALL_pl
+.05 NP NP WHOSE Proper_pl VerbTALL_pl
+.05 NP_pl NP_pl WHOSE Noun VerbTALL
+.05 NP_pl NP_pl WHOSE Noun_pl VerbTALL_pl
+.05 NP_pl NP_pl WHOSE Proper_pl VerbTALL_pl
+.05 oNP_all oNP_all WHOSE Noun VerbTALL
+.05 oNP_all oNP_all WHOSE Noun_pl VerbTALL_pl
+.05 oNP_all oNP_all WHOSE Proper_pl VerbTALL_pl
+
 
 
 
