@@ -506,10 +506,10 @@
 
 .01 Q Q PP
 .01 Q Q Prep
-1 Q Q_do
+100 Q Q_do
 1 Q Q_wh
 1 Q Q_is
-100 Q Q_dyn
+1 Q Q_dyn
 1 Q Q_modal
 
 
@@ -551,6 +551,7 @@
 1 VinfP_whQ drink Prep
 1 VinfP_whQ grow Prep
 1 VinfP_whQ migrate Prep
+1 VinfP_whQ 
 
 
 # Wh-questions adverbs (when/where/how/why)
@@ -561,10 +562,14 @@
 
  #E.g. She carry / the snakes carry in 'why does she carry?' 'when do the snakes carry ?'
  1 Vinf_Cl SNP VinfI
+ 100 Vinf_Cl SNP VinfI Adv
  1 Vinf_Cl_pl SNP_pl VinfI
+ 1 Vinf_Cl_pl SNP_pl VinfI Adv
  #Infinitive clauses with an additional argument. 'Why does she carry the snake? '
  1 Vinf_Cl SNP VinfT ONP_all
+ 1 Vinf_Cl SNP VinfT ONP_all Adv
  1 Vinf_Cl_pl SNP_pl VinfT ONP_all
+ 1 Vinf_Cl_pl SNP_pl VinfT ONP_all Adv
 
 
 #subjunctive questions: a special form of do-questions like 'Does arthur suggest she eat ?'
