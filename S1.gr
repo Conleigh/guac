@@ -518,7 +518,6 @@
 .1 Q Wh_all BE_p SNP
 .1 Q Wh_all BE_pl_p SNP_pl
 
-
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
  1 Q_wh Wh_pronouns Q_do_pronoun
