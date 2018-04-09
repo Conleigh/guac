@@ -538,8 +538,7 @@
 1 VinfP_whQ speak Prep #Does this work? What does Arthur speak at?
 1 VinfP_whQ drink Prep
 1 VinfP_whQ grow Prep
-1 VinfP_whQ migrate to
-1 VinfP_whQ migrate from
+1 VinfP_whQ migrate Prep
 
 
 # Wh-questions adverbs (when/where/how/why)
