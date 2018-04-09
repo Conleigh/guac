@@ -504,6 +504,7 @@
 # should be able to produce: "was he suggesting that the castle be carried?"
 
 .01 Q Q PP
+.01 Q Q Prep
 1 Q Q_do
 1 Q Q_wh
 1 Q Q_is
