@@ -698,6 +698,8 @@
 #What can arthur ride?
 1 Q_modal Wh_adverbs Modal_Q SNP VinfT_adv
 1 Q_modal Wh_adverbs Modal_Q SNP_pl VinfT_adv
+1 Q_modal Wh_pronouns Modal_Q SNP VinfT_adv
+1 Q_modal Wh_pronouns Modal_Q SNP_pl VinfT_adv
 1 VinfT_adv VinfT
 0.01 VinfT_adv Adv
 
