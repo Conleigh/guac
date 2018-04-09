@@ -14,7 +14,7 @@
 .1 ONP_all oNP_all #NP specifically marked with object, e.g., her
 
 #Interrogative sentences
-0.3 S1 Q ?
+300 S1 Q ?
 
 #Imperative sentences
 .1 S1 Imp !
@@ -510,6 +510,7 @@
 1 Q Q_wh
 1 Q Q_is
 1 Q Q_dyn
+100 Q Q_modal
 
 #what are coconuts?
 1 Wh_all Wh_pronouns
@@ -518,6 +519,7 @@
 .1 Q Wh_all BE_pl SNP_pl
 .1 Q Wh_all BE_p SNP
 .1 Q Wh_all BE_pl_p SNP_pl
+
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -663,3 +665,7 @@
 1 dyn_P_will_pl will VP_pres , dyn_P2_will_pl
 1 VP_pres VinfP
 1 dyn_P2_will_pl will PRP_subj_pl not
+
+#e.g. why should arthur ride?
+1 Q_modal Wh_adverbs modal_Q VinfP
+
