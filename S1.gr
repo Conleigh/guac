@@ -199,7 +199,7 @@
 1 VP BE VerbT_pp #sing
 1 VP BE Neg VerbT_pp #sing
 1 VP_pl BE_pl VerbT_pp #pl
-1 VP_pl Neg BE_pl VerbT_pp #pl
+1 VP_pl BE_pl Neg VerbT_pp #pl
 #Past Simple Passive
 1 VP BE_p VerbT_pp #sing
 1 VP BE_p Neg VerbT_pp #sing
