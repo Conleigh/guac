@@ -581,9 +581,16 @@
 1 Q_subjunct do_pl Vinf_Cl_subjunct_pl
 
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP Vinf_whQ #..Arthur suggest she ride
+0.3 Vinf_Cl_subjunct SNP Vinf_subjunct SNP Vinf_whQ Adv_recur #..Arthur suggest she ride frequently
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl Vinf_whQ #..Arthur suggest the snakes ride
+0.3 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl Vinf_whQ  Adv_recur #..Arthur suggest the snakes ride frequently
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP VinfT ONP_all #..Arthur suggest she eat the snakes
+0.3 Vinf_Cl_subjunct SNP Vinf_subjunct SNP VinfT ONP_all Adv_recur #..Arthur suggest she eat the snakes frequently
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfT ONP_all #..ARthur suggest the strangers eat the snakes
+0.3 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfT ONP_all Adv_recur #..ARthur suggest the strangers eat the snakes frequently
+
+1 Adv_recur Adv 
+0.05 Adv_recur Adv Adv_recur
 
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP Vinf_whQ #..Arthur suggest she ride
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP_pl Vinf_whQ #..Arthur suggest the snakes ride
