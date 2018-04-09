@@ -507,9 +507,9 @@
 .01 Q Q PP
 .01 Q Q Prep
 1 Q Q_do
-100 Q Q_wh
+1 Q Q_wh
 1 Q Q_is
-1 Q Q_dyn
+100 Q Q_dyn
 1 Q Q_modal
 
 
@@ -523,10 +523,10 @@
 .1 Q_wh_bar Wh_all BE_pl SNP_pl
 .1 Q_wh_bar Wh_all BE_p SNP
 .1 Q_wh_bar Wh_all BE_pl_p SNP_pl
-100 Q_wh Wh_all HAVE SNP VerbTP_pp #what has arthur ridden?
-100 Q_wh Wh_all HAVE_pl SNP_pl VerbTP_pp #what have snakes ridden?
-100 Q_wh Wh_all HAVE_p SNP VerbTP_pp #what had arthur ridden?
-100 Q_wh Wh_all HAVE_pl_p SNP_pl VerbTP_pp #what had snakes ridden?
+0.5 Q_wh Wh_all HAVE SNP VerbTP_pp #what has arthur ridden?
+0.5 Q_wh Wh_all HAVE_pl SNP_pl VerbTP_pp #what have snakes ridden?
+0.5 Q_wh Wh_all HAVE_p SNP VerbTP_pp #what had arthur ridden?
+0.5 Q_wh Wh_all HAVE_pl_p SNP_pl VerbTP_pp #what had snakes ridden?
 
 1 VerbTP_pp VerbT_pp
 0.05 VerbTP_pp VerbTP_pp Adv
@@ -555,7 +555,7 @@
 
 # Wh-questions adverbs (when/where/how/why)
 # When does Arthur eat? Why does Arthur eat the horse?
- 100 Q_wh Wh_adverbs Q_do
+ 1 Q_wh Wh_adverbs Q_do
  1 Q_do do_sing Vinf_Cl #Do question: do horses eat ?
  1 Q_do do_pl Vinf_Cl_pl #Does question: Does Arthur eat ?
 
@@ -629,52 +629,55 @@
 #Zoot can eat the snake, can she not?
 1 Q_dyn_can SNP dyn_P_can_sing
 1 dyn_P_can_sing can VP_pres , dyn_P2_can_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_can_sing can PRP_subj not
 1 Q_dyn_can SNP_pl dyn_P_can_pl
 1 dyn_P_can_pl can VP_pres , dyn_P2_can_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_can_pl can PRP_subj_pl not
 
 #Zoot could eat the snake, could she not?
 1 Q_dyn_could SNP dyn_P_could_sing
 1 dyn_P_could_sing could VP_pres , dyn_P2_could_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_could_sing could PRP_subj not
 1 Q_dyn_could SNP_pl dyn_P_could_pl
 1 dyn_P_could_pl could VP_pres , dyn_P2_could_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_could_pl could PRP_subj_pl not
 
 #Zoot should eat the snake, should she not?
 1 Q_dyn_should SNP dyn_P_should_sing
 1 dyn_P_should_sing should VP_pres , dyn_P2_should_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_should_sing should PRP_subj not
 1 Q_dyn_should SNP_pl dyn_P_should_pl
 1 dyn_P_should_pl should VP_pres , dyn_P2_should_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_should_pl should PRP_subj_pl not
 
 #Zoot would eat the snake, would she not?
 1 Q_dyn_would SNP dyn_P_would_sing
 1 dyn_P_would_sing would VP_pres , dyn_P2_would_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_would_sing would PRP_subj not
 1 Q_dyn_would SNP_pl dyn_P_would_pl
 1 dyn_P_would_pl would VP_pres , dyn_P2_would_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_would_pl would PRP_subj_pl not
 
 #Zoot will eat the snake, will she not?
 1 Q_dyn_will SNP dyn_P_will_sing
 1 dyn_P_will_sing will VP_pres , dyn_P2_will_sing
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_will_sing will PRP_subj not
 1 Q_dyn_will SNP_pl dyn_P_will_pl
 1 dyn_P_will_pl will VP_pres , dyn_P2_will_pl
-1 VP_pres VinfP
+1 VP_pres VinfPP
 1 dyn_P2_will_pl will PRP_subj_pl not
+
+1 VinfPP VinfP
+0.05 VinfPP VinfP Adv
 
 #What can arthur ride?
 1 Q_modal Wh_adverbs Modal_Q SNP VinfT_adv
