@@ -518,13 +518,18 @@
 1 Wh_all Wh_adverbs
 1 Q_wh Wh_all
 1 Q_wh Q_wh_bar
-100 Q_wh Q_wh_bar VerbT_G
+1 Q_wh Q_wh_bar VerbT_G
 .1 Q_wh_bar Wh_all BE SNP
 .1 Q_wh_bar Wh_all BE_pl SNP_pl
 .1 Q_wh_bar Wh_all BE_p SNP
 .1 Q_wh_bar Wh_all BE_pl_p SNP_pl
+100 Q_wh Wh_all HAVE SNP VerbTP_pp #what has arthur ridden?
+100 Q_wh Wh_all HAVE_pl SNP_pl VerbTP_pp #what have snakes ridden?
+100 Q_wh Wh_all HAVE_p SNP VerbTP_pp #what had arthur ridden?
+100 Q_wh Wh_all HAVE_pl_p SNP_pl VerbTP_pp #what had snakes ridden?
 
-
+1 VerbTP_pp VerbT_pp
+0.05 VerbTP_pp VerbTP_pp Adv
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
