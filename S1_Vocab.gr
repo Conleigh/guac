@@ -206,6 +206,7 @@
 1	VerbI	migrates
 1	VerbI	knows
 0.2   VerbI   snows
+0.2   VerbI   is
 
 # Verbs (present, plural, third person).
 1	VerbT_pl	have
@@ -232,6 +233,7 @@
 1	VerbI_pl	know
 1	VerbI_pl 	do
 0.2 VerbI_pl    swallow
+0.2 VerbI_pl    are
 
 #Verbs followed by complementizer - pres pl
 1	VerbC_pl	suggest
@@ -272,6 +274,7 @@
 1	VerbI_p	grew
 1	VerbI_p	knew
 1   VerbI_p ate
+.2 VerbI_p was
 
 # Verbs (past tense). Intransitive - pl
 1	VerbI_pl_p	migrated
@@ -281,6 +284,7 @@
 1	VerbI_pl_p	grew
 1	VerbI_pl_p	knew
 1   VerbI_pl_p  ate
+.2 VerbI_pl_p were
 
 #Verbs followed by complementizer - past sing
 1	VerbC_p	suggested
