@@ -93,12 +93,12 @@
 
 # Copula
 1	BE is
-1 BE_p was
+1   BE_p was
 1	BE_pl	are
 1	BE_pl_p	were
 1	BE_pp been
 1	BE_cont being #is being drunk; is being JJ
-1 BE_inf be
+1   BE_inf be
 
 # Have as auxillary
 1 HAVE has
@@ -132,10 +132,10 @@
 1	VinfT	carry
 1	VinfT	suggest
 1	VinfT	know
-0.2 VinfT master
-0.2 VinfT swallow
-0.2 VinfT corner
-0.2 VinfT pound
+0.2 VinfT   master
+0.2 VinfT   swallow
+0.2 VinfT   corner
+0.2 VinfT   pound
 
 
 #Intransitive
@@ -251,7 +251,7 @@
 1	VerbT_p suggested
 1	VerbT_p	migrated
 1	VerbT_p	knew
-1 VerbT_p ate
+1   VerbT_p ate
 
 # Verbs (past tense). Transitive - pl
 1	VerbT_pl_p	were
@@ -264,7 +264,7 @@
 1	VerbT_pl_p	carried
 1	VerbT_pl_p suggested
 1	VerbT_pl_p	knew
-1 VerbT_pl_p  ate
+1   VerbT_pl_p  ate
 
 # Verbs (past tense). Intransitive - sing
 1	VerbI_p	migrated
@@ -273,7 +273,7 @@
 1	VerbI_p	spoke
 1	VerbI_p	grew
 1	VerbI_p	knew
-1 VerbI_p ate
+1   VerbI_p ate
 .2 VerbI_p was
 
 # Verbs (past tense). Intransitive - pl
@@ -283,7 +283,7 @@
 1	VerbI_pl_p	spoke
 1	VerbI_pl_p	grew
 1	VerbI_pl_p	knew
-1 VerbI_pl_p  ate
+1   VerbI_pl_p  ate
 .2 VerbI_pl_p were
 
 #Verbs followed by complementizer - past sing
@@ -322,7 +322,7 @@
 1	VerbI_G	riding
 1	VerbI_G	drinking
 1	VerbI_G	growing
-1 VerbI_G	knowing
+1   VerbI_G	knowing
 
 #Gerund with complentizer that
 #"is/was knowing that" ungrammatical
@@ -366,10 +366,10 @@
 
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.
-1	Noun castle
-1	Noun king
-1	Noun defeater
-1 Noun covering
+1	Noun	castle
+1	Noun	king
+1	Noun	defeater
+1 	Noun 	covering
 1	Noun	sovereign
 1	Noun	servant
 1	Noun	corner
@@ -390,12 +390,12 @@
 1	Noun	story
 1	Noun	Holy Grail
 1	Noun	Round Table
-1 Noun can
-1 Noun might
-1 Noun will
-1 Noun being
-.001 Noun one
-.001 Noun	this
+1   Noun    can
+1   Noun    might
+1   Noun    will
+1   Noun    being
+.001   Noun    one
+.001	Noun	this
 
 # Plural nouns.
 1	Noun_pl	coconuts
@@ -408,7 +408,7 @@
 1	Noun_pl	snakes
 1	Noun_pl	ants
 1	Noun_pl	nights
-1 Noun_pl drinks
+1   Noun_pl drinks
 1	Noun_pl	fruit
 
 
@@ -425,13 +425,13 @@
 
 # Personal pronouns (sing) (subjective)
 1	PRP_subj	he
-1 PRP_subj    she
-1 PRP_subj    it
+1   PRP_subj    she
+1   PRP_subj    it
 
 # Personal pronouns (sing) (objective)
 1	PRP_obj	him
-1 PRP_obj    her
-1 PRP_obj    it
+1   PRP_obj    her
+1   PRP_obj    it
 
 # Personal pronouns (plural) (subjective)
 1	PRP_subj_pl	they
@@ -443,7 +443,7 @@
 1	PRP_poss    her
 1	PRP_poss	his
 1	PRP_poss	its
-1 PRP_poss    their # Possessive personal pronouns (plural) #TODO: separation needed?
+1   PRP_poss    their # Possessive personal pronouns (plural) #TODO: separation needed?
 
 # un-classified pronouns
 1	PRP_misc one #TODO
