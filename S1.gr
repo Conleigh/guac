@@ -529,7 +529,7 @@
 0.5 Q_wh Wh_all HAVE_pl_p SNP_pl VerbTP_pp #what had snakes ridden?
 
 1 VerbTP_pp VerbT_pp
-0.05 VerbTP_pp VerbTP_pp Adv
+0.01 VerbTP_pp VerbTP_pp Adv
 
 # Wh-questions pronouns
 # What does Arthur eat ? who does Arthur eat?
@@ -677,12 +677,12 @@
 1 dyn_P2_will_pl will PRP_subj_pl not
 
 1 VinfPP VinfP
-0.05 VinfPP VinfP Adv
+0.01 VinfPP VinfP Adv
 
 #What can arthur ride?
 1 Q_modal Wh_adverbs Modal_Q SNP VinfT_adv
 1 Q_modal Wh_adverbs Modal_Q SNP_pl VinfT_adv
 1 VinfT_adv VinfT
-0.05 VinfT_adv Adv
+0.01 VinfT_adv Adv
 
 #
