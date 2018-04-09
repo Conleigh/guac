@@ -22,7 +22,8 @@
 .05 S S , Conj S
 .05 Q Q , Conj Q
 .05 S S ; S
-.05 S S : S
+.001 S S : S
+.001 S S : ONP_all
 
 
 #TODO: for Conj and subConj, this method could be very recursive very fast...
