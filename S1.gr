@@ -75,8 +75,8 @@
 ###VERBS#############################################
 # Need to reclassify - VP goes to copula, present, past, plural, etc. From there, can do a better sentence thing.
 #Verb basics
-.2 VP VP PP
-.2 VP_pl VP_pl PP
+.05 VP VP PP
+.05 VP_pl VP_pl PP
 
 #Verb Conjunctions
 .1 VP VP conj VP
@@ -355,9 +355,9 @@
 
 ###NOUNS#############################################
 #Prepositional phrases
-.2 SNP SNP PP
-.2 SNP_pl SNP_pl PP
-.2 ONP_all ONP_all PP
+.05 SNP SNP PP
+.05 SNP_pl SNP_pl PP
+.05 ONP_all ONP_all PP
 1	PP Prep ONP_all
 
 #Group of NP and NP_pl
@@ -445,17 +445,17 @@
 
 #Adjective phrase
 1 AP JJ
-.05 AP Adv JJ
+.01 AP Adv JJ
 
 #Complementizer
 1 CC Comp S
 1 CC S #hidden "that"
-1 CC Comp S_subj #subjunctive sentence #"he suggested that the castle be carried"
-1 CC S_subj
+.05 CC Comp S_subj #subjunctive sentence #"he suggested that the castle be carried"
+.05 CC S_subj
 1 S_subj SNP VP_subj
 1 S_subj SNP_pl VP_subj_pl
-.2 VP_subj VP_subj PP
-.2 VP_subj_pl VP_subj_pl PP
+.05 VP_subj VP_subj PP
+.05 VP_subj_pl VP_subj_pl PP
 
 #Gerund phrases
 1 GP GP PP
@@ -487,8 +487,8 @@
 # Need all transitive verb conjugations possible after but without their objects
 1 ONP_all Wh_det SNP VerbTALL
 1 ONP_all Wh_det SNP_pl VerbTALL_pl
-.2 VerbTALL VerbTALL PP
-.2 VerbTALL_pl VerbTALL_pl PP
+.05 VerbTALL VerbTALL PP
+.05 VerbTALL_pl VerbTALL_pl PP
 #TODO: add possibility of Wh_det being the object of a PP; intransitive verb and then Prep without its object
 #TODO: add possibility of "he knows what they are covering that existed before" (like "the castle that...")
 
@@ -530,7 +530,7 @@
 0.5 Q_wh Wh_all HAVE_pl_p SNP_pl VerbTP_pp #what had snakes ridden?
 
 1 VerbTP_pp VerbT_pp
-0.01 VerbTP_pp VerbTP_pp Adv #e.g what have snakes ridden frequently? 
+0.01 VerbTP_pp VerbTP_pp Adv #e.g what have snakes ridden frequently?
 0.01 VerbTP_pp Adv VerbTP_pp #e.g what have snakes frequently ridden ?
 
 # Wh-questions pronouns
@@ -544,7 +544,7 @@
  1 Vinf_Cl_noarg SNP VinfPP_whQ
  1 Vinf_Cl_pl_noarg SNP_pl VinfPP_whQ
 
- 1 VinfPP_whQ VinfP_whQ 
+ 1 VinfPP_whQ VinfP_whQ
  0.02 VinfPP_whQ Adv VinfP_whQ
  0.03 VinfPP_whQ VinfP_whQ Adv
 
@@ -574,10 +574,10 @@
  1 Vinf_Cl_pl SNP_pl VinfTP ONP_all
 
  1 VinfIP VinfI
- 0.01 VinfIP VinfI Adv #why do the snakes carry frequently? 
+ 0.01 VinfIP VinfI Adv #why do the snakes carry frequently?
  0.01 VinfIP Adv VinfI # why do the snakes frequently carry ?
- 1 VinfTP VinfT 
- 0.01 VinfTP VinfT Adv # why does the snake carry the snake frequently 
+ 1 VinfTP VinfT
+ 0.01 VinfTP VinfT Adv # why does the snake carry the snake frequently
  0.01 VinfTP Adv VinfT # why does the snake frequently carry the snake
 
 
@@ -598,7 +598,7 @@
 1 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfT ONP_all #..ARthur suggest the strangers eat the snakes
 0.3 Vinf_Cl_subjunct SNP Vinf_subjunct SNP_pl VinfT ONP_all Adv_recur #..ARthur suggest the strangers eat the snakes frequently
 
-1 Adv_recur Adv 
+1 Adv_recur Adv
 0.05 Adv_recur Adv Adv_recur
 
 1 Vinf_Cl_subjunct_pl SNP_pl Vinf_subjunct SNP Vinf_whQ #..Arthur suggest she ride
@@ -713,10 +713,9 @@
 1 Q_modal Wh_pronouns Modal_Q SNP VinfT_adv
 1 Q_modal Wh_pronouns Modal_Q SNP_pl VinfT_adv
 1 VinfT_adv VinfT
-0.01 VinfT_adv VinfT Adv 
+0.01 VinfT_adv VinfT Adv
 
 1 Q_modal Modal_Q SNP VinfT_adv
 1 Q_modal Modal_Q SNP_pl VinfT_adv
 1 VinfT_adv VinfT
 0.01 VinfT_adv VinfT Adv
-
